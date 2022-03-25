@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package golang;
+
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang";
+
+service AlloffCategory {
+    rpc ListAlloffCategory(ListAlloffCategoryRequest) returns (ListAlloffCategoryResponse);
+}
+
+message AlloffCategoryMessage {
+    string category_id = 1;
+    string name = 2;
+    string keyname = 3;
+    int32 level = 4;
+    string parent_id = 5;
+    string img_url = 6;
+}
+
+
+message ListAlloffCategoryRequest {
+    string parent_id = 1;
+}
+
+message ListAlloffCategoryResponse {
+    repeated AlloffCategoryMessage categories = 1;
+}
