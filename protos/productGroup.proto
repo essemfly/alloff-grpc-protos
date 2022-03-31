@@ -1,10 +1,9 @@
 syntax = "proto3";
 
-package golang;
-
 import "protos/product.proto";
 
-option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang";
+package protos;
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang/protos";
 
 service ProductGroup {
     rpc GetProductGroup(GetProductGroupRequest) returns (GetProductGroupResponse);

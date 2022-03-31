@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package golang;
+package protos;
 
-option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang";
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang/protos";
 
 
 service Notification {
