@@ -6,6 +6,12 @@ import "protos/productGroup.proto";
 
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang/protos";
 
+enum ExhibitionType {
+    EXHIBITION_NORMAL = 0;
+    EXHIBITION_TIMEDEAL = 1;
+    EXHIBITION_GROUPDEAL = 2;
+}
+
 service Exhibition {
     rpc GetExhibition(GetExhibitionRequest) returns (GetExhibitionResponse);
     rpc ListExhibitions(ListExhibitionsRequest) returns (ListExhibitionsResponse);
@@ -20,6 +26,7 @@ message GetExhibitionRequest {
 message ListExhibitionsRequest {
     int32 offset = 1;
     int32 limit = 2;
+    optional ExhibitionType group_type = 3;
 }
 
 message EditExhibitionRequest {
@@ -44,6 +51,7 @@ message CreateExhibitionRequest {
     string start_time = 6;
     string finish_time = 7;
     repeated string pg_ids = 8;
+    ExhibitionType exhibition_type = 9;
 }
 
 message GetExhibitionResponse {
@@ -76,4 +84,5 @@ message ExhibitionMessage {
     string finish_time = 8;
     repeated ProductGroupMessage pgs = 9;
     bool is_live = 10;
+    ExhibitionType exhibition_type = 11;
 }
