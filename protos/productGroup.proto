@@ -10,8 +10,9 @@ service ProductGroup {
     rpc CreateProductGroup(CreateProductGroupRequest) returns (CreateProductGroupResponse);
     rpc ListProductGroups(ListProductGroupsRequest) returns (ListProductGroupsResponse);
     rpc EditProductGroup(EditProductGroupRequest) returns (EditProductGroupResponse);
-    rpc PushProductsInProductGroup(PushProductsInPgRequest) returns (PushProductsInPgResponse);
-    rpc RemoveProductInProductGroup(RemoveProductInPgRequest) returns (RemoveProductInPgResponse);
+    rpc PushProductsInProductGroup(ProductInPgRequest) returns (ProductsInPgResponse);
+    rpc UpdateProductsInProductGroup(ProductsInPgRequest) returns (ProductsInPgResponse);
+    rpc RemoveProductInProductGroup(RemoveProductInPgRequest) returns (ProductsInPgResponse);
 }
 
 /*
@@ -69,12 +70,16 @@ message ListProductGroupsResponse {
     int32 total_counts = 4;
 }
 
-message PushProductsInPgRequest {
+message ProductInPgRequest {
     string product_group_id = 1;
     repeated ProductPriorityMessage product_priority = 2;
 }
 
-message PushProductsInPgResponse {
+message ProductsInPgRequest {
+    repeated ProductsInPgRequest products = 1;
+}
+
+message ProductsInPgResponse {
     ProductGroupMessage pg = 1;
 }
 
