@@ -72,12 +72,12 @@ message ListProductGroupsResponse {
 
 message ProductInPgRequest {
     string product_group_id = 1;
-    repeated ProductPriorityMessage product_priority = 2;
+    ProductPriorityMessage product_priority = 2;
 }
 
 message ProductsInPgRequest {
     string product_group_id = 1;
-    repeated ProductsInPgRequest products = 2;
+    repeated ProductPriorityMessage product_priorities = 2;
 }
 
 message ProductsInPgResponse {
