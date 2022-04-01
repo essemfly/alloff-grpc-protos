@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Seokmin Lee <essemfly@gmail.com>"]
 packages = [
-    { include = "gen" },
+    { include = "gen/python/protos" },
 ]
 
 [tool.poetry.dependencies]
