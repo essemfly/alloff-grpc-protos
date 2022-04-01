@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Seokmin Lee <essemfly@gmail.com>"]
 packages = [
+    { include = "alloff-grpc-protos" },
     { include = "gen" },
     { include = "gen/**/**/*.py" },
     { include = "gen/python/protos" },
