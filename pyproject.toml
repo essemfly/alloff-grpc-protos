@@ -14,7 +14,3 @@ grpcio-tools = "^1.45.0"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-packages = [
-    { include = "gen/python/protos/*.py" },
-]
