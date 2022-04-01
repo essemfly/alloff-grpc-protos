@@ -6,13 +6,13 @@ option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 import "product.proto";
 
 service ProductGroup {
-    rpc GetProductGroup(GetProductGroupRequest) returns (GetProductGroupResponse);
-    rpc CreateProductGroup(CreateProductGroupRequest) returns (CreateProductGroupResponse);
+    rpc GetProductGroup(GetProductGroupRequest) returns (ProductGroupMessage);
+    rpc CreateProductGroup(CreateProductGroupRequest) returns (ProductGroupMessage);
     rpc ListProductGroups(ListProductGroupsRequest) returns (ListProductGroupsResponse);
-    rpc EditProductGroup(EditProductGroupRequest) returns (EditProductGroupResponse);
-    rpc PushProductsInProductGroup(ProductInPgRequest) returns (ProductsInPgResponse);
-    rpc UpdateProductsInProductGroup(ProductsInPgRequest) returns (ProductsInPgResponse);
-    rpc RemoveProductInProductGroup(RemoveProductInPgRequest) returns (ProductsInPgResponse);
+    rpc EditProductGroup(EditProductGroupRequest) returns (ProductGroupMessage);
+    rpc PushProductsInProductGroup(PushProductInPgRequest) returns (ProductGroupMessage);
+    rpc UpdateProductsInProductGroup(UpdateProductsInPgRequest) returns (ProductGroupMessage);
+    rpc RemoveProductInProductGroup(RemoveProductInPgRequest) returns (ProductGroupMessage);
 }
 
 /*
@@ -22,10 +22,6 @@ service ProductGroup {
 // Product Group Service
 message GetProductGroupRequest {
     string product_group_id = 1;
-}
-
-message GetProductGroupResponse {
-    ProductGroupMessage pg = 1;
 }
 
 message CreateProductGroupRequest {
@@ -38,8 +34,10 @@ message CreateProductGroupRequest {
     ProductGroupType group_type = 7;
 }
 
-message CreateProductGroupResponse {
-    ProductGroupMessage pg = 1;
+message ListProductGroupsRequest {
+    ProductGroupQuery query = 1;
+    int32 offset = 2;
+    int32 limit = 3;
 }
 
 message EditProductGroupRequest {
@@ -53,52 +51,19 @@ message EditProductGroupRequest {
     optional ProductGroupType group_type = 9;
 }
 
-message EditProductGroupResponse {
-    ProductGroupMessage pg = 1;
-}
-
-message ListProductGroupsRequest {
-    ProductGroupQuery query = 1;
-    int32 offset = 2;
-    int32 limit = 3;
-}
-
-message ListProductGroupsResponse {
-    repeated ProductGroupMessage pgs = 1;
-    int32 offset = 2;
-    int32 limit = 3;
-    int32 total_counts = 4;
-}
-
-message ProductInPgRequest {
+message PushProductInPgRequest {
     string product_group_id = 1;
     ProductPriorityMessage product_priority = 2;
 }
 
-message ProductsInPgRequest {
+message UpdateProductsInPgRequest {
     string product_group_id = 1;
     repeated ProductPriorityMessage product_priorities = 2;
-}
-
-message ProductsInPgResponse {
-    ProductGroupMessage pg = 1;
 }
 
 message RemoveProductInPgRequest {
     string product_group_id = 1;
     string product_id = 2;
-}
-
-message RemoveProductInPgResponse {
-    ProductGroupMessage pg = 1;
-}
-/*
-    GRPC Structs
-*/
-
-message ProductInGroupMessage {
-    ProductMessage product = 1;
-    int32 priority = 2;
 }
 
 message ProductGroupMessage {
@@ -111,6 +76,18 @@ message ProductGroupMessage {
     string finish_time = 7;
     string product_group_id = 8;
     ProductGroupType group_type = 9;
+}
+
+message ListProductGroupsResponse {
+    repeated ProductGroupMessage pgs = 1;
+    int32 offset = 2;
+    int32 limit = 3;
+    int32 total_counts = 4;
+}
+
+message ProductInGroupMessage {
+    ProductMessage product = 1;
+    int32 priority = 2;
 }
 
 message ProductPriorityMessage {

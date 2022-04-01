@@ -18,13 +18,13 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type ProductGroupClient interface {
-	GetProductGroup(ctx context.Context, in *GetProductGroupRequest, opts ...grpc.CallOption) (*GetProductGroupResponse, error)
-	CreateProductGroup(ctx context.Context, in *CreateProductGroupRequest, opts ...grpc.CallOption) (*CreateProductGroupResponse, error)
+	GetProductGroup(ctx context.Context, in *GetProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
+	CreateProductGroup(ctx context.Context, in *CreateProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
 	ListProductGroups(ctx context.Context, in *ListProductGroupsRequest, opts ...grpc.CallOption) (*ListProductGroupsResponse, error)
-	EditProductGroup(ctx context.Context, in *EditProductGroupRequest, opts ...grpc.CallOption) (*EditProductGroupResponse, error)
-	PushProductsInProductGroup(ctx context.Context, in *ProductInPgRequest, opts ...grpc.CallOption) (*ProductsInPgResponse, error)
-	UpdateProductsInProductGroup(ctx context.Context, in *ProductsInPgRequest, opts ...grpc.CallOption) (*ProductsInPgResponse, error)
-	RemoveProductInProductGroup(ctx context.Context, in *RemoveProductInPgRequest, opts ...grpc.CallOption) (*ProductsInPgResponse, error)
+	EditProductGroup(ctx context.Context, in *EditProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
+	PushProductsInProductGroup(ctx context.Context, in *PushProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
+	UpdateProductsInProductGroup(ctx context.Context, in *UpdateProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
+	RemoveProductInProductGroup(ctx context.Context, in *RemoveProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
 }
 
 type productGroupClient struct {
@@ -35,8 +35,8 @@ func NewProductGroupClient(cc grpc.ClientConnInterface) ProductGroupClient {
 	return &productGroupClient{cc}
 }
 
-func (c *productGroupClient) GetProductGroup(ctx context.Context, in *GetProductGroupRequest, opts ...grpc.CallOption) (*GetProductGroupResponse, error) {
-	out := new(GetProductGroupResponse)
+func (c *productGroupClient) GetProductGroup(ctx context.Context, in *GetProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/GetProductGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -44,8 +44,8 @@ func (c *productGroupClient) GetProductGroup(ctx context.Context, in *GetProduct
 	return out, nil
 }
 
-func (c *productGroupClient) CreateProductGroup(ctx context.Context, in *CreateProductGroupRequest, opts ...grpc.CallOption) (*CreateProductGroupResponse, error) {
-	out := new(CreateProductGroupResponse)
+func (c *productGroupClient) CreateProductGroup(ctx context.Context, in *CreateProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/CreateProductGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -62,8 +62,8 @@ func (c *productGroupClient) ListProductGroups(ctx context.Context, in *ListProd
 	return out, nil
 }
 
-func (c *productGroupClient) EditProductGroup(ctx context.Context, in *EditProductGroupRequest, opts ...grpc.CallOption) (*EditProductGroupResponse, error) {
-	out := new(EditProductGroupResponse)
+func (c *productGroupClient) EditProductGroup(ctx context.Context, in *EditProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/EditProductGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -71,8 +71,8 @@ func (c *productGroupClient) EditProductGroup(ctx context.Context, in *EditProdu
 	return out, nil
 }
 
-func (c *productGroupClient) PushProductsInProductGroup(ctx context.Context, in *ProductInPgRequest, opts ...grpc.CallOption) (*ProductsInPgResponse, error) {
-	out := new(ProductsInPgResponse)
+func (c *productGroupClient) PushProductsInProductGroup(ctx context.Context, in *PushProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/PushProductsInProductGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -80,8 +80,8 @@ func (c *productGroupClient) PushProductsInProductGroup(ctx context.Context, in 
 	return out, nil
 }
 
-func (c *productGroupClient) UpdateProductsInProductGroup(ctx context.Context, in *ProductsInPgRequest, opts ...grpc.CallOption) (*ProductsInPgResponse, error) {
-	out := new(ProductsInPgResponse)
+func (c *productGroupClient) UpdateProductsInProductGroup(ctx context.Context, in *UpdateProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/UpdateProductsInProductGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -89,8 +89,8 @@ func (c *productGroupClient) UpdateProductsInProductGroup(ctx context.Context, i
 	return out, nil
 }
 
-func (c *productGroupClient) RemoveProductInProductGroup(ctx context.Context, in *RemoveProductInPgRequest, opts ...grpc.CallOption) (*ProductsInPgResponse, error) {
-	out := new(ProductsInPgResponse)
+func (c *productGroupClient) RemoveProductInProductGroup(ctx context.Context, in *RemoveProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/RemoveProductInProductGroup", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -102,13 +102,13 @@ func (c *productGroupClient) RemoveProductInProductGroup(ctx context.Context, in
 // All implementations must embed UnimplementedProductGroupServer
 // for forward compatibility
 type ProductGroupServer interface {
-	GetProductGroup(context.Context, *GetProductGroupRequest) (*GetProductGroupResponse, error)
-	CreateProductGroup(context.Context, *CreateProductGroupRequest) (*CreateProductGroupResponse, error)
+	GetProductGroup(context.Context, *GetProductGroupRequest) (*ProductGroupMessage, error)
+	CreateProductGroup(context.Context, *CreateProductGroupRequest) (*ProductGroupMessage, error)
 	ListProductGroups(context.Context, *ListProductGroupsRequest) (*ListProductGroupsResponse, error)
-	EditProductGroup(context.Context, *EditProductGroupRequest) (*EditProductGroupResponse, error)
-	PushProductsInProductGroup(context.Context, *ProductInPgRequest) (*ProductsInPgResponse, error)
-	UpdateProductsInProductGroup(context.Context, *ProductsInPgRequest) (*ProductsInPgResponse, error)
-	RemoveProductInProductGroup(context.Context, *RemoveProductInPgRequest) (*ProductsInPgResponse, error)
+	EditProductGroup(context.Context, *EditProductGroupRequest) (*ProductGroupMessage, error)
+	PushProductsInProductGroup(context.Context, *PushProductInPgRequest) (*ProductGroupMessage, error)
+	UpdateProductsInProductGroup(context.Context, *UpdateProductsInPgRequest) (*ProductGroupMessage, error)
+	RemoveProductInProductGroup(context.Context, *RemoveProductInPgRequest) (*ProductGroupMessage, error)
 	mustEmbedUnimplementedProductGroupServer()
 }
 
@@ -116,25 +116,25 @@ type ProductGroupServer interface {
 type UnimplementedProductGroupServer struct {
 }
 
-func (UnimplementedProductGroupServer) GetProductGroup(context.Context, *GetProductGroupRequest) (*GetProductGroupResponse, error) {
+func (UnimplementedProductGroupServer) GetProductGroup(context.Context, *GetProductGroupRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetProductGroup not implemented")
 }
-func (UnimplementedProductGroupServer) CreateProductGroup(context.Context, *CreateProductGroupRequest) (*CreateProductGroupResponse, error) {
+func (UnimplementedProductGroupServer) CreateProductGroup(context.Context, *CreateProductGroupRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateProductGroup not implemented")
 }
 func (UnimplementedProductGroupServer) ListProductGroups(context.Context, *ListProductGroupsRequest) (*ListProductGroupsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListProductGroups not implemented")
 }
-func (UnimplementedProductGroupServer) EditProductGroup(context.Context, *EditProductGroupRequest) (*EditProductGroupResponse, error) {
+func (UnimplementedProductGroupServer) EditProductGroup(context.Context, *EditProductGroupRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method EditProductGroup not implemented")
 }
-func (UnimplementedProductGroupServer) PushProductsInProductGroup(context.Context, *ProductInPgRequest) (*ProductsInPgResponse, error) {
+func (UnimplementedProductGroupServer) PushProductsInProductGroup(context.Context, *PushProductInPgRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PushProductsInProductGroup not implemented")
 }
-func (UnimplementedProductGroupServer) UpdateProductsInProductGroup(context.Context, *ProductsInPgRequest) (*ProductsInPgResponse, error) {
+func (UnimplementedProductGroupServer) UpdateProductsInProductGroup(context.Context, *UpdateProductsInPgRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateProductsInProductGroup not implemented")
 }
-func (UnimplementedProductGroupServer) RemoveProductInProductGroup(context.Context, *RemoveProductInPgRequest) (*ProductsInPgResponse, error) {
+func (UnimplementedProductGroupServer) RemoveProductInProductGroup(context.Context, *RemoveProductInPgRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method RemoveProductInProductGroup not implemented")
 }
 func (UnimplementedProductGroupServer) mustEmbedUnimplementedProductGroupServer() {}
@@ -223,7 +223,7 @@ func _ProductGroup_EditProductGroup_Handler(srv interface{}, ctx context.Context
 }
 
 func _ProductGroup_PushProductsInProductGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProductInPgRequest)
+	in := new(PushProductInPgRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -235,13 +235,13 @@ func _ProductGroup_PushProductsInProductGroup_Handler(srv interface{}, ctx conte
 		FullMethod: "/goalloff.ProductGroup/PushProductsInProductGroup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ProductGroupServer).PushProductsInProductGroup(ctx, req.(*ProductInPgRequest))
+		return srv.(ProductGroupServer).PushProductsInProductGroup(ctx, req.(*PushProductInPgRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _ProductGroup_UpdateProductsInProductGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ProductsInPgRequest)
+	in := new(UpdateProductsInPgRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -253,7 +253,7 @@ func _ProductGroup_UpdateProductsInProductGroup_Handler(srv interface{}, ctx con
 		FullMethod: "/goalloff.ProductGroup/UpdateProductsInProductGroup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ProductGroupServer).UpdateProductsInProductGroup(ctx, req.(*ProductsInPgRequest))
+		return srv.(ProductGroupServer).UpdateProductsInProductGroup(ctx, req.(*UpdateProductsInPgRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
