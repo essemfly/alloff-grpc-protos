@@ -3,6 +3,9 @@ name = "alloff-grpc-protos"
 version = "0.1.0"
 description = ""
 authors = ["Seokmin Lee <essemfly@gmail.com>"]
+packages = [
+    { include = "alloff-grpc-protos" },
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
