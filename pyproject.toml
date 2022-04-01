@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "alloff-grpc-protos"
+name = "alloff_grpc_protos"
 version = "0.1.0"
 description = ""
 authors = ["Seokmin Lee <essemfly@gmail.com>"]
 packages = [
-    { include = "alloff-grpc-protos" },
+    { include = "alloff_grpc_protos" },
     { include = "gen" },
     { include = "gen/**/**/*.py" },
     { include = "gen/python/protos" },
