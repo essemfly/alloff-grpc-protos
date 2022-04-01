@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import brand_pb2 as brand__pb2
+from . import brand_pb2 as brand__pb2
 
 
 class BrandStub(object):

@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import exhibition_pb2 as exhibition__pb2
+from . import exhibition_pb2 as exhibition__pb2
 
 
 class ExhibitionStub(object):

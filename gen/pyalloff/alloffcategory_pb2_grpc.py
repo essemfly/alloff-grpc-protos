@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import alloffcategory_pb2 as alloffcategory__pb2
+from . import alloffcategory_pb2 as alloffcategory__pb2
 
 
 class AlloffCategoryStub(object):

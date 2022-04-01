@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import productGroup_pb2 as productGroup__pb2
+from . import productGroup_pb2 as productGroup__pb2
 
 
 class ProductGroupStub(object):

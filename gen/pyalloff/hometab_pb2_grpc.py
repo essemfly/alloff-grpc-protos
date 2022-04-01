@@ -2,7 +2,7 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import hometab_pb2 as hometab__pb2
+from . import hometab_pb2 as hometab__pb2
 
 
 class HomeTabItemStub(object):
