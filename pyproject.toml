@@ -4,6 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Seokmin Lee <essemfly@gmail.com>"]
 packages = [
+    { include = "gen/python/protos" },
     { include = "gen/python/protos/*.py" },
 ]
 
