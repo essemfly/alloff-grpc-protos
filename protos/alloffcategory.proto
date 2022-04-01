@@ -1,8 +1,7 @@
 syntax = "proto3";
 
-package protos;
-
-option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang/protos";
+package golang;
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang";
 
 service AlloffCategory {
     rpc ListAlloffCategory(ListAlloffCategoryRequest) returns (ListAlloffCategoryResponse);

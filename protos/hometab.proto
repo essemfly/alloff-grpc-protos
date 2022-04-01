@@ -1,11 +1,11 @@
 syntax = "proto3";
 
-package protos;
-option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang/protos";
+package golang;
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/golang";
 
-import "protos/exhibition.proto";
-import "protos/product.proto";
-import "protos/brand.proto";
+import "exhibition.proto";
+import "product.proto";
+import "brand.proto";
 
 service HomeTabItem {
     rpc GetHomeTabItem(GetHomeTabItemRequest) returns (GetHomeTabItemResponse);
