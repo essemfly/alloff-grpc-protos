@@ -78,6 +78,7 @@ message OrderItem {
     optional refunditem.RefundItem refund_item = 46;
     repeated orderitempaymentadjustment.OrderItemPaymentAdjustment payment_adjustments = 47;
     optional string company_keyname = 48;
+    optional string exhibition_id = 49;
 }
 
 message OrderItemListRequest {
