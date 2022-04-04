@@ -1,7 +1,12 @@
 # alloff-grpc-protos
 ## For Apple silicon devices
 - Python 3.10 or higher
-- `pip3 install --no-binary :all: grpcio-tools --ignore-installed`
+```bash
+pip3 install --no-binary :all: grpcio-tools --ignore-installed
+```
 
 ## Poetry Usage
-TBD
+- Increase version in `pyproject.toml`
+```
+poetry update alloff-grpc-protos
+```
