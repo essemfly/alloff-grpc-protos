@@ -10,8 +10,8 @@ service ProductGroup {
     rpc CreateProductGroup(CreateProductGroupRequest) returns (ProductGroupMessage);
     rpc ListProductGroups(ListProductGroupsRequest) returns (ListProductGroupsResponse);
     rpc EditProductGroup(EditProductGroupRequest) returns (ProductGroupMessage);
-    rpc PushProductsInProductGroup(PushProductInPgRequest) returns (ProductGroupMessage);
-    rpc UpdateProductsInProductGroup(UpdateProductsInPgRequest) returns (ProductGroupMessage);
+    rpc PushProductsInProductGroup(ProductsInPgRequest) returns (ProductGroupMessage);
+    rpc UpdateProductsInProductGroup(ProductsInPgRequest) returns (ProductGroupMessage);
     rpc RemoveProductInProductGroup(RemoveProductInPgRequest) returns (ProductGroupMessage);
 }
 
@@ -51,12 +51,7 @@ message EditProductGroupRequest {
     optional ProductGroupType group_type = 9;
 }
 
-message PushProductInPgRequest {
-    string product_group_id = 1;
-    ProductPriorityMessage product_priority = 2;
-}
-
-message UpdateProductsInPgRequest {
+message ProductsInPgRequest {
     string product_group_id = 1;
     repeated ProductPriorityMessage product_priorities = 2;
 }

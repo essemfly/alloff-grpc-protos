@@ -16,7 +16,7 @@ _sym_db = _symbol_database.Default()
 from . import product_pb2 as product__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12productGroup.proto\x12\x08goalloff\x1a\rproduct.proto\"2\n\x16GetProductGroupRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\"\xe8\x01\n\x19\x43reateProductGroupRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x18\n\x0bshort_title\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x13\n\x0binstruction\x18\x03 \x03(\t\x12\x16\n\timage_url\x18\x04 \x01(\tH\x01\x88\x01\x01\x12\x12\n\nstart_time\x18\x05 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x06 \x01(\t\x12.\n\ngroup_type\x18\x07 \x01(\x0e\x32\x1a.goalloff.ProductGroupTypeB\x0e\n\x0c_short_titleB\x0c\n\n_image_url\"e\n\x18ListProductGroupsRequest\x12*\n\x05query\x18\x01 \x01(\x0b\x32\x1b.goalloff.ProductGroupQuery\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\"\xcc\x02\n\x17\x45\x64itProductGroupRequest\x12\x12\n\x05title\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x18\n\x0bshort_title\x18\x02 \x01(\tH\x01\x88\x01\x01\x12\x13\n\x0binstruction\x18\x03 \x03(\t\x12\x16\n\timage_url\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x17\n\nstart_time\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x18\n\x0b\x66inish_time\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x18\n\x10product_group_id\x18\x07 \x01(\t\x12\x33\n\ngroup_type\x18\t \x01(\x0e\x32\x1a.goalloff.ProductGroupTypeH\x05\x88\x01\x01\x42\x08\n\x06_titleB\x0e\n\x0c_short_titleB\x0c\n\n_image_urlB\r\n\x0b_start_timeB\x0e\n\x0c_finish_timeB\r\n\x0b_group_type\"n\n\x16PushProductInPgRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\x12:\n\x10product_priority\x18\x02 \x01(\x0b\x32 .goalloff.ProductPriorityMessage\"s\n\x19UpdateProductsInPgRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\x12<\n\x12product_priorities\x18\x02 \x03(\x0b\x32 .goalloff.ProductPriorityMessage\"H\n\x18RemoveProductInPgRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\x12\x12\n\nproduct_id\x18\x02 \x01(\t\"\x87\x02\n\x13ProductGroupMessage\x12\r\n\x05title\x18\x01 \x01(\t\x12\x13\n\x0bshort_title\x18\x02 \x01(\t\x12\x13\n\x0binstruction\x18\x03 \x03(\t\x12\x11\n\timage_url\x18\x04 \x01(\t\x12\x31\n\x08products\x18\x05 \x03(\x0b\x32\x1f.goalloff.ProductInGroupMessage\x12\x12\n\nstart_time\x18\x06 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x07 \x01(\t\x12\x18\n\x10product_group_id\x18\x08 \x01(\t\x12.\n\ngroup_type\x18\t \x01(\x0e\x32\x1a.goalloff.ProductGroupType\"|\n\x19ListProductGroupsResponse\x12*\n\x03pgs\x18\x01 \x03(\x0b\x32\x1d.goalloff.ProductGroupMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x14\n\x0ctotal_counts\x18\x04 \x01(\x05\"T\n\x15ProductInGroupMessage\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\x12\x10\n\x08priority\x18\x02 \x01(\x05\">\n\x16ProductPriorityMessage\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\x10\n\x08priority\x18\x02 \x01(\x05\"\x83\x01\n\x11ProductGroupQuery\x12\x19\n\x0csearch_query\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x33\n\ngroup_type\x18\x02 \x01(\x0e\x32\x1a.goalloff.ProductGroupTypeH\x01\x88\x01\x01\x42\x0f\n\r_search_queryB\r\n\x0b_group_type*i\n\x10ProductGroupType\x12\x1a\n\x16PRODUCT_GROUP_TIMEDEAL\x10\x00\x12\x1c\n\x18PRODUCT_GROUP_EXHIBITION\x10\x01\x12\x1b\n\x17PRODUCT_GROUP_GROUPDEAL\x10\x02\x32\x95\x05\n\x0cProductGroup\x12R\n\x0fGetProductGroup\x12 .goalloff.GetProductGroupRequest\x1a\x1d.goalloff.ProductGroupMessage\x12X\n\x12\x43reateProductGroup\x12#.goalloff.CreateProductGroupRequest\x1a\x1d.goalloff.ProductGroupMessage\x12\\\n\x11ListProductGroups\x12\".goalloff.ListProductGroupsRequest\x1a#.goalloff.ListProductGroupsResponse\x12T\n\x10\x45\x64itProductGroup\x12!.goalloff.EditProductGroupRequest\x1a\x1d.goalloff.ProductGroupMessage\x12]\n\x1aPushProductsInProductGroup\x12 .goalloff.PushProductInPgRequest\x1a\x1d.goalloff.ProductGroupMessage\x12\x62\n\x1cUpdateProductsInProductGroup\x12#.goalloff.UpdateProductsInPgRequest\x1a\x1d.goalloff.ProductGroupMessage\x12`\n\x1bRemoveProductInProductGroup\x12\".goalloff.RemoveProductInPgRequest\x1a\x1d.goalloff.ProductGroupMessageB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12productGroup.proto\x12\x08goalloff\x1a\rproduct.proto\"2\n\x16GetProductGroupRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\"\xe8\x01\n\x19\x43reateProductGroupRequest\x12\r\n\x05title\x18\x01 \x01(\t\x12\x18\n\x0bshort_title\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x13\n\x0binstruction\x18\x03 \x03(\t\x12\x16\n\timage_url\x18\x04 \x01(\tH\x01\x88\x01\x01\x12\x12\n\nstart_time\x18\x05 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x06 \x01(\t\x12.\n\ngroup_type\x18\x07 \x01(\x0e\x32\x1a.goalloff.ProductGroupTypeB\x0e\n\x0c_short_titleB\x0c\n\n_image_url\"e\n\x18ListProductGroupsRequest\x12*\n\x05query\x18\x01 \x01(\x0b\x32\x1b.goalloff.ProductGroupQuery\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\"\xcc\x02\n\x17\x45\x64itProductGroupRequest\x12\x12\n\x05title\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x18\n\x0bshort_title\x18\x02 \x01(\tH\x01\x88\x01\x01\x12\x13\n\x0binstruction\x18\x03 \x03(\t\x12\x16\n\timage_url\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x17\n\nstart_time\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x18\n\x0b\x66inish_time\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x18\n\x10product_group_id\x18\x07 \x01(\t\x12\x33\n\ngroup_type\x18\t \x01(\x0e\x32\x1a.goalloff.ProductGroupTypeH\x05\x88\x01\x01\x42\x08\n\x06_titleB\x0e\n\x0c_short_titleB\x0c\n\n_image_urlB\r\n\x0b_start_timeB\x0e\n\x0c_finish_timeB\r\n\x0b_group_type\"m\n\x13ProductsInPgRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\x12<\n\x12product_priorities\x18\x02 \x03(\x0b\x32 .goalloff.ProductPriorityMessage\"H\n\x18RemoveProductInPgRequest\x12\x18\n\x10product_group_id\x18\x01 \x01(\t\x12\x12\n\nproduct_id\x18\x02 \x01(\t\"\x87\x02\n\x13ProductGroupMessage\x12\r\n\x05title\x18\x01 \x01(\t\x12\x13\n\x0bshort_title\x18\x02 \x01(\t\x12\x13\n\x0binstruction\x18\x03 \x03(\t\x12\x11\n\timage_url\x18\x04 \x01(\t\x12\x31\n\x08products\x18\x05 \x03(\x0b\x32\x1f.goalloff.ProductInGroupMessage\x12\x12\n\nstart_time\x18\x06 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x07 \x01(\t\x12\x18\n\x10product_group_id\x18\x08 \x01(\t\x12.\n\ngroup_type\x18\t \x01(\x0e\x32\x1a.goalloff.ProductGroupType\"|\n\x19ListProductGroupsResponse\x12*\n\x03pgs\x18\x01 \x03(\x0b\x32\x1d.goalloff.ProductGroupMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x14\n\x0ctotal_counts\x18\x04 \x01(\x05\"T\n\x15ProductInGroupMessage\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\x12\x10\n\x08priority\x18\x02 \x01(\x05\">\n\x16ProductPriorityMessage\x12\x12\n\nproduct_id\x18\x01 \x01(\t\x12\x10\n\x08priority\x18\x02 \x01(\x05\"\x83\x01\n\x11ProductGroupQuery\x12\x19\n\x0csearch_query\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x33\n\ngroup_type\x18\x02 \x01(\x0e\x32\x1a.goalloff.ProductGroupTypeH\x01\x88\x01\x01\x42\x0f\n\r_search_queryB\r\n\x0b_group_type*i\n\x10ProductGroupType\x12\x1a\n\x16PRODUCT_GROUP_TIMEDEAL\x10\x00\x12\x1c\n\x18PRODUCT_GROUP_EXHIBITION\x10\x01\x12\x1b\n\x17PRODUCT_GROUP_GROUPDEAL\x10\x02\x32\x8c\x05\n\x0cProductGroup\x12R\n\x0fGetProductGroup\x12 .goalloff.GetProductGroupRequest\x1a\x1d.goalloff.ProductGroupMessage\x12X\n\x12\x43reateProductGroup\x12#.goalloff.CreateProductGroupRequest\x1a\x1d.goalloff.ProductGroupMessage\x12\\\n\x11ListProductGroups\x12\".goalloff.ListProductGroupsRequest\x1a#.goalloff.ListProductGroupsResponse\x12T\n\x10\x45\x64itProductGroup\x12!.goalloff.EditProductGroupRequest\x1a\x1d.goalloff.ProductGroupMessage\x12Z\n\x1aPushProductsInProductGroup\x12\x1d.goalloff.ProductsInPgRequest\x1a\x1d.goalloff.ProductGroupMessage\x12\\\n\x1cUpdateProductsInProductGroup\x12\x1d.goalloff.ProductsInPgRequest\x1a\x1d.goalloff.ProductGroupMessage\x12`\n\x1bRemoveProductInProductGroup\x12\".goalloff.RemoveProductInPgRequest\x1a\x1d.goalloff.ProductGroupMessageB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 _PRODUCTGROUPTYPE = DESCRIPTOR.enum_types_by_name['ProductGroupType']
 ProductGroupType = enum_type_wrapper.EnumTypeWrapper(_PRODUCTGROUPTYPE)
@@ -29,8 +29,7 @@ _GETPRODUCTGROUPREQUEST = DESCRIPTOR.message_types_by_name['GetProductGroupReque
 _CREATEPRODUCTGROUPREQUEST = DESCRIPTOR.message_types_by_name['CreateProductGroupRequest']
 _LISTPRODUCTGROUPSREQUEST = DESCRIPTOR.message_types_by_name['ListProductGroupsRequest']
 _EDITPRODUCTGROUPREQUEST = DESCRIPTOR.message_types_by_name['EditProductGroupRequest']
-_PUSHPRODUCTINPGREQUEST = DESCRIPTOR.message_types_by_name['PushProductInPgRequest']
-_UPDATEPRODUCTSINPGREQUEST = DESCRIPTOR.message_types_by_name['UpdateProductsInPgRequest']
+_PRODUCTSINPGREQUEST = DESCRIPTOR.message_types_by_name['ProductsInPgRequest']
 _REMOVEPRODUCTINPGREQUEST = DESCRIPTOR.message_types_by_name['RemoveProductInPgRequest']
 _PRODUCTGROUPMESSAGE = DESCRIPTOR.message_types_by_name['ProductGroupMessage']
 _LISTPRODUCTGROUPSRESPONSE = DESCRIPTOR.message_types_by_name['ListProductGroupsResponse']
@@ -65,19 +64,12 @@ EditProductGroupRequest = _reflection.GeneratedProtocolMessageType('EditProductG
   })
 _sym_db.RegisterMessage(EditProductGroupRequest)
 
-PushProductInPgRequest = _reflection.GeneratedProtocolMessageType('PushProductInPgRequest', (_message.Message,), {
-  'DESCRIPTOR' : _PUSHPRODUCTINPGREQUEST,
+ProductsInPgRequest = _reflection.GeneratedProtocolMessageType('ProductsInPgRequest', (_message.Message,), {
+  'DESCRIPTOR' : _PRODUCTSINPGREQUEST,
   '__module__' : 'productGroup_pb2'
-  # @@protoc_insertion_point(class_scope:goalloff.PushProductInPgRequest)
+  # @@protoc_insertion_point(class_scope:goalloff.ProductsInPgRequest)
   })
-_sym_db.RegisterMessage(PushProductInPgRequest)
-
-UpdateProductsInPgRequest = _reflection.GeneratedProtocolMessageType('UpdateProductsInPgRequest', (_message.Message,), {
-  'DESCRIPTOR' : _UPDATEPRODUCTSINPGREQUEST,
-  '__module__' : 'productGroup_pb2'
-  # @@protoc_insertion_point(class_scope:goalloff.UpdateProductsInPgRequest)
-  })
-_sym_db.RegisterMessage(UpdateProductsInPgRequest)
+_sym_db.RegisterMessage(ProductsInPgRequest)
 
 RemoveProductInPgRequest = _reflection.GeneratedProtocolMessageType('RemoveProductInPgRequest', (_message.Message,), {
   'DESCRIPTOR' : _REMOVEPRODUCTINPGREQUEST,
@@ -126,8 +118,8 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
-  _PRODUCTGROUPTYPE._serialized_start=1751
-  _PRODUCTGROUPTYPE._serialized_end=1856
+  _PRODUCTGROUPTYPE._serialized_start=1633
+  _PRODUCTGROUPTYPE._serialized_end=1738
   _GETPRODUCTGROUPREQUEST._serialized_start=47
   _GETPRODUCTGROUPREQUEST._serialized_end=97
   _CREATEPRODUCTGROUPREQUEST._serialized_start=100
@@ -136,22 +128,20 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _LISTPRODUCTGROUPSREQUEST._serialized_end=435
   _EDITPRODUCTGROUPREQUEST._serialized_start=438
   _EDITPRODUCTGROUPREQUEST._serialized_end=770
-  _PUSHPRODUCTINPGREQUEST._serialized_start=772
-  _PUSHPRODUCTINPGREQUEST._serialized_end=882
-  _UPDATEPRODUCTSINPGREQUEST._serialized_start=884
-  _UPDATEPRODUCTSINPGREQUEST._serialized_end=999
-  _REMOVEPRODUCTINPGREQUEST._serialized_start=1001
-  _REMOVEPRODUCTINPGREQUEST._serialized_end=1073
-  _PRODUCTGROUPMESSAGE._serialized_start=1076
-  _PRODUCTGROUPMESSAGE._serialized_end=1339
-  _LISTPRODUCTGROUPSRESPONSE._serialized_start=1341
-  _LISTPRODUCTGROUPSRESPONSE._serialized_end=1465
-  _PRODUCTINGROUPMESSAGE._serialized_start=1467
-  _PRODUCTINGROUPMESSAGE._serialized_end=1551
-  _PRODUCTPRIORITYMESSAGE._serialized_start=1553
-  _PRODUCTPRIORITYMESSAGE._serialized_end=1615
-  _PRODUCTGROUPQUERY._serialized_start=1618
-  _PRODUCTGROUPQUERY._serialized_end=1749
-  _PRODUCTGROUP._serialized_start=1859
-  _PRODUCTGROUP._serialized_end=2520
+  _PRODUCTSINPGREQUEST._serialized_start=772
+  _PRODUCTSINPGREQUEST._serialized_end=881
+  _REMOVEPRODUCTINPGREQUEST._serialized_start=883
+  _REMOVEPRODUCTINPGREQUEST._serialized_end=955
+  _PRODUCTGROUPMESSAGE._serialized_start=958
+  _PRODUCTGROUPMESSAGE._serialized_end=1221
+  _LISTPRODUCTGROUPSRESPONSE._serialized_start=1223
+  _LISTPRODUCTGROUPSRESPONSE._serialized_end=1347
+  _PRODUCTINGROUPMESSAGE._serialized_start=1349
+  _PRODUCTINGROUPMESSAGE._serialized_end=1433
+  _PRODUCTPRIORITYMESSAGE._serialized_start=1435
+  _PRODUCTPRIORITYMESSAGE._serialized_end=1497
+  _PRODUCTGROUPQUERY._serialized_start=1500
+  _PRODUCTGROUPQUERY._serialized_end=1631
+  _PRODUCTGROUP._serialized_start=1741
+  _PRODUCTGROUP._serialized_end=2393
 # @@protoc_insertion_point(module_scope)

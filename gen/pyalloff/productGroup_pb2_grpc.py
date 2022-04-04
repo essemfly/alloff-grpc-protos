@@ -36,12 +36,12 @@ class ProductGroupStub(object):
                 )
         self.PushProductsInProductGroup = channel.unary_unary(
                 '/goalloff.ProductGroup/PushProductsInProductGroup',
-                request_serializer=productGroup__pb2.PushProductInPgRequest.SerializeToString,
+                request_serializer=productGroup__pb2.ProductsInPgRequest.SerializeToString,
                 response_deserializer=productGroup__pb2.ProductGroupMessage.FromString,
                 )
         self.UpdateProductsInProductGroup = channel.unary_unary(
                 '/goalloff.ProductGroup/UpdateProductsInProductGroup',
-                request_serializer=productGroup__pb2.UpdateProductsInPgRequest.SerializeToString,
+                request_serializer=productGroup__pb2.ProductsInPgRequest.SerializeToString,
                 response_deserializer=productGroup__pb2.ProductGroupMessage.FromString,
                 )
         self.RemoveProductInProductGroup = channel.unary_unary(
@@ -121,12 +121,12 @@ def add_ProductGroupServicer_to_server(servicer, server):
             ),
             'PushProductsInProductGroup': grpc.unary_unary_rpc_method_handler(
                     servicer.PushProductsInProductGroup,
-                    request_deserializer=productGroup__pb2.PushProductInPgRequest.FromString,
+                    request_deserializer=productGroup__pb2.ProductsInPgRequest.FromString,
                     response_serializer=productGroup__pb2.ProductGroupMessage.SerializeToString,
             ),
             'UpdateProductsInProductGroup': grpc.unary_unary_rpc_method_handler(
                     servicer.UpdateProductsInProductGroup,
-                    request_deserializer=productGroup__pb2.UpdateProductsInPgRequest.FromString,
+                    request_deserializer=productGroup__pb2.ProductsInPgRequest.FromString,
                     response_serializer=productGroup__pb2.ProductGroupMessage.SerializeToString,
             ),
             'RemoveProductInProductGroup': grpc.unary_unary_rpc_method_handler(
@@ -224,7 +224,7 @@ class ProductGroup(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/goalloff.ProductGroup/PushProductsInProductGroup',
-            productGroup__pb2.PushProductInPgRequest.SerializeToString,
+            productGroup__pb2.ProductsInPgRequest.SerializeToString,
             productGroup__pb2.ProductGroupMessage.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
@@ -241,7 +241,7 @@ class ProductGroup(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/goalloff.ProductGroup/UpdateProductsInProductGroup',
-            productGroup__pb2.UpdateProductsInPgRequest.SerializeToString,
+            productGroup__pb2.ProductsInPgRequest.SerializeToString,
             productGroup__pb2.ProductGroupMessage.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -22,8 +22,8 @@ type ProductGroupClient interface {
 	CreateProductGroup(ctx context.Context, in *CreateProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
 	ListProductGroups(ctx context.Context, in *ListProductGroupsRequest, opts ...grpc.CallOption) (*ListProductGroupsResponse, error)
 	EditProductGroup(ctx context.Context, in *EditProductGroupRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
-	PushProductsInProductGroup(ctx context.Context, in *PushProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
-	UpdateProductsInProductGroup(ctx context.Context, in *UpdateProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
+	PushProductsInProductGroup(ctx context.Context, in *ProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
+	UpdateProductsInProductGroup(ctx context.Context, in *ProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
 	RemoveProductInProductGroup(ctx context.Context, in *RemoveProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error)
 }
 
@@ -71,7 +71,7 @@ func (c *productGroupClient) EditProductGroup(ctx context.Context, in *EditProdu
 	return out, nil
 }
 
-func (c *productGroupClient) PushProductsInProductGroup(ctx context.Context, in *PushProductInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+func (c *productGroupClient) PushProductsInProductGroup(ctx context.Context, in *ProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
 	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/PushProductsInProductGroup", in, out, opts...)
 	if err != nil {
@@ -80,7 +80,7 @@ func (c *productGroupClient) PushProductsInProductGroup(ctx context.Context, in 
 	return out, nil
 }
 
-func (c *productGroupClient) UpdateProductsInProductGroup(ctx context.Context, in *UpdateProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
+func (c *productGroupClient) UpdateProductsInProductGroup(ctx context.Context, in *ProductsInPgRequest, opts ...grpc.CallOption) (*ProductGroupMessage, error) {
 	out := new(ProductGroupMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.ProductGroup/UpdateProductsInProductGroup", in, out, opts...)
 	if err != nil {
@@ -106,8 +106,8 @@ type ProductGroupServer interface {
 	CreateProductGroup(context.Context, *CreateProductGroupRequest) (*ProductGroupMessage, error)
 	ListProductGroups(context.Context, *ListProductGroupsRequest) (*ListProductGroupsResponse, error)
 	EditProductGroup(context.Context, *EditProductGroupRequest) (*ProductGroupMessage, error)
-	PushProductsInProductGroup(context.Context, *PushProductInPgRequest) (*ProductGroupMessage, error)
-	UpdateProductsInProductGroup(context.Context, *UpdateProductsInPgRequest) (*ProductGroupMessage, error)
+	PushProductsInProductGroup(context.Context, *ProductsInPgRequest) (*ProductGroupMessage, error)
+	UpdateProductsInProductGroup(context.Context, *ProductsInPgRequest) (*ProductGroupMessage, error)
 	RemoveProductInProductGroup(context.Context, *RemoveProductInPgRequest) (*ProductGroupMessage, error)
 	mustEmbedUnimplementedProductGroupServer()
 }
@@ -128,10 +128,10 @@ func (UnimplementedProductGroupServer) ListProductGroups(context.Context, *ListP
 func (UnimplementedProductGroupServer) EditProductGroup(context.Context, *EditProductGroupRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method EditProductGroup not implemented")
 }
-func (UnimplementedProductGroupServer) PushProductsInProductGroup(context.Context, *PushProductInPgRequest) (*ProductGroupMessage, error) {
+func (UnimplementedProductGroupServer) PushProductsInProductGroup(context.Context, *ProductsInPgRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PushProductsInProductGroup not implemented")
 }
-func (UnimplementedProductGroupServer) UpdateProductsInProductGroup(context.Context, *UpdateProductsInPgRequest) (*ProductGroupMessage, error) {
+func (UnimplementedProductGroupServer) UpdateProductsInProductGroup(context.Context, *ProductsInPgRequest) (*ProductGroupMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method UpdateProductsInProductGroup not implemented")
 }
 func (UnimplementedProductGroupServer) RemoveProductInProductGroup(context.Context, *RemoveProductInPgRequest) (*ProductGroupMessage, error) {
@@ -223,7 +223,7 @@ func _ProductGroup_EditProductGroup_Handler(srv interface{}, ctx context.Context
 }
 
 func _ProductGroup_PushProductsInProductGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PushProductInPgRequest)
+	in := new(ProductsInPgRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -235,13 +235,13 @@ func _ProductGroup_PushProductsInProductGroup_Handler(srv interface{}, ctx conte
 		FullMethod: "/goalloff.ProductGroup/PushProductsInProductGroup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ProductGroupServer).PushProductsInProductGroup(ctx, req.(*PushProductInPgRequest))
+		return srv.(ProductGroupServer).PushProductsInProductGroup(ctx, req.(*ProductsInPgRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
 func _ProductGroup_UpdateProductsInProductGroup_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(UpdateProductsInPgRequest)
+	in := new(ProductsInPgRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
@@ -253,7 +253,7 @@ func _ProductGroup_UpdateProductsInProductGroup_Handler(srv interface{}, ctx con
 		FullMethod: "/goalloff.ProductGroup/UpdateProductsInProductGroup",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(ProductGroupServer).UpdateProductsInProductGroup(ctx, req.(*UpdateProductsInPgRequest))
+		return srv.(ProductGroupServer).UpdateProductsInProductGroup(ctx, req.(*ProductsInPgRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
