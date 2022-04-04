@@ -35,7 +35,7 @@ func NewPaymentControllerClient(cc grpc.ClientConnInterface) PaymentControllerCl
 }
 
 func (c *paymentControllerClient) List(ctx context.Context, in *PaymentListRequest, opts ...grpc.CallOption) (PaymentController_ListClient, error) {
-	stream, err := c.cc.NewStream(ctx, &PaymentController_ServiceDesc.Streams[0], "/payment.PaymentController/List", opts...)
+	stream, err := c.cc.NewStream(ctx, &PaymentController_ServiceDesc.Streams[0], "/payment_alloff.PaymentController/List", opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -68,7 +68,7 @@ func (x *paymentControllerListClient) Recv() (*Payment, error) {
 
 func (c *paymentControllerClient) Create(ctx context.Context, in *Payment, opts ...grpc.CallOption) (*Payment, error) {
 	out := new(Payment)
-	err := c.cc.Invoke(ctx, "/payment.PaymentController/Create", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/payment_alloff.PaymentController/Create", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -77,7 +77,7 @@ func (c *paymentControllerClient) Create(ctx context.Context, in *Payment, opts 
 
 func (c *paymentControllerClient) Retrieve(ctx context.Context, in *PaymentRetrieveRequest, opts ...grpc.CallOption) (*Payment, error) {
 	out := new(Payment)
-	err := c.cc.Invoke(ctx, "/payment.PaymentController/Retrieve", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/payment_alloff.PaymentController/Retrieve", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -86,7 +86,7 @@ func (c *paymentControllerClient) Retrieve(ctx context.Context, in *PaymentRetri
 
 func (c *paymentControllerClient) Update(ctx context.Context, in *Payment, opts ...grpc.CallOption) (*Payment, error) {
 	out := new(Payment)
-	err := c.cc.Invoke(ctx, "/payment.PaymentController/Update", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/payment_alloff.PaymentController/Update", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -95,7 +95,7 @@ func (c *paymentControllerClient) Update(ctx context.Context, in *Payment, opts 
 
 func (c *paymentControllerClient) Destroy(ctx context.Context, in *Payment, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	out := new(emptypb.Empty)
-	err := c.cc.Invoke(ctx, "/payment.PaymentController/Destroy", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/payment_alloff.PaymentController/Destroy", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -177,7 +177,7 @@ func _PaymentController_Create_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/payment.PaymentController/Create",
+		FullMethod: "/payment_alloff.PaymentController/Create",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PaymentControllerServer).Create(ctx, req.(*Payment))
@@ -195,7 +195,7 @@ func _PaymentController_Retrieve_Handler(srv interface{}, ctx context.Context, d
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/payment.PaymentController/Retrieve",
+		FullMethod: "/payment_alloff.PaymentController/Retrieve",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PaymentControllerServer).Retrieve(ctx, req.(*PaymentRetrieveRequest))
@@ -213,7 +213,7 @@ func _PaymentController_Update_Handler(srv interface{}, ctx context.Context, dec
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/payment.PaymentController/Update",
+		FullMethod: "/payment_alloff.PaymentController/Update",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PaymentControllerServer).Update(ctx, req.(*Payment))
@@ -231,7 +231,7 @@ func _PaymentController_Destroy_Handler(srv interface{}, ctx context.Context, de
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/payment.PaymentController/Destroy",
+		FullMethod: "/payment_alloff.PaymentController/Destroy",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(PaymentControllerServer).Destroy(ctx, req.(*Payment))
@@ -243,7 +243,7 @@ func _PaymentController_Destroy_Handler(srv interface{}, ctx context.Context, de
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
 var PaymentController_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "payment.PaymentController",
+	ServiceName: "payment_alloff.PaymentController",
 	HandlerType: (*PaymentControllerServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{

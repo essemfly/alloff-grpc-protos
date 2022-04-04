@@ -16,27 +16,27 @@ class PaymentControllerStub(object):
             channel: A grpc.Channel.
         """
         self.List = channel.unary_stream(
-                '/payment.PaymentController/List',
+                '/payment_alloff.PaymentController/List',
                 request_serializer=payment__pb2.PaymentListRequest.SerializeToString,
                 response_deserializer=payment__pb2.Payment.FromString,
                 )
         self.Create = channel.unary_unary(
-                '/payment.PaymentController/Create',
+                '/payment_alloff.PaymentController/Create',
                 request_serializer=payment__pb2.Payment.SerializeToString,
                 response_deserializer=payment__pb2.Payment.FromString,
                 )
         self.Retrieve = channel.unary_unary(
-                '/payment.PaymentController/Retrieve',
+                '/payment_alloff.PaymentController/Retrieve',
                 request_serializer=payment__pb2.PaymentRetrieveRequest.SerializeToString,
                 response_deserializer=payment__pb2.Payment.FromString,
                 )
         self.Update = channel.unary_unary(
-                '/payment.PaymentController/Update',
+                '/payment_alloff.PaymentController/Update',
                 request_serializer=payment__pb2.Payment.SerializeToString,
                 response_deserializer=payment__pb2.Payment.FromString,
                 )
         self.Destroy = channel.unary_unary(
-                '/payment.PaymentController/Destroy',
+                '/payment_alloff.PaymentController/Destroy',
                 request_serializer=payment__pb2.Payment.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
@@ -105,7 +105,7 @@ def add_PaymentControllerServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'payment.PaymentController', rpc_method_handlers)
+            'payment_alloff.PaymentController', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
@@ -124,7 +124,7 @@ class PaymentController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/payment.PaymentController/List',
+        return grpc.experimental.unary_stream(request, target, '/payment_alloff.PaymentController/List',
             payment__pb2.PaymentListRequest.SerializeToString,
             payment__pb2.Payment.FromString,
             options, channel_credentials,
@@ -141,7 +141,7 @@ class PaymentController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/payment.PaymentController/Create',
+        return grpc.experimental.unary_unary(request, target, '/payment_alloff.PaymentController/Create',
             payment__pb2.Payment.SerializeToString,
             payment__pb2.Payment.FromString,
             options, channel_credentials,
@@ -158,7 +158,7 @@ class PaymentController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/payment.PaymentController/Retrieve',
+        return grpc.experimental.unary_unary(request, target, '/payment_alloff.PaymentController/Retrieve',
             payment__pb2.PaymentRetrieveRequest.SerializeToString,
             payment__pb2.Payment.FromString,
             options, channel_credentials,
@@ -175,7 +175,7 @@ class PaymentController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/payment.PaymentController/Update',
+        return grpc.experimental.unary_unary(request, target, '/payment_alloff.PaymentController/Update',
             payment__pb2.Payment.SerializeToString,
             payment__pb2.Payment.FromString,
             options, channel_credentials,
@@ -192,7 +192,7 @@ class PaymentController(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/payment.PaymentController/Destroy',
+        return grpc.experimental.unary_unary(request, target, '/payment_alloff.PaymentController/Destroy',
             payment__pb2.Payment.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,

@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package payment;
+package payment_alloff;
 
 import "google/protobuf/empty.proto";
 
