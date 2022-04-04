@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0esupplier.proto\x12\x08supplier\x1a\x1bgoogle/protobuf/empty.proto\"\xc4\x01\n\x08Supplier\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x11\n\tbank_name\x18\x04 \x01(\t\x12\x1b\n\x13\x62\x61nk_account_holder\x18\x05 \x01(\t\x12\x1b\n\x13\x62\x61nk_account_number\x18\x06 \x01(\t\x12\x1b\n\x13\x62iz_registration_id\x18\x07 \x01(\t\x12\x12\n\ncreated_at\x18\x08 \x01(\t\x12\x12\n\nupdated_at\x18\t \x01(\t\"\x15\n\x13SupplierListRequest\"%\n\x17SupplierRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\xb9\x02\n\x12SupplierController\x12=\n\x04List\x12\x1d.supplier.SupplierListRequest\x1a\x12.supplier.Supplier\"\x00\x30\x01\x12\x32\n\x06\x43reate\x12\x12.supplier.Supplier\x1a\x12.supplier.Supplier\"\x00\x12\x43\n\x08Retrieve\x12!.supplier.SupplierRetrieveRequest\x1a\x12.supplier.Supplier\"\x00\x12\x32\n\x06Update\x12\x12.supplier.Supplier\x1a\x12.supplier.Supplier\"\x00\x12\x37\n\x07\x44\x65stroy\x12\x12.supplier.Supplier\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0esupplier.proto\x12\x08supplier\x1a\x1bgoogle/protobuf/empty.proto\"\xc4\x01\n\x08Supplier\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\x0c\n\x04type\x18\x03 \x01(\t\x12\x11\n\tbank_name\x18\x04 \x01(\t\x12\x1b\n\x13\x62\x61nk_account_holder\x18\x05 \x01(\t\x12\x1b\n\x13\x62\x61nk_account_number\x18\x06 \x01(\t\x12\x1b\n\x13\x62iz_registration_id\x18\x07 \x01(\t\x12\x12\n\ncreated_at\x18\x08 \x01(\t\x12\x12\n\nupdated_at\x18\t \x01(\t\"\x15\n\x13SupplierListRequest\"%\n\x17SupplierRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\xb9\x02\n\x12SupplierController\x12=\n\x04List\x12\x1d.supplier.SupplierListRequest\x1a\x12.supplier.Supplier\"\x00\x30\x01\x12\x32\n\x06\x43reate\x12\x12.supplier.Supplier\x1a\x12.supplier.Supplier\"\x00\x12\x43\n\x08Retrieve\x12!.supplier.SupplierRetrieveRequest\x1a\x12.supplier.Supplier\"\x00\x12\x32\n\x06Update\x12\x12.supplier.Supplier\x1a\x12.supplier.Supplier\"\x00\x12\x37\n\x07\x44\x65stroy\x12\x12.supplier.Supplier\x1a\x16.google.protobuf.Empty\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -47,6 +47,7 @@ _SUPPLIERCONTROLLER = DESCRIPTOR.services_by_name['SupplierController']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _SUPPLIER._serialized_start=58
   _SUPPLIER._serialized_end=254
   _SUPPLIERLISTREQUEST._serialized_start=256

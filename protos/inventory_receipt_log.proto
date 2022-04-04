@@ -4,6 +4,8 @@ package inventoryreceiptlog;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service InventoryReceiptLogController {
     rpc List(InventoryReceiptLogListRequest) returns (stream InventoryReceiptLog) {}
     rpc Create(InventoryReceiptLog) returns (InventoryReceiptLog) {}

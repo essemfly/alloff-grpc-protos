@@ -4,6 +4,8 @@ package orderitemrefundupdatelog;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service OrderItemRefundUpdateLogController {
     rpc List(OrderItemRefundUpdateLogListRequest) returns (stream OrderItemRefundUpdateLog) {}
     rpc Create(OrderItemRefundUpdateLog) returns (OrderItemRefundUpdateLog) {}

@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19refund_item_history.proto\x12\x11refunditemhistory\x1a\x1bgoogle/protobuf/empty.proto\"~\n\x11RefundItemHistory\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x13\n\x0b\x61mount_from\x18\x02 \x01(\x05\x12\x10\n\x08\x66\x65\x65_from\x18\x03 \x01(\x05\x12\x11\n\tamount_to\x18\x04 \x01(\x05\x12\x0e\n\x06\x66\x65\x65_to\x18\x05 \x01(\x05\x12\x13\n\x0brefund_item\x18\x06 \x01(\x03\"\x1e\n\x1cRefundItemHistoryListRequest\".\n RefundItemHistoryRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\xe4\x03\n\x1bRefundItemHistoryController\x12\x61\n\x04List\x12/.refunditemhistory.RefundItemHistoryListRequest\x1a$.refunditemhistory.RefundItemHistory\"\x00\x30\x01\x12V\n\x06\x43reate\x12$.refunditemhistory.RefundItemHistory\x1a$.refunditemhistory.RefundItemHistory\"\x00\x12g\n\x08Retrieve\x12\x33.refunditemhistory.RefundItemHistoryRetrieveRequest\x1a$.refunditemhistory.RefundItemHistory\"\x00\x12V\n\x06Update\x12$.refunditemhistory.RefundItemHistory\x1a$.refunditemhistory.RefundItemHistory\"\x00\x12I\n\x07\x44\x65stroy\x12$.refunditemhistory.RefundItemHistory\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x19refund_item_history.proto\x12\x11refunditemhistory\x1a\x1bgoogle/protobuf/empty.proto\"~\n\x11RefundItemHistory\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x13\n\x0b\x61mount_from\x18\x02 \x01(\x05\x12\x10\n\x08\x66\x65\x65_from\x18\x03 \x01(\x05\x12\x11\n\tamount_to\x18\x04 \x01(\x05\x12\x0e\n\x06\x66\x65\x65_to\x18\x05 \x01(\x05\x12\x13\n\x0brefund_item\x18\x06 \x01(\x03\"\x1e\n\x1cRefundItemHistoryListRequest\".\n RefundItemHistoryRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\xe4\x03\n\x1bRefundItemHistoryController\x12\x61\n\x04List\x12/.refunditemhistory.RefundItemHistoryListRequest\x1a$.refunditemhistory.RefundItemHistory\"\x00\x30\x01\x12V\n\x06\x43reate\x12$.refunditemhistory.RefundItemHistory\x1a$.refunditemhistory.RefundItemHistory\"\x00\x12g\n\x08Retrieve\x12\x33.refunditemhistory.RefundItemHistoryRetrieveRequest\x1a$.refunditemhistory.RefundItemHistory\"\x00\x12V\n\x06Update\x12$.refunditemhistory.RefundItemHistory\x1a$.refunditemhistory.RefundItemHistory\"\x00\x12I\n\x07\x44\x65stroy\x12$.refunditemhistory.RefundItemHistory\x1a\x16.google.protobuf.Empty\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -47,6 +47,7 @@ _REFUNDITEMHISTORYCONTROLLER = DESCRIPTOR.services_by_name['RefundItemHistoryCon
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _REFUNDITEMHISTORY._serialized_start=77
   _REFUNDITEMHISTORY._serialized_end=203
   _REFUNDITEMHISTORYLISTREQUEST._serialized_start=205

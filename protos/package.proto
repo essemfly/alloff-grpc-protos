@@ -6,6 +6,8 @@ import "google/protobuf/empty.proto";
 import "courier.proto";
 import "inventory.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service PackageController {
     rpc List(PackageListRequest) returns (stream Package) {}
     rpc Create(Package) returns (Package) {}

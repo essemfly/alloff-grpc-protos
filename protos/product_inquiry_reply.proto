@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package productinquiryreply;
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 message ProductInquiryReply {
     int64 id = 1;
     string body = 2;

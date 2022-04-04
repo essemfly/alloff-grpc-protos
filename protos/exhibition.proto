@@ -39,6 +39,7 @@ message EditExhibitionRequest {
     optional string finish_time = 8;
     repeated string pg_ids = 9;
     optional bool is_live = 10;
+    optional int32 target_sales = 11;
 }
 
 message CreateExhibitionRequest {
@@ -51,6 +52,7 @@ message CreateExhibitionRequest {
     string finish_time = 7;
     repeated string pg_ids = 8;
     ExhibitionType exhibition_type = 9;
+    int32 target_sales = 10;
 }
 
 message GetExhibitionResponse {
@@ -84,4 +86,5 @@ message ExhibitionMessage {
     repeated ProductGroupMessage pgs = 9;
     bool is_live = 10;
     ExhibitionType exhibition_type = 11;
+    int32 target_sales = 12;
 }

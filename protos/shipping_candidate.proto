@@ -5,6 +5,7 @@ package shippingcandidate;
 import "inventory.proto";
 import "order_item.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 message ShippingCandidate {
     orderitem.OrderItem item = 1;

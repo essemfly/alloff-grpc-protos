@@ -16,7 +16,7 @@ from . import inventory_pb2 as inventory__pb2
 from . import order_item_pb2 as order__item__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18shipping_candidate.proto\x12\x11shippingcandidate\x1a\x0finventory.proto\x1a\x10order_item.proto\"x\n\x11ShippingCandidate\x12\"\n\x04item\x18\x01 \x01(\x0b\x32\x14.orderitem.OrderItem\x12)\n\x0binventories\x18\x02 \x03(\x0b\x32\x14.inventory.Inventory\x12\x14\n\x0cis_fulfilled\x18\x03 \x01(\x08\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18shipping_candidate.proto\x12\x11shippingcandidate\x1a\x0finventory.proto\x1a\x10order_item.proto\"x\n\x11ShippingCandidate\x12\"\n\x04item\x18\x01 \x01(\x0b\x32\x14.orderitem.OrderItem\x12)\n\x0binventories\x18\x02 \x03(\x0b\x32\x14.inventory.Inventory\x12\x14\n\x0cis_fulfilled\x18\x03 \x01(\x08\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -31,6 +31,7 @@ _sym_db.RegisterMessage(ShippingCandidate)
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _SHIPPINGCANDIDATE._serialized_start=82
   _SHIPPINGCANDIDATE._serialized_end=202
 # @@protoc_insertion_point(module_scope)

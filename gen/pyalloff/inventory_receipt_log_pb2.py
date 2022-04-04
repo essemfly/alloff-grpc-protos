@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1binventory_receipt_log.proto\x12\x13inventoryreceiptlog\x1a\x1bgoogle/protobuf/empty.proto\"\xeb\x01\n\x13InventoryReceiptLog\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tuser_uuid\x18\x02 \x01(\t\x12\x15\n\ruser_username\x18\x03 \x01(\t\x12\x18\n\x10received_item_id\x18\x04 \x01(\x05\x12\x1a\n\x12received_item_code\x18\x05 \x01(\t\x12\x14\n\x0cinventory_id\x18\x06 \x01(\x05\x12\x16\n\x0einventory_code\x18\x07 \x01(\t\x12\x12\n\ncreated_at\x18\x08 \x01(\t\x12\x12\n\norder_item\x18\t \x01(\x03\x12\x12\n\naction_log\x18\n \x01(\x03\" \n\x1eInventoryReceiptLogListRequest\"0\n\"InventoryReceiptLogRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x8a\x04\n\x1dInventoryReceiptLogController\x12i\n\x04List\x12\x33.inventoryreceiptlog.InventoryReceiptLogListRequest\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x30\x01\x12^\n\x06\x43reate\x12(.inventoryreceiptlog.InventoryReceiptLog\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x12o\n\x08Retrieve\x12\x37.inventoryreceiptlog.InventoryReceiptLogRetrieveRequest\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x12^\n\x06Update\x12(.inventoryreceiptlog.InventoryReceiptLog\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x12M\n\x07\x44\x65stroy\x12(.inventoryreceiptlog.InventoryReceiptLog\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1binventory_receipt_log.proto\x12\x13inventoryreceiptlog\x1a\x1bgoogle/protobuf/empty.proto\"\xeb\x01\n\x13InventoryReceiptLog\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tuser_uuid\x18\x02 \x01(\t\x12\x15\n\ruser_username\x18\x03 \x01(\t\x12\x18\n\x10received_item_id\x18\x04 \x01(\x05\x12\x1a\n\x12received_item_code\x18\x05 \x01(\t\x12\x14\n\x0cinventory_id\x18\x06 \x01(\x05\x12\x16\n\x0einventory_code\x18\x07 \x01(\t\x12\x12\n\ncreated_at\x18\x08 \x01(\t\x12\x12\n\norder_item\x18\t \x01(\x03\x12\x12\n\naction_log\x18\n \x01(\x03\" \n\x1eInventoryReceiptLogListRequest\"0\n\"InventoryReceiptLogRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x8a\x04\n\x1dInventoryReceiptLogController\x12i\n\x04List\x12\x33.inventoryreceiptlog.InventoryReceiptLogListRequest\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x30\x01\x12^\n\x06\x43reate\x12(.inventoryreceiptlog.InventoryReceiptLog\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x12o\n\x08Retrieve\x12\x37.inventoryreceiptlog.InventoryReceiptLogRetrieveRequest\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x12^\n\x06Update\x12(.inventoryreceiptlog.InventoryReceiptLog\x1a(.inventoryreceiptlog.InventoryReceiptLog\"\x00\x12M\n\x07\x44\x65stroy\x12(.inventoryreceiptlog.InventoryReceiptLog\x1a\x16.google.protobuf.Empty\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -47,6 +47,7 @@ _INVENTORYRECEIPTLOGCONTROLLER = DESCRIPTOR.services_by_name['InventoryReceiptLo
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _INVENTORYRECEIPTLOG._serialized_start=82
   _INVENTORYRECEIPTLOG._serialized_end=317
   _INVENTORYRECEIPTLOGLISTREQUEST._serialized_start=319

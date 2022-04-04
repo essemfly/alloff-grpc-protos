@@ -4,6 +4,8 @@ package orderitempaymentadjustment;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service OrderItemPaymentAdjustmentController {
     rpc List(OrderItemPaymentAdjustmentListRequest) returns (stream OrderItemPaymentAdjustment) {}
     rpc Create(OrderItemPaymentAdjustment) returns (OrderItemPaymentAdjustment) {}

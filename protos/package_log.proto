@@ -4,6 +4,8 @@ package package_log;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service PackageLogController {
     rpc List(PackageLogListRequest) returns (stream PackageLog) {}
     rpc Create(PackageLog) returns (PackageLog) {}

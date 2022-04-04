@@ -4,6 +4,8 @@ package receiveditemlog;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service ReceivedItemLogController {
     rpc List(ReceivedItemLogListRequest) returns (stream ReceivedItemLog) {}
     rpc Create(ReceivedItemLog) returns (ReceivedItemLog) {}

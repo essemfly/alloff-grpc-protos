@@ -18,7 +18,7 @@ from . import package_pb2 as package__pb2
 from . import order_item_pb2 as order__item__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ashipping_notice_item.proto\x12\x14shipping_notice_item\x1a\x1bgoogle/protobuf/empty.proto\x1a\x0finventory.proto\x1a\rpackage.proto\x1a\x10order_item.proto\"\xba\x01\n\x12ShippingNoticeItem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tnotice_id\x18\x02 \x01(\x03\x12\'\n\tinventory\x18\x03 \x01(\x0b\x32\x14.inventory.Inventory\x12(\n\norder_item\x18\x04 \x01(\x0b\x32\x14.orderitem.OrderItem\x12&\n\x07package\x18\x05 \x01(\x0b\x32\x10.package.PackageH\x00\x88\x01\x01\x42\n\n\x08_package\"\x1f\n\x1dShippingNoticeItemListRequest\"/\n!ShippingNoticeItemRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x89\x04\n\x1cShippingNoticeItemController\x12i\n\x04List\x12\x33.shipping_notice_item.ShippingNoticeItemListRequest\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x30\x01\x12^\n\x06\x43reate\x12(.shipping_notice_item.ShippingNoticeItem\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x12o\n\x08Retrieve\x12\x37.shipping_notice_item.ShippingNoticeItemRetrieveRequest\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x12^\n\x06Update\x12(.shipping_notice_item.ShippingNoticeItem\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x12M\n\x07\x44\x65stroy\x12(.shipping_notice_item.ShippingNoticeItem\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1ashipping_notice_item.proto\x12\x14shipping_notice_item\x1a\x1bgoogle/protobuf/empty.proto\x1a\x0finventory.proto\x1a\rpackage.proto\x1a\x10order_item.proto\"\xba\x01\n\x12ShippingNoticeItem\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tnotice_id\x18\x02 \x01(\x03\x12\'\n\tinventory\x18\x03 \x01(\x0b\x32\x14.inventory.Inventory\x12(\n\norder_item\x18\x04 \x01(\x0b\x32\x14.orderitem.OrderItem\x12&\n\x07package\x18\x05 \x01(\x0b\x32\x10.package.PackageH\x00\x88\x01\x01\x42\n\n\x08_package\"\x1f\n\x1dShippingNoticeItemListRequest\"/\n!ShippingNoticeItemRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x89\x04\n\x1cShippingNoticeItemController\x12i\n\x04List\x12\x33.shipping_notice_item.ShippingNoticeItemListRequest\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x30\x01\x12^\n\x06\x43reate\x12(.shipping_notice_item.ShippingNoticeItem\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x12o\n\x08Retrieve\x12\x37.shipping_notice_item.ShippingNoticeItemRetrieveRequest\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x12^\n\x06Update\x12(.shipping_notice_item.ShippingNoticeItem\x1a(.shipping_notice_item.ShippingNoticeItem\"\x00\x12M\n\x07\x44\x65stroy\x12(.shipping_notice_item.ShippingNoticeItem\x1a\x16.google.protobuf.Empty\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -50,6 +50,7 @@ _SHIPPINGNOTICEITEMCONTROLLER = DESCRIPTOR.services_by_name['ShippingNoticeItemC
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _SHIPPINGNOTICEITEM._serialized_start=132
   _SHIPPINGNOTICEITEM._serialized_end=318
   _SHIPPINGNOTICEITEMLISTREQUEST._serialized_start=320

@@ -4,6 +4,8 @@ package orderitemstatuschangelog;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service OrderItemStatusChangeLogController {
     rpc List(OrderItemStatusChangeLogListRequest) returns (stream OrderItemStatusChangeLog) {}
     rpc Create(OrderItemStatusChangeLog) returns (OrderItemStatusChangeLog) {}

@@ -4,6 +4,8 @@ package supplier;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service SupplierController {
     rpc List(SupplierListRequest) returns (stream Supplier) {}
     rpc Create(Supplier) returns (Supplier) {}

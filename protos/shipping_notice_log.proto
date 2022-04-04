@@ -4,6 +4,8 @@ package shippingnoticelog;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service ShippingNoticeLogController {
     rpc List(ShippingNoticeLogListRequest) returns (stream ShippingNoticeLog) {}
     rpc Create(ShippingNoticeLog) returns (ShippingNoticeLog) {}

@@ -4,6 +4,8 @@ package receiveditemgenerationlog;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service ReceivedItemGenerationLogController {
     rpc List(ReceivedItemGenerationLogListRequest) returns (stream ReceivedItemGenerationLog) {}
     rpc Create(ReceivedItemGenerationLog) returns (ReceivedItemGenerationLog) {}

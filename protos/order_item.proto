@@ -10,6 +10,8 @@ import "order_item_action_log.proto";
 import "refund_item.proto";
 import "order_item_payment_adjustment.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service OrderItemController {
     rpc List(OrderItemListRequest) returns (OrderItemListResponse) {}
     rpc Create(OrderItem) returns (OrderItem) {}

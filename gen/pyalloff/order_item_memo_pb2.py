@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15order_item_memo.proto\x12\rorderitemmemo\x1a\x1bgoogle/protobuf/empty.proto\"\x8f\x01\n\rOrderItemMemo\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tuser_uuid\x18\x02 \x01(\t\x12\x15\n\ruser_username\x18\x03 \x01(\t\x12\x0c\n\x04\x62ody\x18\x04 \x01(\t\x12\x12\n\ncreated_at\x18\x05 \x01(\t\x12\x12\n\ndeleted_at\x18\x06 \x01(\t\x12\x12\n\norder_item\x18\x07 \x01(\x03\"\x1a\n\x18OrderItemMemoListRequest\"*\n\x1cOrderItemMemoRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x98\x03\n\x17OrderItemMemoController\x12Q\n\x04List\x12\'.orderitemmemo.OrderItemMemoListRequest\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x30\x01\x12\x46\n\x06\x43reate\x12\x1c.orderitemmemo.OrderItemMemo\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x12W\n\x08Retrieve\x12+.orderitemmemo.OrderItemMemoRetrieveRequest\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x12\x46\n\x06Update\x12\x1c.orderitemmemo.OrderItemMemo\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x12\x41\n\x07\x44\x65stroy\x12\x1c.orderitemmemo.OrderItemMemo\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15order_item_memo.proto\x12\rorderitemmemo\x1a\x1bgoogle/protobuf/empty.proto\"\x8f\x01\n\rOrderItemMemo\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tuser_uuid\x18\x02 \x01(\t\x12\x15\n\ruser_username\x18\x03 \x01(\t\x12\x0c\n\x04\x62ody\x18\x04 \x01(\t\x12\x12\n\ncreated_at\x18\x05 \x01(\t\x12\x12\n\ndeleted_at\x18\x06 \x01(\t\x12\x12\n\norder_item\x18\x07 \x01(\x03\"\x1a\n\x18OrderItemMemoListRequest\"*\n\x1cOrderItemMemoRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x98\x03\n\x17OrderItemMemoController\x12Q\n\x04List\x12\'.orderitemmemo.OrderItemMemoListRequest\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x30\x01\x12\x46\n\x06\x43reate\x12\x1c.orderitemmemo.OrderItemMemo\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x12W\n\x08Retrieve\x12+.orderitemmemo.OrderItemMemoRetrieveRequest\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x12\x46\n\x06Update\x12\x1c.orderitemmemo.OrderItemMemo\x1a\x1c.orderitemmemo.OrderItemMemo\"\x00\x12\x41\n\x07\x44\x65stroy\x12\x1c.orderitemmemo.OrderItemMemo\x1a\x16.google.protobuf.Empty\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -47,6 +47,7 @@ _ORDERITEMMEMOCONTROLLER = DESCRIPTOR.services_by_name['OrderItemMemoController'
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _ORDERITEMMEMO._serialized_start=70
   _ORDERITEMMEMO._serialized_end=213
   _ORDERITEMMEMOLISTREQUEST._serialized_start=215

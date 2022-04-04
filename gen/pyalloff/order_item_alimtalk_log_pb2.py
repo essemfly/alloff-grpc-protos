@@ -15,7 +15,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dorder_item_alimtalk_log.proto\x12\x14orderitemalimtalklog\x1a\x1bgoogle/protobuf/empty.proto\"\xb3\x01\n\x14OrderItemAlimtalkLog\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tuser_uuid\x18\x02 \x01(\t\x12\x15\n\ruser_username\x18\x03 \x01(\t\x12\x15\n\ralimtalk_type\x18\x04 \x01(\t\x12\x12\n\nrequest_id\x18\x05 \x01(\t\x12\x12\n\ncreated_at\x18\x06 \x01(\t\x12\x12\n\norder_item\x18\x07 \x01(\x03\x12\x12\n\naction_log\x18\x08 \x01(\x03\"!\n\x1fOrderItemAlimtalkLogListRequest\"1\n#OrderItemAlimtalkLogRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x9d\x04\n\x1eOrderItemAlimtalkLogController\x12m\n\x04List\x12\x35.orderitemalimtalklog.OrderItemAlimtalkLogListRequest\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x30\x01\x12\x62\n\x06\x43reate\x12*.orderitemalimtalklog.OrderItemAlimtalkLog\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x12s\n\x08Retrieve\x12\x39.orderitemalimtalklog.OrderItemAlimtalkLogRetrieveRequest\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x12\x62\n\x06Update\x12*.orderitemalimtalklog.OrderItemAlimtalkLog\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x12O\n\x07\x44\x65stroy\x12*.orderitemalimtalklog.OrderItemAlimtalkLog\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1dorder_item_alimtalk_log.proto\x12\x14orderitemalimtalklog\x1a\x1bgoogle/protobuf/empty.proto\"\xb3\x01\n\x14OrderItemAlimtalkLog\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x11\n\tuser_uuid\x18\x02 \x01(\t\x12\x15\n\ruser_username\x18\x03 \x01(\t\x12\x15\n\ralimtalk_type\x18\x04 \x01(\t\x12\x12\n\nrequest_id\x18\x05 \x01(\t\x12\x12\n\ncreated_at\x18\x06 \x01(\t\x12\x12\n\norder_item\x18\x07 \x01(\x03\x12\x12\n\naction_log\x18\x08 \x01(\x03\"!\n\x1fOrderItemAlimtalkLogListRequest\"1\n#OrderItemAlimtalkLogRetrieveRequest\x12\n\n\x02id\x18\x01 \x01(\x03\x32\x9d\x04\n\x1eOrderItemAlimtalkLogController\x12m\n\x04List\x12\x35.orderitemalimtalklog.OrderItemAlimtalkLogListRequest\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x30\x01\x12\x62\n\x06\x43reate\x12*.orderitemalimtalklog.OrderItemAlimtalkLog\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x12s\n\x08Retrieve\x12\x39.orderitemalimtalklog.OrderItemAlimtalkLogRetrieveRequest\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x12\x62\n\x06Update\x12*.orderitemalimtalklog.OrderItemAlimtalkLog\x1a*.orderitemalimtalklog.OrderItemAlimtalkLog\"\x00\x12O\n\x07\x44\x65stroy\x12*.orderitemalimtalklog.OrderItemAlimtalkLog\x1a\x16.google.protobuf.Empty\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -47,6 +47,7 @@ _ORDERITEMALIMTALKLOGCONTROLLER = DESCRIPTOR.services_by_name['OrderItemAlimtalk
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _ORDERITEMALIMTALKLOG._serialized_start=85
   _ORDERITEMALIMTALKLOG._serialized_end=264
   _ORDERITEMALIMTALKLOGLISTREQUEST._serialized_start=266

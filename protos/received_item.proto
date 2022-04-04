@@ -6,6 +6,8 @@ import "google/protobuf/empty.proto";
 import "inventory.proto";
 import "order_item.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service ReceivedItemController {
     rpc List(ReceivedItemListRequest) returns (ReceivedItemListResponse) {}
     rpc Create(ReceivedItem) returns (ReceivedItem) {}

@@ -4,6 +4,8 @@ package payment;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service PaymentController {
     rpc List(PaymentListRequest) returns (stream Payment) {}
     rpc Create(Payment) returns (Payment) {}

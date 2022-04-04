@@ -4,6 +4,8 @@ package refunditem;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service RefundItemController {
     rpc List(RefundItemListRequest) returns (stream RefundItem) {}
     rpc Create(RefundItem) returns (RefundItem) {}

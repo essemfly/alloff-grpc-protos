@@ -7,6 +7,8 @@ import "shipping_notice_item.proto";
 import "package.proto";
 import "shipping_candidate.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service ShippingNoticeController {
     rpc List(ShippingNoticeListRequest) returns (ShippingNoticeListResponse) {}
     rpc Create(ShippingNotice) returns (ShippingNotice) {}

@@ -9,6 +9,8 @@ import "order_item_alimtalk_log.proto";
 import "inventory_receipt_log.proto";
 import "received_item_generation_log.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service OrderItemActionLogController {
     rpc List(OrderItemActionLogListRequest) returns (stream OrderItemActionLog) {}
     rpc Create(OrderItemActionLog) returns (OrderItemActionLog) {}

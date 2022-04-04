@@ -4,6 +4,8 @@ package refunditemhistory;
 
 import "google/protobuf/empty.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service RefundItemHistoryController {
     rpc List(RefundItemHistoryListRequest) returns (stream RefundItemHistory) {}
     rpc Create(RefundItemHistory) returns (RefundItemHistory) {}

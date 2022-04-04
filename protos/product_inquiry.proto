@@ -5,6 +5,8 @@ package productinquiry;
 import "google/protobuf/empty.proto";
 import "product_inquiry_reply.proto";
 
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
 service ProductInquiryController {
     rpc List(ProductInquiryListRequest) returns (ProductInquiryListResponse) {}
     rpc Retrieve(ProductInquiryRetrieveRequest) returns (ProductInquiry) {}

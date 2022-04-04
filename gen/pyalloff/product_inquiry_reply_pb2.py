@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bproduct_inquiry_reply.proto\x12\x13productinquiryreply\"\xae\x01\n\x13ProductInquiryReply\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04\x62ody\x18\x02 \x01(\t\x12\x12\n\ncreated_at\x18\x03 \x01(\t\x12\x17\n\ndeleted_at\x18\x04 \x01(\tH\x00\x88\x01\x01\x12\x17\n\x0fproduct_inquiry\x18\x05 \x01(\x03\x12\x15\n\ruser_username\x18\x06 \x01(\t\x12\x11\n\tuser_uuid\x18\x07 \x01(\tB\r\n\x0b_deleted_atb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1bproduct_inquiry_reply.proto\x12\x13productinquiryreply\"\xae\x01\n\x13ProductInquiryReply\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0c\n\x04\x62ody\x18\x02 \x01(\t\x12\x12\n\ncreated_at\x18\x03 \x01(\t\x12\x17\n\ndeleted_at\x18\x04 \x01(\tH\x00\x88\x01\x01\x12\x17\n\x0fproduct_inquiry\x18\x05 \x01(\x03\x12\x15\n\ruser_username\x18\x06 \x01(\t\x12\x11\n\tuser_uuid\x18\x07 \x01(\tB\r\n\x0b_deleted_atB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -29,6 +29,7 @@ _sym_db.RegisterMessage(ProductInquiryReply)
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
+  DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
   _PRODUCTINQUIRYREPLY._serialized_start=53
   _PRODUCTINQUIRYREPLY._serialized_end=227
 # @@protoc_insertion_point(module_scope)
