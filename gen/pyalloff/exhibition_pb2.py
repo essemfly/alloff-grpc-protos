@@ -16,7 +16,7 @@ _sym_db = _symbol_database.Default()
 from . import productGroup_pb2 as productGroup__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10\x65xhibition.proto\x12\x08goalloff\x1a\x12productGroup.proto\"-\n\x14GetExhibitionRequest\x12\x15\n\rexhibition_id\x18\x01 \x01(\t\"y\n\x16ListExhibitionsRequest\x12\x0e\n\x06offset\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\x12\x31\n\ngroup_type\x18\x03 \x01(\x0e\x32\x18.goalloff.ExhibitionTypeH\x00\x88\x01\x01\x42\r\n\x0b_group_type\"\xa8\x03\n\x15\x45\x64itExhibitionRequest\x12\x15\n\rexhibition_id\x18\x01 \x01(\t\x12\x19\n\x0c\x62\x61nner_image\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x1c\n\x0fthumbnail_image\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x12\n\x05title\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x15\n\x08subtitle\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x17\n\nstart_time\x18\x07 \x01(\tH\x05\x88\x01\x01\x12\x18\n\x0b\x66inish_time\x18\x08 \x01(\tH\x06\x88\x01\x01\x12\x0e\n\x06pg_ids\x18\t \x03(\t\x12\x14\n\x07is_live\x18\n \x01(\x08H\x07\x88\x01\x01\x12\x19\n\x0ctarget_sales\x18\x0b \x01(\x05H\x08\x88\x01\x01\x42\x0f\n\r_banner_imageB\x12\n\x10_thumbnail_imageB\x08\n\x06_titleB\x0b\n\t_subtitleB\x0e\n\x0c_descriptionB\r\n\x0b_start_timeB\x0e\n\x0c_finish_timeB\n\n\x08_is_liveB\x0f\n\r_target_sales\"\x80\x02\n\x17\x43reateExhibitionRequest\x12\x14\n\x0c\x62\x61nner_image\x18\x01 \x01(\t\x12\x17\n\x0fthumbnail_image\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x07 \x01(\t\x12\x0e\n\x06pg_ids\x18\x08 \x03(\t\x12\x31\n\x0f\x65xhibition_type\x18\t \x01(\x0e\x32\x18.goalloff.ExhibitionType\x12\x14\n\x0ctarget_sales\x18\n \x01(\x05\"H\n\x15GetExhibitionResponse\x12/\n\nexhibition\x18\x01 \x01(\x0b\x32\x1b.goalloff.ExhibitionMessage\"\x80\x01\n\x17ListExhibitionsResponse\x12\x30\n\x0b\x65xhibitions\x18\x01 \x03(\x0b\x32\x1b.goalloff.ExhibitionMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x14\n\x0ctotal_counts\x18\x04 \x01(\x05\"I\n\x16\x45\x64itExhibitionResponse\x12/\n\nexhibition\x18\x01 \x01(\x0b\x32\x1b.goalloff.ExhibitionMessage\"K\n\x18\x43reateExhibitionResponse\x12/\n\nexhibition\x18\x01 \x01(\x0b\x32\x1b.goalloff.ExhibitionMessage\"\xd5\x02\n\x11\x45xhibitionMessage\x12\x15\n\rexhibition_id\x18\x01 \x01(\t\x12\x14\n\x0c\x62\x61nner_image\x18\x02 \x01(\t\x12\x17\n\x0fthumbnail_image\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x10\n\x08subtitle\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\nstart_time\x18\x07 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x08 \x01(\t\x12*\n\x03pgs\x18\t \x03(\x0b\x32\x1d.goalloff.ProductGroupMessage\x12\x0f\n\x07is_live\x18\n \x01(\x08\x12\x31\n\x0f\x65xhibition_type\x18\x0b \x01(\x0e\x32\x18.goalloff.ExhibitionType\x12\x14\n\x0ctarget_sales\x18\x0c \x01(\x05\x12\x15\n\rcurrent_sales\x18\r \x01(\x05*Z\n\x0e\x45xhibitionType\x12\x15\n\x11\x45XHIBITION_NORMAL\x10\x00\x12\x17\n\x13\x45XHIBITION_TIMEDEAL\x10\x01\x12\x18\n\x14\x45XHIBITION_GROUPDEAL\x10\x02\x32\xe6\x02\n\nExhibition\x12P\n\rGetExhibition\x12\x1e.goalloff.GetExhibitionRequest\x1a\x1f.goalloff.GetExhibitionResponse\x12V\n\x0fListExhibitions\x12 .goalloff.ListExhibitionsRequest\x1a!.goalloff.ListExhibitionsResponse\x12S\n\x0e\x45\x64itExhibition\x12\x1f.goalloff.EditExhibitionRequest\x1a .goalloff.EditExhibitionResponse\x12Y\n\x10\x43reateExhibition\x12!.goalloff.CreateExhibitionRequest\x1a\".goalloff.CreateExhibitionResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10\x65xhibition.proto\x12\x08goalloff\x1a\x12productGroup.proto\"-\n\x14GetExhibitionRequest\x12\x15\n\rexhibition_id\x18\x01 \x01(\t\"\x94\x01\n\x16ListExhibitionsRequest\x12\x0e\n\x06offset\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\x12,\n\ngroup_type\x18\x03 \x01(\x0e\x32\x18.goalloff.ExhibitionType\x12\x0f\n\x07is_live\x18\x04 \x01(\x08\x12\x12\n\x05query\x18\x05 \x01(\tH\x00\x88\x01\x01\x42\x08\n\x06_query\"\xa8\x03\n\x15\x45\x64itExhibitionRequest\x12\x15\n\rexhibition_id\x18\x01 \x01(\t\x12\x19\n\x0c\x62\x61nner_image\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x1c\n\x0fthumbnail_image\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x12\n\x05title\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x15\n\x08subtitle\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x06 \x01(\tH\x04\x88\x01\x01\x12\x17\n\nstart_time\x18\x07 \x01(\tH\x05\x88\x01\x01\x12\x18\n\x0b\x66inish_time\x18\x08 \x01(\tH\x06\x88\x01\x01\x12\x0e\n\x06pg_ids\x18\t \x03(\t\x12\x14\n\x07is_live\x18\n \x01(\x08H\x07\x88\x01\x01\x12\x19\n\x0ctarget_sales\x18\x0b \x01(\x05H\x08\x88\x01\x01\x42\x0f\n\r_banner_imageB\x12\n\x10_thumbnail_imageB\x08\n\x06_titleB\x0b\n\t_subtitleB\x0e\n\x0c_descriptionB\r\n\x0b_start_timeB\x0e\n\x0c_finish_timeB\n\n\x08_is_liveB\x0f\n\r_target_sales\"\x80\x02\n\x17\x43reateExhibitionRequest\x12\x14\n\x0c\x62\x61nner_image\x18\x01 \x01(\t\x12\x17\n\x0fthumbnail_image\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x12\n\nstart_time\x18\x06 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x07 \x01(\t\x12\x0e\n\x06pg_ids\x18\x08 \x03(\t\x12\x31\n\x0f\x65xhibition_type\x18\t \x01(\x0e\x32\x18.goalloff.ExhibitionType\x12\x14\n\x0ctarget_sales\x18\n \x01(\x05\"H\n\x15GetExhibitionResponse\x12/\n\nexhibition\x18\x01 \x01(\x0b\x32\x1b.goalloff.ExhibitionMessage\"\xce\x01\n\x17ListExhibitionsResponse\x12\x30\n\x0b\x65xhibitions\x18\x01 \x03(\x0b\x32\x1b.goalloff.ExhibitionMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x14\n\x0ctotal_counts\x18\x04 \x01(\x05\x12,\n\ngroup_type\x18\x05 \x01(\x0e\x32\x18.goalloff.ExhibitionType\x12\x0f\n\x07is_live\x18\x06 \x01(\x08\x12\r\n\x05query\x18\x07 \x01(\t\"I\n\x16\x45\x64itExhibitionResponse\x12/\n\nexhibition\x18\x01 \x01(\x0b\x32\x1b.goalloff.ExhibitionMessage\"K\n\x18\x43reateExhibitionResponse\x12/\n\nexhibition\x18\x01 \x01(\x0b\x32\x1b.goalloff.ExhibitionMessage\"\xd5\x02\n\x11\x45xhibitionMessage\x12\x15\n\rexhibition_id\x18\x01 \x01(\t\x12\x14\n\x0c\x62\x61nner_image\x18\x02 \x01(\t\x12\x17\n\x0fthumbnail_image\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x10\n\x08subtitle\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\nstart_time\x18\x07 \x01(\t\x12\x13\n\x0b\x66inish_time\x18\x08 \x01(\t\x12*\n\x03pgs\x18\t \x03(\x0b\x32\x1d.goalloff.ProductGroupMessage\x12\x0f\n\x07is_live\x18\n \x01(\x08\x12\x31\n\x0f\x65xhibition_type\x18\x0b \x01(\x0e\x32\x18.goalloff.ExhibitionType\x12\x14\n\x0ctarget_sales\x18\x0c \x01(\x05\x12\x15\n\rcurrent_sales\x18\r \x01(\x05*Z\n\x0e\x45xhibitionType\x12\x15\n\x11\x45XHIBITION_NORMAL\x10\x00\x12\x17\n\x13\x45XHIBITION_TIMEDEAL\x10\x01\x12\x18\n\x14\x45XHIBITION_GROUPDEAL\x10\x02\x32\xe6\x02\n\nExhibition\x12P\n\rGetExhibition\x12\x1e.goalloff.GetExhibitionRequest\x1a\x1f.goalloff.GetExhibitionResponse\x12V\n\x0fListExhibitions\x12 .goalloff.ListExhibitionsRequest\x1a!.goalloff.ListExhibitionsResponse\x12S\n\x0e\x45\x64itExhibition\x12\x1f.goalloff.EditExhibitionRequest\x1a .goalloff.EditExhibitionResponse\x12Y\n\x10\x43reateExhibition\x12!.goalloff.CreateExhibitionRequest\x1a\".goalloff.CreateExhibitionResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 _EXHIBITIONTYPE = DESCRIPTOR.enum_types_by_name['ExhibitionType']
 ExhibitionType = enum_type_wrapper.EnumTypeWrapper(_EXHIBITIONTYPE)
@@ -102,26 +102,26 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
-  _EXHIBITIONTYPE._serialized_start=1607
-  _EXHIBITIONTYPE._serialized_end=1697
+  _EXHIBITIONTYPE._serialized_start=1713
+  _EXHIBITIONTYPE._serialized_end=1803
   _GETEXHIBITIONREQUEST._serialized_start=50
   _GETEXHIBITIONREQUEST._serialized_end=95
-  _LISTEXHIBITIONSREQUEST._serialized_start=97
-  _LISTEXHIBITIONSREQUEST._serialized_end=218
-  _EDITEXHIBITIONREQUEST._serialized_start=221
-  _EDITEXHIBITIONREQUEST._serialized_end=645
-  _CREATEEXHIBITIONREQUEST._serialized_start=648
-  _CREATEEXHIBITIONREQUEST._serialized_end=904
-  _GETEXHIBITIONRESPONSE._serialized_start=906
-  _GETEXHIBITIONRESPONSE._serialized_end=978
-  _LISTEXHIBITIONSRESPONSE._serialized_start=981
-  _LISTEXHIBITIONSRESPONSE._serialized_end=1109
-  _EDITEXHIBITIONRESPONSE._serialized_start=1111
-  _EDITEXHIBITIONRESPONSE._serialized_end=1184
-  _CREATEEXHIBITIONRESPONSE._serialized_start=1186
-  _CREATEEXHIBITIONRESPONSE._serialized_end=1261
-  _EXHIBITIONMESSAGE._serialized_start=1264
-  _EXHIBITIONMESSAGE._serialized_end=1605
-  _EXHIBITION._serialized_start=1700
-  _EXHIBITION._serialized_end=2058
+  _LISTEXHIBITIONSREQUEST._serialized_start=98
+  _LISTEXHIBITIONSREQUEST._serialized_end=246
+  _EDITEXHIBITIONREQUEST._serialized_start=249
+  _EDITEXHIBITIONREQUEST._serialized_end=673
+  _CREATEEXHIBITIONREQUEST._serialized_start=676
+  _CREATEEXHIBITIONREQUEST._serialized_end=932
+  _GETEXHIBITIONRESPONSE._serialized_start=934
+  _GETEXHIBITIONRESPONSE._serialized_end=1006
+  _LISTEXHIBITIONSRESPONSE._serialized_start=1009
+  _LISTEXHIBITIONSRESPONSE._serialized_end=1215
+  _EDITEXHIBITIONRESPONSE._serialized_start=1217
+  _EDITEXHIBITIONRESPONSE._serialized_end=1290
+  _CREATEEXHIBITIONRESPONSE._serialized_start=1292
+  _CREATEEXHIBITIONRESPONSE._serialized_end=1367
+  _EXHIBITIONMESSAGE._serialized_start=1370
+  _EXHIBITIONMESSAGE._serialized_end=1711
+  _EXHIBITION._serialized_start=1806
+  _EXHIBITION._serialized_end=2164
 # @@protoc_insertion_point(module_scope)

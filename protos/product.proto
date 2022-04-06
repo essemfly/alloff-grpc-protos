@@ -56,6 +56,7 @@ message CreateProductRequest {
     optional string product_url = 18;
     map<string, string> description_infos = 19;
     map<string, string> product_infos = 20;
+    optional string thumbnail_image = 21;
 }
 
 message CreateProductResponse {
@@ -86,6 +87,7 @@ message EditProductRequest {
     optional string product_url = 21;
     map<string, string> description_infos = 22;
     map<string, string> product_infos = 23;
+    optional string thumbnail_image = 24;
 }
 
 message EditProductResponse {
@@ -125,6 +127,7 @@ message ProductMessage {
     bool is_classified_touched = 26;
     map<string, string> description_infos = 27;
     map<string, string> product_infos = 28;
+    string thumbnail_image = 29;
 }
 
 message ProductInventoryMessage {

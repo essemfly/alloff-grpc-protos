@@ -25,7 +25,9 @@ message GetExhibitionRequest {
 message ListExhibitionsRequest {
     int32 offset = 1;
     int32 limit = 2;
-    optional ExhibitionType group_type = 3;
+    ExhibitionType group_type = 3;
+    bool is_live = 4;
+    optional string query = 5;
 }
 
 message EditExhibitionRequest {
@@ -64,6 +66,9 @@ message ListExhibitionsResponse {
     int32 offset = 2;
     int32 limit = 3;
     int32 total_counts = 4;
+    ExhibitionType group_type = 5;
+    bool is_live = 6;
+    string query = 7;
 }
 
 message EditExhibitionResponse {
