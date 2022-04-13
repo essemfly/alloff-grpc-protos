@@ -48,4 +48,6 @@ message NotificationMessage {
     string title = 5;
     string message = 6;
     string sended_at = 7;
+    int32 num_users_pushed = 8;
+    int32 num_users_failed = 9;
 }
