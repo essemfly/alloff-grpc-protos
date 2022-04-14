@@ -31,6 +31,7 @@ message EditBrandRequest {
     optional bool in_maintenance = 8;
     repeated SizeGuideMessage size_guide = 9;
     optional string back_image_url = 10;
+    optional bool is_hide = 11;
 }
 
 message EditBrandResponse {
@@ -66,6 +67,7 @@ message BrandMessage {
     bool in_maintenance = 9;
     repeated SizeGuideMessage size_guide = 10;
     string back_image_url = 11;
+    bool is_hide = 12;
 }
 
 message SizeGuideMessage {
