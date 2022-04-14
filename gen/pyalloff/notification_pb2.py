@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12notification.proto\x12\x08goalloff\"0\n\x0fListNotiRequest\x12\x0e\n\x06offset\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\"_\n\x10ListNotiResponse\x12\x0e\n\x06offset\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\x12,\n\x05notis\x18\x03 \x03(\x0b\x32\x1d.goalloff.NotificationMessage\"\\\n\x11\x43reateNotiRequest\x12\x11\n\tnoti_type\x18\x01 \x01(\t\x12\x14\n\x0creference_id\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t\"\'\n\x12\x43reateNotiResponse\x12\x11\n\tsucceeded\x18\x01 \x01(\x08\"*\n\x0fSendNotiRequest\x12\x17\n\x0fnotification_id\x18\x01 \x01(\t\"#\n\x10SendNotiResponse\x12\x0f\n\x07is_sent\x18\x01 \x01(\x08\"\x9a\x01\n\x13NotificationMessage\x12\x17\n\x0fnotification_id\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x11\n\tnoti_type\x18\x03 \x01(\t\x12\x14\n\x0creference_id\x18\x04 \x01(\t\x12\r\n\x05title\x18\x05 \x01(\t\x12\x0f\n\x07message\x18\x06 \x01(\t\x12\x11\n\tsended_at\x18\x07 \x01(\t2\xdd\x01\n\x0cNotification\x12\x41\n\x08ListNoti\x12\x19.goalloff.ListNotiRequest\x1a\x1a.goalloff.ListNotiResponse\x12G\n\nCreateNoti\x12\x1b.goalloff.CreateNotiRequest\x1a\x1c.goalloff.CreateNotiResponse\x12\x41\n\x08SendNoti\x12\x19.goalloff.SendNotiRequest\x1a\x1a.goalloff.SendNotiResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x12notification.proto\x12\x08goalloff\"0\n\x0fListNotiRequest\x12\x0e\n\x06offset\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\"_\n\x10ListNotiResponse\x12\x0e\n\x06offset\x18\x01 \x01(\x05\x12\r\n\x05limit\x18\x02 \x01(\x05\x12,\n\x05notis\x18\x03 \x03(\x0b\x32\x1d.goalloff.NotificationMessage\"\\\n\x11\x43reateNotiRequest\x12\x11\n\tnoti_type\x18\x01 \x01(\t\x12\x14\n\x0creference_id\x18\x02 \x01(\t\x12\r\n\x05title\x18\x03 \x01(\t\x12\x0f\n\x07message\x18\x04 \x01(\t\"\'\n\x12\x43reateNotiResponse\x12\x11\n\tsucceeded\x18\x01 \x01(\x08\"*\n\x0fSendNotiRequest\x12\x17\n\x0fnotification_id\x18\x01 \x01(\t\"#\n\x10SendNotiResponse\x12\x0f\n\x07is_sent\x18\x01 \x01(\x08\"\xce\x01\n\x13NotificationMessage\x12\x17\n\x0fnotification_id\x18\x01 \x01(\t\x12\x0e\n\x06status\x18\x02 \x01(\t\x12\x11\n\tnoti_type\x18\x03 \x01(\t\x12\x14\n\x0creference_id\x18\x04 \x01(\t\x12\r\n\x05title\x18\x05 \x01(\t\x12\x0f\n\x07message\x18\x06 \x01(\t\x12\x11\n\tsended_at\x18\x07 \x01(\t\x12\x18\n\x10num_users_pushed\x18\x08 \x01(\x05\x12\x18\n\x10num_users_failed\x18\t \x01(\x05\x32\xdd\x01\n\x0cNotification\x12\x41\n\x08ListNoti\x12\x19.goalloff.ListNotiRequest\x1a\x1a.goalloff.ListNotiResponse\x12G\n\nCreateNoti\x12\x1b.goalloff.CreateNotiRequest\x1a\x1c.goalloff.CreateNotiResponse\x12\x41\n\x08SendNoti\x12\x19.goalloff.SendNotiRequest\x1a\x1a.goalloff.SendNotiResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -92,7 +92,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _SENDNOTIRESPONSE._serialized_start=358
   _SENDNOTIRESPONSE._serialized_end=393
   _NOTIFICATIONMESSAGE._serialized_start=396
-  _NOTIFICATIONMESSAGE._serialized_end=550
-  _NOTIFICATION._serialized_start=553
-  _NOTIFICATION._serialized_end=774
+  _NOTIFICATIONMESSAGE._serialized_end=602
+  _NOTIFICATION._serialized_start=605
+  _NOTIFICATION._serialized_end=826
 # @@protoc_insertion_point(module_scope)
