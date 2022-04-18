@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package orderanalytics;
+
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
+
+service OrderAnalyticsController {
+    rpc DailyOrderStat(DailyOrderStatRequest) returns (OrderStatResponse) {}
+}
+
+message DailyOrderStatRequest {
+    string date_from = 1;
+    string date_to = 2;
+}
+
+message OrderStatResponse {
+    repeated OrderStat order_stats = 1;
+    OrderStat summary = 2;
+}
+
+message OrderStatFigure {
+    int64 count = 1;
+    int64 amount = 2;
+}
+
+message OrderStat {
+    string timestamp = 1;
+    OrderStatFigure total = 2;
+    OrderStatFigure paid = 3;
+    OrderStatFigure canceled = 4;
+}
