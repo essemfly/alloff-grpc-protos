@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15order_analytics.proto\x12\x0eorderanalytics\";\n\x15\x44\x61ilyOrderStatRequest\x12\x11\n\tdate_from\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61te_to\x18\x02 \x01(\t\"o\n\x11OrderStatResponse\x12.\n\x0border_stats\x18\x01 \x03(\x0b\x32\x19.orderanalytics.OrderStat\x12*\n\x07summary\x18\x02 \x01(\x0b\x32\x19.orderanalytics.OrderStat\"0\n\x0fOrderStatFigure\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x03\"\xb0\x01\n\tOrderStat\x12\x11\n\ttimestamp\x18\x01 \x01(\t\x12.\n\x05total\x18\x02 \x01(\x0b\x32\x1f.orderanalytics.OrderStatFigure\x12-\n\x04paid\x18\x03 \x01(\x0b\x32\x1f.orderanalytics.OrderStatFigure\x12\x31\n\x08\x63\x61nceled\x18\x04 \x01(\x0b\x32\x1f.orderanalytics.OrderStatFigure2x\n\x18OrderAnalyticsController\x12\\\n\x0e\x44\x61ilyOrderStat\x12%.orderanalytics.DailyOrderStatRequest\x1a!.orderanalytics.OrderStatResponse\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15order_analytics.proto\x12\x0eorderanalytics\";\n\x15\x44\x61ilyOrderStatRequest\x12\x11\n\tdate_from\x18\x01 \x01(\t\x12\x0f\n\x07\x64\x61te_to\x18\x02 \x01(\t\"o\n\x11OrderStatResponse\x12.\n\x0border_stats\x18\x01 \x03(\x0b\x32\x19.orderanalytics.OrderStat\x12*\n\x07summary\x18\x02 \x01(\x0b\x32\x19.orderanalytics.OrderStat\"B\n\x0fOrderStatFigure\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\x12\x0e\n\x06\x61mount\x18\x02 \x01(\x03\x12\x10\n\x08quantity\x18\x03 \x01(\x03\"\xb0\x01\n\tOrderStat\x12\x11\n\ttimestamp\x18\x01 \x01(\t\x12.\n\x05total\x18\x02 \x01(\x0b\x32\x1f.orderanalytics.OrderStatFigure\x12-\n\x04paid\x18\x03 \x01(\x0b\x32\x1f.orderanalytics.OrderStatFigure\x12\x31\n\x08\x63\x61nceled\x18\x04 \x01(\x0b\x32\x1f.orderanalytics.OrderStatFigure2x\n\x18OrderAnalyticsController\x12\\\n\x0e\x44\x61ilyOrderStat\x12%.orderanalytics.DailyOrderStatRequest\x1a!.orderanalytics.OrderStatResponse\"\x00\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -60,9 +60,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _ORDERSTATRESPONSE._serialized_start=102
   _ORDERSTATRESPONSE._serialized_end=213
   _ORDERSTATFIGURE._serialized_start=215
-  _ORDERSTATFIGURE._serialized_end=263
-  _ORDERSTAT._serialized_start=266
-  _ORDERSTAT._serialized_end=442
-  _ORDERANALYTICSCONTROLLER._serialized_start=444
-  _ORDERANALYTICSCONTROLLER._serialized_end=564
+  _ORDERSTATFIGURE._serialized_end=281
+  _ORDERSTAT._serialized_start=284
+  _ORDERSTAT._serialized_end=460
+  _ORDERANALYTICSCONTROLLER._serialized_start=462
+  _ORDERANALYTICSCONTROLLER._serialized_end=582
 # @@protoc_insertion_point(module_scope)
