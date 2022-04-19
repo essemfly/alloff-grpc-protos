@@ -4,6 +4,7 @@ package goalloff;
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 import "product.proto";
+import "brand.proto";
 
 service ProductGroup {
     rpc GetProductGroup(GetProductGroupRequest) returns (ProductGroupMessage);
@@ -32,6 +33,7 @@ message CreateProductGroupRequest {
     string start_time = 5;
     string finish_time = 6;
     ProductGroupType group_type = 7;
+    optional string brand_id = 8;
 }
 
 message ListProductGroupsRequest {
@@ -49,6 +51,7 @@ message EditProductGroupRequest {
     optional string finish_time = 6;
     string product_group_id = 7;
     optional ProductGroupType group_type = 9;
+    optional string brand_id = 10;
 }
 
 message ProductsInPgRequest {
@@ -71,6 +74,7 @@ message ProductGroupMessage {
     string finish_time = 7;
     string product_group_id = 8;
     ProductGroupType group_type = 9;
+    BrandMessage brand = 10;
 }
 
 message ListProductGroupsResponse {
@@ -94,6 +98,7 @@ enum ProductGroupType {
     PRODUCT_GROUP_TIMEDEAL = 0;
     PRODUCT_GROUP_EXHIBITION = 1;
     PRODUCT_GROUP_GROUPDEAL = 2;
+    PRODUCT_GROUP_BRAND_TIMEDEAL = 3;
 }
 
 message ProductGroupQuery {
