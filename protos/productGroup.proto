@@ -98,6 +98,7 @@ enum ProductGroupType {
     PRODUCT_GROUP_TIMEDEAL = 0;
     PRODUCT_GROUP_EXHIBITION = 1;
     PRODUCT_GROUP_GROUPDEAL = 2;
+    PRODUCT_GROUP_BRAND_TIMEDEAL = 3;
 }
 
 message ProductGroupQuery {
