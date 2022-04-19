@@ -4,7 +4,7 @@ from rest_framework import fields
 from ..pyalloff import order_analytics_pb2
 
 
-class OrderStatFigureSerializer(proto_serializers):
+class OrderStatFigureSerializer(proto_serializers.ProtoSerializer):
     count = fields.IntegerField()
     amount = fields.IntegerField()
     quantity = fields.IntegerField()
