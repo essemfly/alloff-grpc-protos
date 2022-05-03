@@ -43,6 +43,7 @@ message EditExhibitionRequest {
     optional bool is_live = 10;
     optional int32 target_sales = 11;
     repeated ExhibitionBannerMessage banners = 12;
+    optional int32 num_users_required = 13;
 }
 
 message CreateExhibitionRequest {
@@ -57,6 +58,7 @@ message CreateExhibitionRequest {
     ExhibitionType exhibition_type = 9;
     int32 target_sales = 10;
     repeated ExhibitionBannerMessage banners = 11;
+    optional int32 num_users_required = 12;
 }
 
 message GetExhibitionResponse {
@@ -96,6 +98,9 @@ message ExhibitionMessage {
     int32 target_sales = 12;
     int32 current_sales = 13;
     repeated ExhibitionBannerMessage banners = 14;
+    int32 total_participants = 15;
+    int32 num_users_required = 16;
+    int32 total_groups = 17;
 }
 
 message ExhibitionBannerMessage {
