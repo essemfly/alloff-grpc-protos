@@ -57,7 +57,7 @@ message CreateProductRequest {
     map<string, string> description_infos = 19;
     map<string, string> product_infos = 20;
     optional string thumbnail_image = 21;
-    optional bool is_hide = 22;
+    optional bool is_special = 22;
 }
 
 message CreateProductResponse {
@@ -89,7 +89,7 @@ message EditProductRequest {
     map<string, string> description_infos = 22;
     map<string, string> product_infos = 23;
     optional string thumbnail_image = 24;
-    optional bool is_hide = 25;
+    optional bool is_special = 25;
 }
 
 message EditProductResponse {
@@ -130,7 +130,7 @@ message ProductMessage {
     map<string, string> description_infos = 27;
     map<string, string> product_infos = 28;
     string thumbnail_image = 29;
-    bool is_hide = 30;
+    bool is_special = 30;
 }
 
 message ProductInventoryMessage {
