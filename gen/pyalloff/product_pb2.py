@@ -13,9 +13,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from . import alloff_size_pb2 as alloff__size__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rproduct.proto\x12\x08goalloff\".\n\x11GetProductRequest\x12\x19\n\x11\x61lloff_product_id\x18\x01 \x01(\t\"?\n\x12GetProductResponse\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\"\x85\x01\n\x13ListProductsRequest\x12%\n\x05query\x18\x01 \x01(\x0b\x32\x16.goalloff.ProductQuery\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x18\n\x0bmodule_name\x18\x04 \x01(\tH\x00\x88\x01\x01\x42\x0e\n\x0c_module_name\"\xb8\x01\n\x14ListProductsResponse\x12*\n\x08products\x18\x01 \x03(\x0b\x32\x18.goalloff.ProductMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x14\n\x0ctotal_counts\x18\x04 \x01(\x05\x12*\n\nlist_query\x18\x05 \x01(\x0b\x32\x16.goalloff.ProductQuery\x12\x13\n\x0bmodule_name\x18\x06 \x01(\t\"\xd3\x07\n\x14\x43reateProductRequest\x12\x13\n\x0b\x61lloff_name\x18\x01 \x01(\t\x12\x1b\n\x13is_foreign_delivery\x18\x02 \x01(\x08\x12\x17\n\nproduct_id\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x1b\n\x0eoriginal_price\x18\x04 \x01(\x05H\x01\x88\x01\x01\x12\x18\n\x10\x64iscounted_price\x18\x05 \x01(\x05\x12\x1a\n\rspecial_price\x18\x06 \x01(\x05H\x02\x88\x01\x01\x12\x16\n\x0e\x62rand_key_name\x18\x07 \x01(\t\x12\x34\n\tinventory\x18\x08 \x03(\x0b\x32!.goalloff.ProductInventoryMessage\x12\x13\n\x0b\x64\x65scription\x18\t \x03(\t\x12\x1a\n\x12is_refund_possible\x18\n \x01(\x08\x12\x0e\n\x06images\x18\x0b \x03(\t\x12\x1a\n\x12\x64\x65scription_images\x18\x0c \x03(\t\x12\x1e\n\x16\x65\x61rliest_delivery_days\x18\r \x01(\x05\x12\x1c\n\x14latest_delivery_days\x18\x0e \x01(\x05\x12\x12\n\nrefund_fee\x18\x0f \x01(\x05\x12\x18\n\x0bmodule_name\x18\x10 \x01(\tH\x03\x88\x01\x01\x12\x1f\n\x12\x61lloff_category_id\x18\x11 \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0bproduct_url\x18\x12 \x01(\tH\x05\x88\x01\x01\x12O\n\x11\x64\x65scription_infos\x18\x13 \x03(\x0b\x32\x34.goalloff.CreateProductRequest.DescriptionInfosEntry\x12G\n\rproduct_infos\x18\x14 \x03(\x0b\x32\x30.goalloff.CreateProductRequest.ProductInfosEntry\x12\x1c\n\x0fthumbnail_image\x18\x15 \x01(\tH\x06\x88\x01\x01\x12\x17\n\nis_special\x18\x16 \x01(\x08H\x07\x88\x01\x01\x1a\x37\n\x15\x44\x65scriptionInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11ProductInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\r\n\x0b_product_idB\x11\n\x0f_original_priceB\x10\n\x0e_special_priceB\x0e\n\x0c_module_nameB\x15\n\x13_alloff_category_idB\x0e\n\x0c_product_urlB\x12\n\x10_thumbnail_imageB\r\n\x0b_is_special\"B\n\x15\x43reateProductResponse\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\"\xf5\t\n\x12\x45\x64itProductRequest\x12\x18\n\x0b\x61lloff_name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12 \n\x13is_foreign_delivery\x18\x02 \x01(\x08H\x01\x88\x01\x01\x12\x17\n\nproduct_id\x18\x03 \x01(\tH\x02\x88\x01\x01\x12\x1b\n\x0eoriginal_price\x18\x04 \x01(\x05H\x03\x88\x01\x01\x12\x1d\n\x10\x64iscounted_price\x18\x05 \x01(\x05H\x04\x88\x01\x01\x12\x1a\n\rspecial_price\x18\x06 \x01(\x05H\x05\x88\x01\x01\x12\x1b\n\x0e\x62rand_key_name\x18\x07 \x01(\tH\x06\x88\x01\x01\x12\x34\n\tinventory\x18\x08 \x03(\x0b\x32!.goalloff.ProductInventoryMessage\x12\x13\n\x0b\x64\x65scription\x18\t \x03(\t\x12\x1f\n\x12is_refund_possible\x18\n \x01(\x08H\x07\x88\x01\x01\x12\x0e\n\x06images\x18\x0b \x03(\t\x12\x1a\n\x12\x64\x65scription_images\x18\x0c \x03(\t\x12\x17\n\nis_removed\x18\r \x01(\x08H\x08\x88\x01\x01\x12#\n\x16\x65\x61rliest_delivery_days\x18\x0e \x01(\x05H\t\x88\x01\x01\x12!\n\x14latest_delivery_days\x18\x0f \x01(\x05H\n\x88\x01\x01\x12\x17\n\nrefund_fee\x18\x10 \x01(\x05H\x0b\x88\x01\x01\x12\x19\n\x11\x61lloff_product_id\x18\x11 \x01(\t\x12\x13\n\x0bmodule_name\x18\x12 \x01(\t\x12\x1f\n\x12\x61lloff_category_id\x18\x13 \x01(\tH\x0c\x88\x01\x01\x12\x17\n\nis_soldout\x18\x14 \x01(\x08H\r\x88\x01\x01\x12\x18\n\x0bproduct_url\x18\x15 \x01(\tH\x0e\x88\x01\x01\x12M\n\x11\x64\x65scription_infos\x18\x16 \x03(\x0b\x32\x32.goalloff.EditProductRequest.DescriptionInfosEntry\x12\x45\n\rproduct_infos\x18\x17 \x03(\x0b\x32..goalloff.EditProductRequest.ProductInfosEntry\x12\x1c\n\x0fthumbnail_image\x18\x18 \x01(\tH\x0f\x88\x01\x01\x12\x17\n\nis_special\x18\x19 \x01(\x08H\x10\x88\x01\x01\x1a\x37\n\x15\x44\x65scriptionInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11ProductInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0e\n\x0c_alloff_nameB\x16\n\x14_is_foreign_deliveryB\r\n\x0b_product_idB\x11\n\x0f_original_priceB\x13\n\x11_discounted_priceB\x10\n\x0e_special_priceB\x11\n\x0f_brand_key_nameB\x15\n\x13_is_refund_possibleB\r\n\x0b_is_removedB\x19\n\x17_earliest_delivery_daysB\x17\n\x15_latest_delivery_daysB\r\n\x0b_refund_feeB\x15\n\x13_alloff_category_idB\r\n\x0b_is_soldoutB\x0e\n\x0c_product_urlB\x12\n\x10_thumbnail_imageB\r\n\x0b_is_special\"@\n\x13\x45\x64itProductResponse\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\"\xd3\x07\n\x0eProductMessage\x12\x13\n\x0b\x61lloff_name\x18\x01 \x01(\t\x12\x1b\n\x13is_foreign_delivery\x18\x02 \x01(\x08\x12\x12\n\nproduct_id\x18\x03 \x01(\t\x12\x16\n\x0eoriginal_price\x18\x04 \x01(\x05\x12\x18\n\x10\x64iscounted_price\x18\x05 \x01(\x05\x12\x15\n\rspecial_price\x18\x06 \x01(\x05\x12\x16\n\x0e\x62rand_kor_name\x18\x07 \x01(\t\x12\x34\n\tinventory\x18\x08 \x03(\x0b\x32!.goalloff.ProductInventoryMessage\x12\x13\n\x0b\x64\x65scription\x18\t \x03(\t\x12\x1e\n\x16\x65\x61rliest_delivery_days\x18\n \x01(\x05\x12\x1c\n\x14latest_delivery_days\x18\x0b \x01(\x05\x12\x12\n\nrefund_fee\x18\x0c \x01(\x05\x12\x1a\n\x12is_refund_possible\x18\r \x01(\x08\x12\x0e\n\x06images\x18\x0e \x03(\t\x12\x1a\n\x12\x64\x65scription_images\x18\x0f \x03(\t\x12\x15\n\rcategory_name\x18\x10 \x01(\t\x12\x1c\n\x14\x61lloff_category_name\x18\x11 \x01(\t\x12\x12\n\nis_removed\x18\x12 \x01(\x08\x12\x12\n\nis_soldout\x18\x13 \x01(\x08\x12\x13\n\x0btotal_score\x18\x14 \x01(\x05\x12\x19\n\x11\x61lloff_product_id\x18\x15 \x01(\t\x12\x13\n\x0bmodule_name\x18\x16 \x01(\t\x12\x1a\n\x12\x61lloff_category_id\x18\x17 \x01(\t\x12\x13\n\x0bproduct_url\x18\x18 \x01(\t\x12\x1a\n\x12is_classified_done\x18\x19 \x01(\x08\x12\x1d\n\x15is_classified_touched\x18\x1a \x01(\x08\x12I\n\x11\x64\x65scription_infos\x18\x1b \x03(\x0b\x32..goalloff.ProductMessage.DescriptionInfosEntry\x12\x41\n\rproduct_infos\x18\x1c \x03(\x0b\x32*.goalloff.ProductMessage.ProductInfosEntry\x12\x17\n\x0fthumbnail_image\x18\x1d \x01(\t\x12\x12\n\nis_special\x18\x1e \x01(\x08\x1a\x37\n\x15\x44\x65scriptionInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11ProductInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"9\n\x17ProductInventoryMessage\x12\x0c\n\x04size\x18\x01 \x01(\t\x12\x10\n\x08quantity\x18\x02 \x01(\x05\"\xa3\x02\n\x0cProductQuery\x12\x19\n\x0csearch_query\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x15\n\x08\x62rand_id\x18\x02 \x01(\tH\x01\x88\x01\x01\x12\x18\n\x0b\x63\x61tegory_id\x18\x03 \x01(\tH\x02\x88\x01\x01\x12\x1f\n\x12\x61lloff_category_id\x18\x04 \x01(\tH\x03\x88\x01\x01\x12)\n\x07options\x18\x05 \x03(\x0e\x32\x18.goalloff.SortingOptions\x12\x1f\n\x12is_classified_done\x18\x06 \x01(\x08H\x04\x88\x01\x01\x42\x0f\n\r_search_queryB\x0b\n\t_brand_idB\x0e\n\x0c_category_idB\x15\n\x13_alloff_category_idB\x15\n\x13_is_classified_done*\xc4\x01\n\x0eSortingOptions\x12\x13\n\x0fPRICE_ASCENDING\x10\x00\x12\x14\n\x10PRICE_DESCENDING\x10\x01\x12\x11\n\rDISCOUNT_0_30\x10\x02\x12\x12\n\x0e\x44ISCOUNT_30_50\x10\x03\x12\x12\n\x0e\x44ISCOUNT_50_70\x10\x04\x12\x13\n\x0f\x44ISCOUNT_70_100\x10\x05\x12\x1a\n\x16\x44ISCOUNTRATE_ASCENDING\x10\x06\x12\x1b\n\x17\x44ISCOUNTRATE_DESCENDING\x10\x07\x32\xbf\x02\n\x07Product\x12G\n\nGetProduct\x12\x1b.goalloff.GetProductRequest\x1a\x1c.goalloff.GetProductResponse\x12M\n\x0cListProducts\x12\x1d.goalloff.ListProductsRequest\x1a\x1e.goalloff.ListProductsResponse\x12P\n\rCreateProduct\x12\x1e.goalloff.CreateProductRequest\x1a\x1f.goalloff.CreateProductResponse\x12J\n\x0b\x45\x64itProduct\x12\x1c.goalloff.EditProductRequest\x1a\x1d.goalloff.EditProductResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rproduct.proto\x12\x08goalloff\x1a\x11\x61lloff_size.proto\".\n\x11GetProductRequest\x12\x19\n\x11\x61lloff_product_id\x18\x01 \x01(\t\"?\n\x12GetProductResponse\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\"\x85\x01\n\x13ListProductsRequest\x12%\n\x05query\x18\x01 \x01(\x0b\x32\x16.goalloff.ProductQuery\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x18\n\x0bmodule_name\x18\x04 \x01(\tH\x00\x88\x01\x01\x42\x0e\n\x0c_module_name\"\xb8\x01\n\x14ListProductsResponse\x12*\n\x08products\x18\x01 \x03(\x0b\x32\x18.goalloff.ProductMessage\x12\x0e\n\x06offset\x18\x02 \x01(\x05\x12\r\n\x05limit\x18\x03 \x01(\x05\x12\x14\n\x0ctotal_counts\x18\x04 \x01(\x05\x12*\n\nlist_query\x18\x05 \x01(\x0b\x32\x16.goalloff.ProductQuery\x12\x13\n\x0bmodule_name\x18\x06 \x01(\t\"\xd3\x07\n\x14\x43reateProductRequest\x12\x13\n\x0b\x61lloff_name\x18\x01 \x01(\t\x12\x1b\n\x13is_foreign_delivery\x18\x02 \x01(\x08\x12\x17\n\nproduct_id\x18\x03 \x01(\tH\x00\x88\x01\x01\x12\x1b\n\x0eoriginal_price\x18\x04 \x01(\x05H\x01\x88\x01\x01\x12\x18\n\x10\x64iscounted_price\x18\x05 \x01(\x05\x12\x1a\n\rspecial_price\x18\x06 \x01(\x05H\x02\x88\x01\x01\x12\x16\n\x0e\x62rand_key_name\x18\x07 \x01(\t\x12\x34\n\tinventory\x18\x08 \x03(\x0b\x32!.goalloff.ProductInventoryMessage\x12\x13\n\x0b\x64\x65scription\x18\t \x03(\t\x12\x1a\n\x12is_refund_possible\x18\n \x01(\x08\x12\x0e\n\x06images\x18\x0b \x03(\t\x12\x1a\n\x12\x64\x65scription_images\x18\x0c \x03(\t\x12\x1e\n\x16\x65\x61rliest_delivery_days\x18\r \x01(\x05\x12\x1c\n\x14latest_delivery_days\x18\x0e \x01(\x05\x12\x12\n\nrefund_fee\x18\x0f \x01(\x05\x12\x18\n\x0bmodule_name\x18\x10 \x01(\tH\x03\x88\x01\x01\x12\x1f\n\x12\x61lloff_category_id\x18\x11 \x01(\tH\x04\x88\x01\x01\x12\x18\n\x0bproduct_url\x18\x12 \x01(\tH\x05\x88\x01\x01\x12O\n\x11\x64\x65scription_infos\x18\x13 \x03(\x0b\x32\x34.goalloff.CreateProductRequest.DescriptionInfosEntry\x12G\n\rproduct_infos\x18\x14 \x03(\x0b\x32\x30.goalloff.CreateProductRequest.ProductInfosEntry\x12\x1c\n\x0fthumbnail_image\x18\x15 \x01(\tH\x06\x88\x01\x01\x12\x17\n\nis_special\x18\x16 \x01(\x08H\x07\x88\x01\x01\x1a\x37\n\x15\x44\x65scriptionInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11ProductInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\r\n\x0b_product_idB\x11\n\x0f_original_priceB\x10\n\x0e_special_priceB\x0e\n\x0c_module_nameB\x15\n\x13_alloff_category_idB\x0e\n\x0c_product_urlB\x12\n\x10_thumbnail_imageB\r\n\x0b_is_special\"B\n\x15\x43reateProductResponse\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\"\xf5\t\n\x12\x45\x64itProductRequest\x12\x18\n\x0b\x61lloff_name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12 \n\x13is_foreign_delivery\x18\x02 \x01(\x08H\x01\x88\x01\x01\x12\x17\n\nproduct_id\x18\x03 \x01(\tH\x02\x88\x01\x01\x12\x1b\n\x0eoriginal_price\x18\x04 \x01(\x05H\x03\x88\x01\x01\x12\x1d\n\x10\x64iscounted_price\x18\x05 \x01(\x05H\x04\x88\x01\x01\x12\x1a\n\rspecial_price\x18\x06 \x01(\x05H\x05\x88\x01\x01\x12\x1b\n\x0e\x62rand_key_name\x18\x07 \x01(\tH\x06\x88\x01\x01\x12\x34\n\tinventory\x18\x08 \x03(\x0b\x32!.goalloff.ProductInventoryMessage\x12\x13\n\x0b\x64\x65scription\x18\t \x03(\t\x12\x1f\n\x12is_refund_possible\x18\n \x01(\x08H\x07\x88\x01\x01\x12\x0e\n\x06images\x18\x0b \x03(\t\x12\x1a\n\x12\x64\x65scription_images\x18\x0c \x03(\t\x12\x17\n\nis_removed\x18\r \x01(\x08H\x08\x88\x01\x01\x12#\n\x16\x65\x61rliest_delivery_days\x18\x0e \x01(\x05H\t\x88\x01\x01\x12!\n\x14latest_delivery_days\x18\x0f \x01(\x05H\n\x88\x01\x01\x12\x17\n\nrefund_fee\x18\x10 \x01(\x05H\x0b\x88\x01\x01\x12\x19\n\x11\x61lloff_product_id\x18\x11 \x01(\t\x12\x13\n\x0bmodule_name\x18\x12 \x01(\t\x12\x1f\n\x12\x61lloff_category_id\x18\x13 \x01(\tH\x0c\x88\x01\x01\x12\x17\n\nis_soldout\x18\x14 \x01(\x08H\r\x88\x01\x01\x12\x18\n\x0bproduct_url\x18\x15 \x01(\tH\x0e\x88\x01\x01\x12M\n\x11\x64\x65scription_infos\x18\x16 \x03(\x0b\x32\x32.goalloff.EditProductRequest.DescriptionInfosEntry\x12\x45\n\rproduct_infos\x18\x17 \x03(\x0b\x32..goalloff.EditProductRequest.ProductInfosEntry\x12\x1c\n\x0fthumbnail_image\x18\x18 \x01(\tH\x0f\x88\x01\x01\x12\x17\n\nis_special\x18\x19 \x01(\x08H\x10\x88\x01\x01\x1a\x37\n\x15\x44\x65scriptionInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11ProductInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x0e\n\x0c_alloff_nameB\x16\n\x14_is_foreign_deliveryB\r\n\x0b_product_idB\x11\n\x0f_original_priceB\x13\n\x11_discounted_priceB\x10\n\x0e_special_priceB\x11\n\x0f_brand_key_nameB\x15\n\x13_is_refund_possibleB\r\n\x0b_is_removedB\x19\n\x17_earliest_delivery_daysB\x17\n\x15_latest_delivery_daysB\r\n\x0b_refund_feeB\x15\n\x13_alloff_category_idB\r\n\x0b_is_soldoutB\x0e\n\x0c_product_urlB\x12\n\x10_thumbnail_imageB\r\n\x0b_is_special\"@\n\x13\x45\x64itProductResponse\x12)\n\x07product\x18\x01 \x01(\x0b\x32\x18.goalloff.ProductMessage\"\x8f\x08\n\x0eProductMessage\x12\x13\n\x0b\x61lloff_name\x18\x01 \x01(\t\x12\x1b\n\x13is_foreign_delivery\x18\x02 \x01(\x08\x12\x12\n\nproduct_id\x18\x03 \x01(\t\x12\x16\n\x0eoriginal_price\x18\x04 \x01(\x05\x12\x18\n\x10\x64iscounted_price\x18\x05 \x01(\x05\x12\x15\n\rspecial_price\x18\x06 \x01(\x05\x12\x16\n\x0e\x62rand_kor_name\x18\x07 \x01(\t\x12\x34\n\tinventory\x18\x08 \x03(\x0b\x32!.goalloff.ProductInventoryMessage\x12\x13\n\x0b\x64\x65scription\x18\t \x03(\t\x12\x1e\n\x16\x65\x61rliest_delivery_days\x18\n \x01(\x05\x12\x1c\n\x14latest_delivery_days\x18\x0b \x01(\x05\x12\x12\n\nrefund_fee\x18\x0c \x01(\x05\x12\x1a\n\x12is_refund_possible\x18\r \x01(\x08\x12\x0e\n\x06images\x18\x0e \x03(\t\x12\x1a\n\x12\x64\x65scription_images\x18\x0f \x03(\t\x12\x15\n\rcategory_name\x18\x10 \x01(\t\x12\x1c\n\x14\x61lloff_category_name\x18\x11 \x01(\t\x12\x12\n\nis_removed\x18\x12 \x01(\x08\x12\x12\n\nis_soldout\x18\x13 \x01(\x08\x12\x13\n\x0btotal_score\x18\x14 \x01(\x05\x12\x19\n\x11\x61lloff_product_id\x18\x15 \x01(\t\x12\x13\n\x0bmodule_name\x18\x16 \x01(\t\x12\x1a\n\x12\x61lloff_category_id\x18\x17 \x01(\t\x12\x13\n\x0bproduct_url\x18\x18 \x01(\t\x12\x1a\n\x12is_classified_done\x18\x19 \x01(\x08\x12\x1d\n\x15is_classified_touched\x18\x1a \x01(\x08\x12I\n\x11\x64\x65scription_infos\x18\x1b \x03(\x0b\x32..goalloff.ProductMessage.DescriptionInfosEntry\x12\x41\n\rproduct_infos\x18\x1c \x03(\x0b\x32*.goalloff.ProductMessage.ProductInfosEntry\x12\x17\n\x0fthumbnail_image\x18\x1d \x01(\t\x12\x12\n\nis_special\x18\x1e \x01(\x08\x12:\n\x10\x61lloff_inventory\x18\x1f \x03(\x0b\x32 .goalloff.AlloffInventoryMessage\x1a\x37\n\x15\x44\x65scriptionInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11ProductInfosEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"9\n\x17ProductInventoryMessage\x12\x0c\n\x04size\x18\x01 \x01(\t\x12\x10\n\x08quantity\x18\x02 \x01(\x05\"\\\n\x16\x41lloffInventoryMessage\x12\x30\n\x0b\x61lloff_size\x18\x01 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage\x12\x10\n\x08quantity\x18\x02 \x01(\x05\"\xa3\x02\n\x0cProductQuery\x12\x19\n\x0csearch_query\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x15\n\x08\x62rand_id\x18\x02 \x01(\tH\x01\x88\x01\x01\x12\x18\n\x0b\x63\x61tegory_id\x18\x03 \x01(\tH\x02\x88\x01\x01\x12\x1f\n\x12\x61lloff_category_id\x18\x04 \x01(\tH\x03\x88\x01\x01\x12)\n\x07options\x18\x05 \x03(\x0e\x32\x18.goalloff.SortingOptions\x12\x1f\n\x12is_classified_done\x18\x06 \x01(\x08H\x04\x88\x01\x01\x42\x0f\n\r_search_queryB\x0b\n\t_brand_idB\x0e\n\x0c_category_idB\x15\n\x13_alloff_category_idB\x15\n\x13_is_classified_done*\xc4\x01\n\x0eSortingOptions\x12\x13\n\x0fPRICE_ASCENDING\x10\x00\x12\x14\n\x10PRICE_DESCENDING\x10\x01\x12\x11\n\rDISCOUNT_0_30\x10\x02\x12\x12\n\x0e\x44ISCOUNT_30_50\x10\x03\x12\x12\n\x0e\x44ISCOUNT_50_70\x10\x04\x12\x13\n\x0f\x44ISCOUNT_70_100\x10\x05\x12\x1a\n\x16\x44ISCOUNTRATE_ASCENDING\x10\x06\x12\x1b\n\x17\x44ISCOUNTRATE_DESCENDING\x10\x07\x32\xbf\x02\n\x07Product\x12G\n\nGetProduct\x12\x1b.goalloff.GetProductRequest\x1a\x1c.goalloff.GetProductResponse\x12M\n\x0cListProducts\x12\x1d.goalloff.ListProductsRequest\x1a\x1e.goalloff.ListProductsResponse\x12P\n\rCreateProduct\x12\x1e.goalloff.CreateProductRequest\x1a\x1f.goalloff.CreateProductResponse\x12J\n\x0b\x45\x64itProduct\x12\x1c.goalloff.EditProductRequest\x1a\x1d.goalloff.EditProductResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 _SORTINGOPTIONS = DESCRIPTOR.enum_types_by_name['SortingOptions']
 SortingOptions = enum_type_wrapper.EnumTypeWrapper(_SORTINGOPTIONS)
@@ -45,6 +46,7 @@ _PRODUCTMESSAGE = DESCRIPTOR.message_types_by_name['ProductMessage']
 _PRODUCTMESSAGE_DESCRIPTIONINFOSENTRY = _PRODUCTMESSAGE.nested_types_by_name['DescriptionInfosEntry']
 _PRODUCTMESSAGE_PRODUCTINFOSENTRY = _PRODUCTMESSAGE.nested_types_by_name['ProductInfosEntry']
 _PRODUCTINVENTORYMESSAGE = DESCRIPTOR.message_types_by_name['ProductInventoryMessage']
+_ALLOFFINVENTORYMESSAGE = DESCRIPTOR.message_types_by_name['AlloffInventoryMessage']
 _PRODUCTQUERY = DESCRIPTOR.message_types_by_name['ProductQuery']
 GetProductRequest = _reflection.GeneratedProtocolMessageType('GetProductRequest', (_message.Message,), {
   'DESCRIPTOR' : _GETPRODUCTREQUEST,
@@ -164,6 +166,13 @@ ProductInventoryMessage = _reflection.GeneratedProtocolMessageType('ProductInven
   })
 _sym_db.RegisterMessage(ProductInventoryMessage)
 
+AlloffInventoryMessage = _reflection.GeneratedProtocolMessageType('AlloffInventoryMessage', (_message.Message,), {
+  'DESCRIPTOR' : _ALLOFFINVENTORYMESSAGE,
+  '__module__' : 'product_pb2'
+  # @@protoc_insertion_point(class_scope:goalloff.AlloffInventoryMessage)
+  })
+_sym_db.RegisterMessage(AlloffInventoryMessage)
+
 ProductQuery = _reflection.GeneratedProtocolMessageType('ProductQuery', (_message.Message,), {
   'DESCRIPTOR' : _PRODUCTQUERY,
   '__module__' : 'product_pb2'
@@ -188,42 +197,44 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _PRODUCTMESSAGE_DESCRIPTIONINFOSENTRY._serialized_options = b'8\001'
   _PRODUCTMESSAGE_PRODUCTINFOSENTRY._options = None
   _PRODUCTMESSAGE_PRODUCTINFOSENTRY._serialized_options = b'8\001'
-  _SORTINGOPTIONS._serialized_start=4187
-  _SORTINGOPTIONS._serialized_end=4383
-  _GETPRODUCTREQUEST._serialized_start=27
-  _GETPRODUCTREQUEST._serialized_end=73
-  _GETPRODUCTRESPONSE._serialized_start=75
-  _GETPRODUCTRESPONSE._serialized_end=138
-  _LISTPRODUCTSREQUEST._serialized_start=141
-  _LISTPRODUCTSREQUEST._serialized_end=274
-  _LISTPRODUCTSRESPONSE._serialized_start=277
-  _LISTPRODUCTSRESPONSE._serialized_end=461
-  _CREATEPRODUCTREQUEST._serialized_start=464
-  _CREATEPRODUCTREQUEST._serialized_end=1443
-  _CREATEPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_start=1193
-  _CREATEPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_end=1248
-  _CREATEPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_start=1250
-  _CREATEPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_end=1301
-  _CREATEPRODUCTRESPONSE._serialized_start=1445
-  _CREATEPRODUCTRESPONSE._serialized_end=1511
-  _EDITPRODUCTREQUEST._serialized_start=1514
-  _EDITPRODUCTREQUEST._serialized_end=2783
-  _EDITPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_start=1193
-  _EDITPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_end=1248
-  _EDITPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_start=1250
-  _EDITPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_end=1301
-  _EDITPRODUCTRESPONSE._serialized_start=2785
-  _EDITPRODUCTRESPONSE._serialized_end=2849
-  _PRODUCTMESSAGE._serialized_start=2852
-  _PRODUCTMESSAGE._serialized_end=3831
-  _PRODUCTMESSAGE_DESCRIPTIONINFOSENTRY._serialized_start=1193
-  _PRODUCTMESSAGE_DESCRIPTIONINFOSENTRY._serialized_end=1248
-  _PRODUCTMESSAGE_PRODUCTINFOSENTRY._serialized_start=1250
-  _PRODUCTMESSAGE_PRODUCTINFOSENTRY._serialized_end=1301
-  _PRODUCTINVENTORYMESSAGE._serialized_start=3833
-  _PRODUCTINVENTORYMESSAGE._serialized_end=3890
-  _PRODUCTQUERY._serialized_start=3893
-  _PRODUCTQUERY._serialized_end=4184
-  _PRODUCT._serialized_start=4386
-  _PRODUCT._serialized_end=4705
+  _SORTINGOPTIONS._serialized_start=4360
+  _SORTINGOPTIONS._serialized_end=4556
+  _GETPRODUCTREQUEST._serialized_start=46
+  _GETPRODUCTREQUEST._serialized_end=92
+  _GETPRODUCTRESPONSE._serialized_start=94
+  _GETPRODUCTRESPONSE._serialized_end=157
+  _LISTPRODUCTSREQUEST._serialized_start=160
+  _LISTPRODUCTSREQUEST._serialized_end=293
+  _LISTPRODUCTSRESPONSE._serialized_start=296
+  _LISTPRODUCTSRESPONSE._serialized_end=480
+  _CREATEPRODUCTREQUEST._serialized_start=483
+  _CREATEPRODUCTREQUEST._serialized_end=1462
+  _CREATEPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_start=1212
+  _CREATEPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_end=1267
+  _CREATEPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_start=1269
+  _CREATEPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_end=1320
+  _CREATEPRODUCTRESPONSE._serialized_start=1464
+  _CREATEPRODUCTRESPONSE._serialized_end=1530
+  _EDITPRODUCTREQUEST._serialized_start=1533
+  _EDITPRODUCTREQUEST._serialized_end=2802
+  _EDITPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_start=1212
+  _EDITPRODUCTREQUEST_DESCRIPTIONINFOSENTRY._serialized_end=1267
+  _EDITPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_start=1269
+  _EDITPRODUCTREQUEST_PRODUCTINFOSENTRY._serialized_end=1320
+  _EDITPRODUCTRESPONSE._serialized_start=2804
+  _EDITPRODUCTRESPONSE._serialized_end=2868
+  _PRODUCTMESSAGE._serialized_start=2871
+  _PRODUCTMESSAGE._serialized_end=3910
+  _PRODUCTMESSAGE_DESCRIPTIONINFOSENTRY._serialized_start=1212
+  _PRODUCTMESSAGE_DESCRIPTIONINFOSENTRY._serialized_end=1267
+  _PRODUCTMESSAGE_PRODUCTINFOSENTRY._serialized_start=1269
+  _PRODUCTMESSAGE_PRODUCTINFOSENTRY._serialized_end=1320
+  _PRODUCTINVENTORYMESSAGE._serialized_start=3912
+  _PRODUCTINVENTORYMESSAGE._serialized_end=3969
+  _ALLOFFINVENTORYMESSAGE._serialized_start=3971
+  _ALLOFFINVENTORYMESSAGE._serialized_end=4063
+  _PRODUCTQUERY._serialized_start=4066
+  _PRODUCTQUERY._serialized_end=4357
+  _PRODUCT._serialized_start=4559
+  _PRODUCT._serialized_end=4878
 # @@protoc_insertion_point(module_scope)

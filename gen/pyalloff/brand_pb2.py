@@ -12,9 +12,10 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from . import alloff_size_pb2 as alloff__size__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x62rand.proto\x12\x08goalloff\"\x12\n\x10ListBrandRequest\";\n\x11ListBrandResponse\x12&\n\x06\x62rands\x18\x01 \x03(\x0b\x32\x16.goalloff.BrandMessage\"\xbd\x03\n\x10\x45\x64itBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x14\n\x07korname\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x14\n\x07\x65ngname\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x1b\n\x0elogo_image_url\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x17\n\nis_popular\x18\x06 \x01(\x08H\x04\x88\x01\x01\x12\x14\n\x07is_open\x18\x07 \x01(\x08H\x05\x88\x01\x01\x12\x1b\n\x0ein_maintenance\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x1b\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\tH\x07\x88\x01\x01\x12\x14\n\x07is_hide\x18\x0b \x01(\x08H\x08\x88\x01\x01\x42\n\n\x08_kornameB\n\n\x08_engnameB\x11\n\x0f_logo_image_urlB\x0e\n\x0c_descriptionB\r\n\x0b_is_popularB\n\n\x08_is_openB\x11\n\x0f_in_maintenanceB\x11\n\x0f_back_image_urlB\n\n\x08_is_hide\":\n\x11\x45\x64itBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\xf9\x01\n\x12\x43reateBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x03 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x12\n\nis_popular\x18\x06 \x01(\x08\x12\x0f\n\x07is_open\x18\x07 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\x08 \x01(\x08\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\t\"<\n\x13\x43reateBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\x96\x02\n\x0c\x42randMessage\x12\x10\n\x08\x62rand_id\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07keyname\x18\x03 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x04 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\nis_popular\x18\x07 \x01(\x08\x12\x0f\n\x07is_open\x18\x08 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\t \x01(\x08\x12.\n\nsize_guide\x18\n \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\x0b \x01(\t\x12\x0f\n\x07is_hide\x18\x0c \x01(\x08\"4\n\x10SizeGuideMessage\x12\r\n\x05label\x18\x01 \x01(\t\x12\x11\n\timage_url\x18\x02 \x01(\t2\xdf\x01\n\x05\x42rand\x12\x44\n\tListBrand\x12\x1a.goalloff.ListBrandRequest\x1a\x1b.goalloff.ListBrandResponse\x12\x44\n\tEditBrand\x12\x1a.goalloff.EditBrandRequest\x1a\x1b.goalloff.EditBrandResponse\x12J\n\x0b\x43reateBrand\x12\x1c.goalloff.CreateBrandRequest\x1a\x1d.goalloff.CreateBrandResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x62rand.proto\x12\x08goalloff\x1a\x11\x61lloff_size.proto\"\x12\n\x10ListBrandRequest\";\n\x11ListBrandResponse\x12&\n\x06\x62rands\x18\x01 \x03(\x0b\x32\x16.goalloff.BrandMessage\"\x8a\x04\n\x10\x45\x64itBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x14\n\x07korname\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x14\n\x07\x65ngname\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x1b\n\x0elogo_image_url\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x17\n\nis_popular\x18\x06 \x01(\x08H\x04\x88\x01\x01\x12\x14\n\x07is_open\x18\x07 \x01(\x08H\x05\x88\x01\x01\x12\x1b\n\x0ein_maintenance\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x1b\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\tH\x07\x88\x01\x01\x12\x14\n\x07is_hide\x18\x0b \x01(\x08H\x08\x88\x01\x01\x12K\n\x1ainventory_mapping_policies\x18\x0c \x03(\x0b\x32\'.goalloff.InventoryMappingPolicyMessageB\n\n\x08_kornameB\n\n\x08_engnameB\x11\n\x0f_logo_image_urlB\x0e\n\x0c_descriptionB\r\n\x0b_is_popularB\n\n\x08_is_openB\x11\n\x0f_in_maintenanceB\x11\n\x0f_back_image_urlB\n\n\x08_is_hide\":\n\x11\x45\x64itBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\xc6\x02\n\x12\x43reateBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x03 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x12\n\nis_popular\x18\x06 \x01(\x08\x12\x0f\n\x07is_open\x18\x07 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\x08 \x01(\x08\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\t\x12K\n\x1ainventory_mapping_policies\x18\x0b \x03(\x0b\x32\'.goalloff.InventoryMappingPolicyMessage\"<\n\x13\x43reateBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\xe3\x02\n\x0c\x42randMessage\x12\x10\n\x08\x62rand_id\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07keyname\x18\x03 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x04 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\nis_popular\x18\x07 \x01(\x08\x12\x0f\n\x07is_open\x18\x08 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\t \x01(\x08\x12.\n\nsize_guide\x18\n \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\x0b \x01(\t\x12\x0f\n\x07is_hide\x18\x0c \x01(\x08\x12K\n\x1ainventory_mapping_policies\x18\r \x03(\x0b\x32\'.goalloff.InventoryMappingPolicyMessage\"4\n\x10SizeGuideMessage\x12\r\n\x05label\x18\x01 \x01(\t\x12\x11\n\timage_url\x18\x02 \x01(\t\"e\n\x1dInventoryMappingPolicyMessage\x12\x12\n\nbrand_size\x18\x01 \x01(\t\x12\x30\n\x0b\x61lloff_size\x18\x02 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage2\xdf\x01\n\x05\x42rand\x12\x44\n\tListBrand\x12\x1a.goalloff.ListBrandRequest\x1a\x1b.goalloff.ListBrandResponse\x12\x44\n\tEditBrand\x12\x1a.goalloff.EditBrandRequest\x1a\x1b.goalloff.EditBrandResponse\x12J\n\x0b\x43reateBrand\x12\x1c.goalloff.CreateBrandRequest\x1a\x1d.goalloff.CreateBrandResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -26,6 +27,7 @@ _CREATEBRANDREQUEST = DESCRIPTOR.message_types_by_name['CreateBrandRequest']
 _CREATEBRANDRESPONSE = DESCRIPTOR.message_types_by_name['CreateBrandResponse']
 _BRANDMESSAGE = DESCRIPTOR.message_types_by_name['BrandMessage']
 _SIZEGUIDEMESSAGE = DESCRIPTOR.message_types_by_name['SizeGuideMessage']
+_INVENTORYMAPPINGPOLICYMESSAGE = DESCRIPTOR.message_types_by_name['InventoryMappingPolicyMessage']
 ListBrandRequest = _reflection.GeneratedProtocolMessageType('ListBrandRequest', (_message.Message,), {
   'DESCRIPTOR' : _LISTBRANDREQUEST,
   '__module__' : 'brand_pb2'
@@ -82,27 +84,36 @@ SizeGuideMessage = _reflection.GeneratedProtocolMessageType('SizeGuideMessage', 
   })
 _sym_db.RegisterMessage(SizeGuideMessage)
 
+InventoryMappingPolicyMessage = _reflection.GeneratedProtocolMessageType('InventoryMappingPolicyMessage', (_message.Message,), {
+  'DESCRIPTOR' : _INVENTORYMAPPINGPOLICYMESSAGE,
+  '__module__' : 'brand_pb2'
+  # @@protoc_insertion_point(class_scope:goalloff.InventoryMappingPolicyMessage)
+  })
+_sym_db.RegisterMessage(InventoryMappingPolicyMessage)
+
 _BRAND = DESCRIPTOR.services_by_name['Brand']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
-  _LISTBRANDREQUEST._serialized_start=25
-  _LISTBRANDREQUEST._serialized_end=43
-  _LISTBRANDRESPONSE._serialized_start=45
-  _LISTBRANDRESPONSE._serialized_end=104
-  _EDITBRANDREQUEST._serialized_start=107
-  _EDITBRANDREQUEST._serialized_end=552
-  _EDITBRANDRESPONSE._serialized_start=554
-  _EDITBRANDRESPONSE._serialized_end=612
-  _CREATEBRANDREQUEST._serialized_start=615
-  _CREATEBRANDREQUEST._serialized_end=864
-  _CREATEBRANDRESPONSE._serialized_start=866
-  _CREATEBRANDRESPONSE._serialized_end=926
-  _BRANDMESSAGE._serialized_start=929
-  _BRANDMESSAGE._serialized_end=1207
-  _SIZEGUIDEMESSAGE._serialized_start=1209
-  _SIZEGUIDEMESSAGE._serialized_end=1261
-  _BRAND._serialized_start=1264
-  _BRAND._serialized_end=1487
+  _LISTBRANDREQUEST._serialized_start=44
+  _LISTBRANDREQUEST._serialized_end=62
+  _LISTBRANDRESPONSE._serialized_start=64
+  _LISTBRANDRESPONSE._serialized_end=123
+  _EDITBRANDREQUEST._serialized_start=126
+  _EDITBRANDREQUEST._serialized_end=648
+  _EDITBRANDRESPONSE._serialized_start=650
+  _EDITBRANDRESPONSE._serialized_end=708
+  _CREATEBRANDREQUEST._serialized_start=711
+  _CREATEBRANDREQUEST._serialized_end=1037
+  _CREATEBRANDRESPONSE._serialized_start=1039
+  _CREATEBRANDRESPONSE._serialized_end=1099
+  _BRANDMESSAGE._serialized_start=1102
+  _BRANDMESSAGE._serialized_end=1457
+  _SIZEGUIDEMESSAGE._serialized_start=1459
+  _SIZEGUIDEMESSAGE._serialized_end=1511
+  _INVENTORYMAPPINGPOLICYMESSAGE._serialized_start=1513
+  _INVENTORYMAPPINGPOLICYMESSAGE._serialized_end=1614
+  _BRAND._serialized_start=1617
+  _BRAND._serialized_end=1840
 # @@protoc_insertion_point(module_scope)

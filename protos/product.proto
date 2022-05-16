@@ -1,6 +1,9 @@
 syntax = "proto3";
 
 package goalloff;
+
+import "alloff_size.proto";
+
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 service Product {
@@ -131,10 +134,16 @@ message ProductMessage {
     map<string, string> product_infos = 28;
     string thumbnail_image = 29;
     bool is_special = 30;
+    repeated  AlloffInventoryMessage alloff_inventory = 31;
 }
 
 message ProductInventoryMessage {
     string size = 1;
+    int32 quantity = 2;
+}
+
+message AlloffInventoryMessage {
+    AlloffSizeMessage alloff_size = 1;
     int32 quantity = 2;
 }
 

@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package goalloff;
+
+option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
+
+service AlloffSize {
+  rpc ListAlloffSize(ListAlloffSizeRequest) returns (ListAlloffSizeResponse);
+  rpc EditAlloffSize(EditAlloffSizeRequest) returns (EditAlloffSizeResponse);
+  rpc CreateAlloffSize(CreateAlloffSizeRequest) returns (CreateAlloffSizeResponse);
+}
+
+/*
+      GRPC API Request & Response
+ */
+
+message ListAlloffSizeRequest {
+}
+
+message ListAlloffSizeResponse {
+  repeated AlloffSizeMessage alloff_sizes = 1;
+}
+
+message CreateAlloffSizeRequest {
+  string size_name = 1;
+  string guide_image = 2;
+}
+
+message CreateAlloffSizeResponse {
+  AlloffSizeMessage alloff_size = 1;
+}
+
+message EditAlloffSizeRequest {
+  string alloff_size_id = 1;
+  optional string size_name = 2;
+  optional string guide_image = 3;
+}
+
+message EditAlloffSizeResponse {
+  AlloffSizeMessage alloff_size = 1;
+}
+
+message AlloffSizeMessage {
+  string id = 1;
+  string size_name = 2;
+  string guide_image = 3;
+}

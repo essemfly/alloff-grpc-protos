@@ -1,6 +1,9 @@
 syntax = "proto3";
 
 package goalloff;
+
+import "alloff_size.proto";
+
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 service Brand {
@@ -32,6 +35,7 @@ message EditBrandRequest {
     repeated SizeGuideMessage size_guide = 9;
     optional string back_image_url = 10;
     optional bool is_hide = 11;
+    repeated InventoryMappingPolicyMessage inventory_mapping_policies = 12;
 }
 
 message EditBrandResponse {
@@ -49,6 +53,7 @@ message CreateBrandRequest {
     bool in_maintenance = 8;
     repeated SizeGuideMessage size_guide = 9;
     string back_image_url = 10;
+    repeated InventoryMappingPolicyMessage inventory_mapping_policies = 11;
 }
 
 message CreateBrandResponse {
@@ -68,9 +73,15 @@ message BrandMessage {
     repeated SizeGuideMessage size_guide = 10;
     string back_image_url = 11;
     bool is_hide = 12;
+    repeated InventoryMappingPolicyMessage inventory_mapping_policies = 13;
 }
 
 message SizeGuideMessage {
     string label = 1;
     string image_url = 2;
+}
+
+message InventoryMappingPolicyMessage {
+    string brand_size = 1;
+    AlloffSizeMessage alloff_size = 2;
 }
