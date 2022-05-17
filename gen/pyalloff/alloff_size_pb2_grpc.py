@@ -14,6 +14,11 @@ class AlloffSizeStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.GetAlloffSize = channel.unary_unary(
+                '/goalloff.AlloffSize/GetAlloffSize',
+                request_serializer=alloff__size__pb2.GetAlloffSizeRequest.SerializeToString,
+                response_deserializer=alloff__size__pb2.GetAlloffSizeResponse.FromString,
+                )
         self.ListAlloffSize = channel.unary_unary(
                 '/goalloff.AlloffSize/ListAlloffSize',
                 request_serializer=alloff__size__pb2.ListAlloffSizeRequest.SerializeToString,
@@ -33,6 +38,12 @@ class AlloffSizeStub(object):
 
 class AlloffSizeServicer(object):
     """Missing associated documentation comment in .proto file."""
+
+    def GetAlloffSize(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
     def ListAlloffSize(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -55,6 +66,11 @@ class AlloffSizeServicer(object):
 
 def add_AlloffSizeServicer_to_server(servicer, server):
     rpc_method_handlers = {
+            'GetAlloffSize': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetAlloffSize,
+                    request_deserializer=alloff__size__pb2.GetAlloffSizeRequest.FromString,
+                    response_serializer=alloff__size__pb2.GetAlloffSizeResponse.SerializeToString,
+            ),
             'ListAlloffSize': grpc.unary_unary_rpc_method_handler(
                     servicer.ListAlloffSize,
                     request_deserializer=alloff__size__pb2.ListAlloffSizeRequest.FromString,
@@ -79,6 +95,23 @@ def add_AlloffSizeServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class AlloffSize(object):
     """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def GetAlloffSize(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/goalloff.AlloffSize/GetAlloffSize',
+            alloff__size__pb2.GetAlloffSizeRequest.SerializeToString,
+            alloff__size__pb2.GetAlloffSizeResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def ListAlloffSize(request,

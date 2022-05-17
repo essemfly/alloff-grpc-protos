@@ -22,6 +22,7 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AlloffSizeClient interface {
+	GetAlloffSize(ctx context.Context, in *GetAlloffSizeRequest, opts ...grpc.CallOption) (*GetAlloffSizeResponse, error)
 	ListAlloffSize(ctx context.Context, in *ListAlloffSizeRequest, opts ...grpc.CallOption) (*ListAlloffSizeResponse, error)
 	EditAlloffSize(ctx context.Context, in *EditAlloffSizeRequest, opts ...grpc.CallOption) (*EditAlloffSizeResponse, error)
 	CreateAlloffSize(ctx context.Context, in *CreateAlloffSizeRequest, opts ...grpc.CallOption) (*CreateAlloffSizeResponse, error)
@@ -33,6 +34,15 @@ type alloffSizeClient struct {
 
 func NewAlloffSizeClient(cc grpc.ClientConnInterface) AlloffSizeClient {
 	return &alloffSizeClient{cc}
+}
+
+func (c *alloffSizeClient) GetAlloffSize(ctx context.Context, in *GetAlloffSizeRequest, opts ...grpc.CallOption) (*GetAlloffSizeResponse, error) {
+	out := new(GetAlloffSizeResponse)
+	err := c.cc.Invoke(ctx, "/goalloff.AlloffSize/GetAlloffSize", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
 }
 
 func (c *alloffSizeClient) ListAlloffSize(ctx context.Context, in *ListAlloffSizeRequest, opts ...grpc.CallOption) (*ListAlloffSizeResponse, error) {
@@ -66,6 +76,7 @@ func (c *alloffSizeClient) CreateAlloffSize(ctx context.Context, in *CreateAllof
 // All implementations must embed UnimplementedAlloffSizeServer
 // for forward compatibility
 type AlloffSizeServer interface {
+	GetAlloffSize(context.Context, *GetAlloffSizeRequest) (*GetAlloffSizeResponse, error)
 	ListAlloffSize(context.Context, *ListAlloffSizeRequest) (*ListAlloffSizeResponse, error)
 	EditAlloffSize(context.Context, *EditAlloffSizeRequest) (*EditAlloffSizeResponse, error)
 	CreateAlloffSize(context.Context, *CreateAlloffSizeRequest) (*CreateAlloffSizeResponse, error)
@@ -76,6 +87,9 @@ type AlloffSizeServer interface {
 type UnimplementedAlloffSizeServer struct {
 }
 
+func (UnimplementedAlloffSizeServer) GetAlloffSize(context.Context, *GetAlloffSizeRequest) (*GetAlloffSizeResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetAlloffSize not implemented")
+}
 func (UnimplementedAlloffSizeServer) ListAlloffSize(context.Context, *ListAlloffSizeRequest) (*ListAlloffSizeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListAlloffSize not implemented")
 }
@@ -96,6 +110,24 @@ type UnsafeAlloffSizeServer interface {
 
 func RegisterAlloffSizeServer(s grpc.ServiceRegistrar, srv AlloffSizeServer) {
 	s.RegisterService(&AlloffSize_ServiceDesc, srv)
+}
+
+func _AlloffSize_GetAlloffSize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetAlloffSizeRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(AlloffSizeServer).GetAlloffSize(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/goalloff.AlloffSize/GetAlloffSize",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(AlloffSizeServer).GetAlloffSize(ctx, req.(*GetAlloffSizeRequest))
+	}
+	return interceptor(ctx, in, info, handler)
 }
 
 func _AlloffSize_ListAlloffSize_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
@@ -159,6 +191,10 @@ var AlloffSize_ServiceDesc = grpc.ServiceDesc{
 	ServiceName: "goalloff.AlloffSize",
 	HandlerType: (*AlloffSizeServer)(nil),
 	Methods: []grpc.MethodDesc{
+		{
+			MethodName: "GetAlloffSize",
+			Handler:    _AlloffSize_GetAlloffSize_Handler,
+		},
 		{
 			MethodName: "ListAlloffSize",
 			Handler:    _AlloffSize_ListAlloffSize_Handler,

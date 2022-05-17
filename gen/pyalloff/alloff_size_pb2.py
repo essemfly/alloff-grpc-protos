@@ -14,10 +14,12 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11\x61lloff_size.proto\x12\x08goalloff\"\x17\n\x15ListAlloffSizeRequest\"K\n\x16ListAlloffSizeResponse\x12\x31\n\x0c\x61lloff_sizes\x18\x01 \x03(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"A\n\x17\x43reateAlloffSizeRequest\x12\x11\n\tsize_name\x18\x01 \x01(\t\x12\x13\n\x0bguide_image\x18\x02 \x01(\t\"L\n\x18\x43reateAlloffSizeResponse\x12\x30\n\x0b\x61lloff_size\x18\x01 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"\x7f\n\x15\x45\x64itAlloffSizeRequest\x12\x16\n\x0e\x61lloff_size_id\x18\x01 \x01(\t\x12\x16\n\tsize_name\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x18\n\x0bguide_image\x18\x03 \x01(\tH\x01\x88\x01\x01\x42\x0c\n\n_size_nameB\x0e\n\x0c_guide_image\"J\n\x16\x45\x64itAlloffSizeResponse\x12\x30\n\x0b\x61lloff_size\x18\x01 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"S\n\x11\x41lloffSizeMessage\x12\x16\n\x0e\x61lloff_size_id\x18\x01 \x01(\t\x12\x11\n\tsize_name\x18\x02 \x01(\t\x12\x13\n\x0bguide_image\x18\x03 \x01(\t2\x91\x02\n\nAlloffSize\x12S\n\x0eListAlloffSize\x12\x1f.goalloff.ListAlloffSizeRequest\x1a .goalloff.ListAlloffSizeResponse\x12S\n\x0e\x45\x64itAlloffSize\x12\x1f.goalloff.EditAlloffSizeRequest\x1a .goalloff.EditAlloffSizeResponse\x12Y\n\x10\x43reateAlloffSize\x12!.goalloff.CreateAlloffSizeRequest\x1a\".goalloff.CreateAlloffSizeResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x11\x61lloff_size.proto\x12\x08goalloff\".\n\x14GetAlloffSizeRequest\x12\x16\n\x0e\x61lloff_size_id\x18\x01 \x01(\t\"I\n\x15GetAlloffSizeResponse\x12\x30\n\x0b\x61lloff_size\x18\x01 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"\x17\n\x15ListAlloffSizeRequest\"K\n\x16ListAlloffSizeResponse\x12\x31\n\x0c\x61lloff_sizes\x18\x01 \x03(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"A\n\x17\x43reateAlloffSizeRequest\x12\x11\n\tsize_name\x18\x01 \x01(\t\x12\x13\n\x0bguide_image\x18\x02 \x01(\t\"L\n\x18\x43reateAlloffSizeResponse\x12\x30\n\x0b\x61lloff_size\x18\x01 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"\x7f\n\x15\x45\x64itAlloffSizeRequest\x12\x16\n\x0e\x61lloff_size_id\x18\x01 \x01(\t\x12\x16\n\tsize_name\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x18\n\x0bguide_image\x18\x03 \x01(\tH\x01\x88\x01\x01\x42\x0c\n\n_size_nameB\x0e\n\x0c_guide_image\"J\n\x16\x45\x64itAlloffSizeResponse\x12\x30\n\x0b\x61lloff_size\x18\x01 \x01(\x0b\x32\x1b.goalloff.AlloffSizeMessage\"S\n\x11\x41lloffSizeMessage\x12\x16\n\x0e\x61lloff_size_id\x18\x01 \x01(\t\x12\x11\n\tsize_name\x18\x02 \x01(\t\x12\x13\n\x0bguide_image\x18\x03 \x01(\t2\xe3\x02\n\nAlloffSize\x12P\n\rGetAlloffSize\x12\x1e.goalloff.GetAlloffSizeRequest\x1a\x1f.goalloff.GetAlloffSizeResponse\x12S\n\x0eListAlloffSize\x12\x1f.goalloff.ListAlloffSizeRequest\x1a .goalloff.ListAlloffSizeResponse\x12S\n\x0e\x45\x64itAlloffSize\x12\x1f.goalloff.EditAlloffSizeRequest\x1a .goalloff.EditAlloffSizeResponse\x12Y\n\x10\x43reateAlloffSize\x12!.goalloff.CreateAlloffSizeRequest\x1a\".goalloff.CreateAlloffSizeResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
+_GETALLOFFSIZEREQUEST = DESCRIPTOR.message_types_by_name['GetAlloffSizeRequest']
+_GETALLOFFSIZERESPONSE = DESCRIPTOR.message_types_by_name['GetAlloffSizeResponse']
 _LISTALLOFFSIZEREQUEST = DESCRIPTOR.message_types_by_name['ListAlloffSizeRequest']
 _LISTALLOFFSIZERESPONSE = DESCRIPTOR.message_types_by_name['ListAlloffSizeResponse']
 _CREATEALLOFFSIZEREQUEST = DESCRIPTOR.message_types_by_name['CreateAlloffSizeRequest']
@@ -25,6 +27,20 @@ _CREATEALLOFFSIZERESPONSE = DESCRIPTOR.message_types_by_name['CreateAlloffSizeRe
 _EDITALLOFFSIZEREQUEST = DESCRIPTOR.message_types_by_name['EditAlloffSizeRequest']
 _EDITALLOFFSIZERESPONSE = DESCRIPTOR.message_types_by_name['EditAlloffSizeResponse']
 _ALLOFFSIZEMESSAGE = DESCRIPTOR.message_types_by_name['AlloffSizeMessage']
+GetAlloffSizeRequest = _reflection.GeneratedProtocolMessageType('GetAlloffSizeRequest', (_message.Message,), {
+  'DESCRIPTOR' : _GETALLOFFSIZEREQUEST,
+  '__module__' : 'alloff_size_pb2'
+  # @@protoc_insertion_point(class_scope:goalloff.GetAlloffSizeRequest)
+  })
+_sym_db.RegisterMessage(GetAlloffSizeRequest)
+
+GetAlloffSizeResponse = _reflection.GeneratedProtocolMessageType('GetAlloffSizeResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETALLOFFSIZERESPONSE,
+  '__module__' : 'alloff_size_pb2'
+  # @@protoc_insertion_point(class_scope:goalloff.GetAlloffSizeResponse)
+  })
+_sym_db.RegisterMessage(GetAlloffSizeResponse)
+
 ListAlloffSizeRequest = _reflection.GeneratedProtocolMessageType('ListAlloffSizeRequest', (_message.Message,), {
   'DESCRIPTOR' : _LISTALLOFFSIZEREQUEST,
   '__module__' : 'alloff_size_pb2'
@@ -79,20 +95,24 @@ if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloff'
-  _LISTALLOFFSIZEREQUEST._serialized_start=31
-  _LISTALLOFFSIZEREQUEST._serialized_end=54
-  _LISTALLOFFSIZERESPONSE._serialized_start=56
-  _LISTALLOFFSIZERESPONSE._serialized_end=131
-  _CREATEALLOFFSIZEREQUEST._serialized_start=133
-  _CREATEALLOFFSIZEREQUEST._serialized_end=198
-  _CREATEALLOFFSIZERESPONSE._serialized_start=200
-  _CREATEALLOFFSIZERESPONSE._serialized_end=276
-  _EDITALLOFFSIZEREQUEST._serialized_start=278
-  _EDITALLOFFSIZEREQUEST._serialized_end=405
-  _EDITALLOFFSIZERESPONSE._serialized_start=407
-  _EDITALLOFFSIZERESPONSE._serialized_end=481
-  _ALLOFFSIZEMESSAGE._serialized_start=483
-  _ALLOFFSIZEMESSAGE._serialized_end=566
-  _ALLOFFSIZE._serialized_start=569
-  _ALLOFFSIZE._serialized_end=842
+  _GETALLOFFSIZEREQUEST._serialized_start=31
+  _GETALLOFFSIZEREQUEST._serialized_end=77
+  _GETALLOFFSIZERESPONSE._serialized_start=79
+  _GETALLOFFSIZERESPONSE._serialized_end=152
+  _LISTALLOFFSIZEREQUEST._serialized_start=154
+  _LISTALLOFFSIZEREQUEST._serialized_end=177
+  _LISTALLOFFSIZERESPONSE._serialized_start=179
+  _LISTALLOFFSIZERESPONSE._serialized_end=254
+  _CREATEALLOFFSIZEREQUEST._serialized_start=256
+  _CREATEALLOFFSIZEREQUEST._serialized_end=321
+  _CREATEALLOFFSIZERESPONSE._serialized_start=323
+  _CREATEALLOFFSIZERESPONSE._serialized_end=399
+  _EDITALLOFFSIZEREQUEST._serialized_start=401
+  _EDITALLOFFSIZEREQUEST._serialized_end=528
+  _EDITALLOFFSIZERESPONSE._serialized_start=530
+  _EDITALLOFFSIZERESPONSE._serialized_end=604
+  _ALLOFFSIZEMESSAGE._serialized_start=606
+  _ALLOFFSIZEMESSAGE._serialized_end=689
+  _ALLOFFSIZE._serialized_start=692
+  _ALLOFFSIZE._serialized_end=1047
 # @@protoc_insertion_point(module_scope)

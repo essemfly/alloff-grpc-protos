@@ -5,6 +5,7 @@ package goalloff;
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 service AlloffSize {
+  rpc GetAlloffSize(GetAlloffSizeRequest) returns (GetAlloffSizeResponse);
   rpc ListAlloffSize(ListAlloffSizeRequest) returns (ListAlloffSizeResponse);
   rpc EditAlloffSize(EditAlloffSizeRequest) returns (EditAlloffSizeResponse);
   rpc CreateAlloffSize(CreateAlloffSizeRequest) returns (CreateAlloffSizeResponse);
@@ -13,6 +14,14 @@ service AlloffSize {
 /*
       GRPC API Request & Response
  */
+
+message GetAlloffSizeRequest {
+  string alloff_size_id = 1;
+}
+
+message GetAlloffSizeResponse {
+  AlloffSizeMessage alloff_size = 1;
+}
 
 message ListAlloffSizeRequest {
 }
