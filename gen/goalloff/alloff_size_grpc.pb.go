@@ -22,10 +22,10 @@ const _ = grpc.SupportPackageIsVersion7
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type AlloffSizeClient interface {
-	GetAlloffSize(ctx context.Context, in *GetAlloffSizeRequest, opts ...grpc.CallOption) (*GetAlloffSizeResponse, error)
+	GetAlloffSize(ctx context.Context, in *GetAlloffSizeRequest, opts ...grpc.CallOption) (*AlloffSizeMessage, error)
 	ListAlloffSize(ctx context.Context, in *ListAlloffSizeRequest, opts ...grpc.CallOption) (*ListAlloffSizeResponse, error)
-	EditAlloffSize(ctx context.Context, in *EditAlloffSizeRequest, opts ...grpc.CallOption) (*EditAlloffSizeResponse, error)
-	CreateAlloffSize(ctx context.Context, in *CreateAlloffSizeRequest, opts ...grpc.CallOption) (*CreateAlloffSizeResponse, error)
+	EditAlloffSize(ctx context.Context, in *EditAlloffSizeRequest, opts ...grpc.CallOption) (*AlloffSizeMessage, error)
+	CreateAlloffSize(ctx context.Context, in *CreateAlloffSizeRequest, opts ...grpc.CallOption) (*AlloffSizeMessage, error)
 }
 
 type alloffSizeClient struct {
@@ -36,8 +36,8 @@ func NewAlloffSizeClient(cc grpc.ClientConnInterface) AlloffSizeClient {
 	return &alloffSizeClient{cc}
 }
 
-func (c *alloffSizeClient) GetAlloffSize(ctx context.Context, in *GetAlloffSizeRequest, opts ...grpc.CallOption) (*GetAlloffSizeResponse, error) {
-	out := new(GetAlloffSizeResponse)
+func (c *alloffSizeClient) GetAlloffSize(ctx context.Context, in *GetAlloffSizeRequest, opts ...grpc.CallOption) (*AlloffSizeMessage, error) {
+	out := new(AlloffSizeMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.AlloffSize/GetAlloffSize", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -54,8 +54,8 @@ func (c *alloffSizeClient) ListAlloffSize(ctx context.Context, in *ListAlloffSiz
 	return out, nil
 }
 
-func (c *alloffSizeClient) EditAlloffSize(ctx context.Context, in *EditAlloffSizeRequest, opts ...grpc.CallOption) (*EditAlloffSizeResponse, error) {
-	out := new(EditAlloffSizeResponse)
+func (c *alloffSizeClient) EditAlloffSize(ctx context.Context, in *EditAlloffSizeRequest, opts ...grpc.CallOption) (*AlloffSizeMessage, error) {
+	out := new(AlloffSizeMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.AlloffSize/EditAlloffSize", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -63,8 +63,8 @@ func (c *alloffSizeClient) EditAlloffSize(ctx context.Context, in *EditAlloffSiz
 	return out, nil
 }
 
-func (c *alloffSizeClient) CreateAlloffSize(ctx context.Context, in *CreateAlloffSizeRequest, opts ...grpc.CallOption) (*CreateAlloffSizeResponse, error) {
-	out := new(CreateAlloffSizeResponse)
+func (c *alloffSizeClient) CreateAlloffSize(ctx context.Context, in *CreateAlloffSizeRequest, opts ...grpc.CallOption) (*AlloffSizeMessage, error) {
+	out := new(AlloffSizeMessage)
 	err := c.cc.Invoke(ctx, "/goalloff.AlloffSize/CreateAlloffSize", in, out, opts...)
 	if err != nil {
 		return nil, err
@@ -76,10 +76,10 @@ func (c *alloffSizeClient) CreateAlloffSize(ctx context.Context, in *CreateAllof
 // All implementations must embed UnimplementedAlloffSizeServer
 // for forward compatibility
 type AlloffSizeServer interface {
-	GetAlloffSize(context.Context, *GetAlloffSizeRequest) (*GetAlloffSizeResponse, error)
+	GetAlloffSize(context.Context, *GetAlloffSizeRequest) (*AlloffSizeMessage, error)
 	ListAlloffSize(context.Context, *ListAlloffSizeRequest) (*ListAlloffSizeResponse, error)
-	EditAlloffSize(context.Context, *EditAlloffSizeRequest) (*EditAlloffSizeResponse, error)
-	CreateAlloffSize(context.Context, *CreateAlloffSizeRequest) (*CreateAlloffSizeResponse, error)
+	EditAlloffSize(context.Context, *EditAlloffSizeRequest) (*AlloffSizeMessage, error)
+	CreateAlloffSize(context.Context, *CreateAlloffSizeRequest) (*AlloffSizeMessage, error)
 	mustEmbedUnimplementedAlloffSizeServer()
 }
 
@@ -87,16 +87,16 @@ type AlloffSizeServer interface {
 type UnimplementedAlloffSizeServer struct {
 }
 
-func (UnimplementedAlloffSizeServer) GetAlloffSize(context.Context, *GetAlloffSizeRequest) (*GetAlloffSizeResponse, error) {
+func (UnimplementedAlloffSizeServer) GetAlloffSize(context.Context, *GetAlloffSizeRequest) (*AlloffSizeMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetAlloffSize not implemented")
 }
 func (UnimplementedAlloffSizeServer) ListAlloffSize(context.Context, *ListAlloffSizeRequest) (*ListAlloffSizeResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ListAlloffSize not implemented")
 }
-func (UnimplementedAlloffSizeServer) EditAlloffSize(context.Context, *EditAlloffSizeRequest) (*EditAlloffSizeResponse, error) {
+func (UnimplementedAlloffSizeServer) EditAlloffSize(context.Context, *EditAlloffSizeRequest) (*AlloffSizeMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method EditAlloffSize not implemented")
 }
-func (UnimplementedAlloffSizeServer) CreateAlloffSize(context.Context, *CreateAlloffSizeRequest) (*CreateAlloffSizeResponse, error) {
+func (UnimplementedAlloffSizeServer) CreateAlloffSize(context.Context, *CreateAlloffSizeRequest) (*AlloffSizeMessage, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CreateAlloffSize not implemented")
 }
 func (UnimplementedAlloffSizeServer) mustEmbedUnimplementedAlloffSizeServer() {}

@@ -17,7 +17,7 @@ class AlloffSizeStub(object):
         self.GetAlloffSize = channel.unary_unary(
                 '/goalloff.AlloffSize/GetAlloffSize',
                 request_serializer=alloff__size__pb2.GetAlloffSizeRequest.SerializeToString,
-                response_deserializer=alloff__size__pb2.GetAlloffSizeResponse.FromString,
+                response_deserializer=alloff__size__pb2.AlloffSizeMessage.FromString,
                 )
         self.ListAlloffSize = channel.unary_unary(
                 '/goalloff.AlloffSize/ListAlloffSize',
@@ -27,12 +27,12 @@ class AlloffSizeStub(object):
         self.EditAlloffSize = channel.unary_unary(
                 '/goalloff.AlloffSize/EditAlloffSize',
                 request_serializer=alloff__size__pb2.EditAlloffSizeRequest.SerializeToString,
-                response_deserializer=alloff__size__pb2.EditAlloffSizeResponse.FromString,
+                response_deserializer=alloff__size__pb2.AlloffSizeMessage.FromString,
                 )
         self.CreateAlloffSize = channel.unary_unary(
                 '/goalloff.AlloffSize/CreateAlloffSize',
                 request_serializer=alloff__size__pb2.CreateAlloffSizeRequest.SerializeToString,
-                response_deserializer=alloff__size__pb2.CreateAlloffSizeResponse.FromString,
+                response_deserializer=alloff__size__pb2.AlloffSizeMessage.FromString,
                 )
 
 
@@ -69,7 +69,7 @@ def add_AlloffSizeServicer_to_server(servicer, server):
             'GetAlloffSize': grpc.unary_unary_rpc_method_handler(
                     servicer.GetAlloffSize,
                     request_deserializer=alloff__size__pb2.GetAlloffSizeRequest.FromString,
-                    response_serializer=alloff__size__pb2.GetAlloffSizeResponse.SerializeToString,
+                    response_serializer=alloff__size__pb2.AlloffSizeMessage.SerializeToString,
             ),
             'ListAlloffSize': grpc.unary_unary_rpc_method_handler(
                     servicer.ListAlloffSize,
@@ -79,12 +79,12 @@ def add_AlloffSizeServicer_to_server(servicer, server):
             'EditAlloffSize': grpc.unary_unary_rpc_method_handler(
                     servicer.EditAlloffSize,
                     request_deserializer=alloff__size__pb2.EditAlloffSizeRequest.FromString,
-                    response_serializer=alloff__size__pb2.EditAlloffSizeResponse.SerializeToString,
+                    response_serializer=alloff__size__pb2.AlloffSizeMessage.SerializeToString,
             ),
             'CreateAlloffSize': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateAlloffSize,
                     request_deserializer=alloff__size__pb2.CreateAlloffSizeRequest.FromString,
-                    response_serializer=alloff__size__pb2.CreateAlloffSizeResponse.SerializeToString,
+                    response_serializer=alloff__size__pb2.AlloffSizeMessage.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -109,7 +109,7 @@ class AlloffSize(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/goalloff.AlloffSize/GetAlloffSize',
             alloff__size__pb2.GetAlloffSizeRequest.SerializeToString,
-            alloff__size__pb2.GetAlloffSizeResponse.FromString,
+            alloff__size__pb2.AlloffSizeMessage.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -143,7 +143,7 @@ class AlloffSize(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/goalloff.AlloffSize/EditAlloffSize',
             alloff__size__pb2.EditAlloffSizeRequest.SerializeToString,
-            alloff__size__pb2.EditAlloffSizeResponse.FromString,
+            alloff__size__pb2.AlloffSizeMessage.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
@@ -160,6 +160,6 @@ class AlloffSize(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/goalloff.AlloffSize/CreateAlloffSize',
             alloff__size__pb2.CreateAlloffSizeRequest.SerializeToString,
-            alloff__size__pb2.CreateAlloffSizeResponse.FromString,
+            alloff__size__pb2.AlloffSizeMessage.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

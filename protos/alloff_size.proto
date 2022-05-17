@@ -5,10 +5,10 @@ package goalloff;
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 service AlloffSize {
-  rpc GetAlloffSize(GetAlloffSizeRequest) returns (GetAlloffSizeResponse);
+  rpc GetAlloffSize(GetAlloffSizeRequest) returns (AlloffSizeMessage);
   rpc ListAlloffSize(ListAlloffSizeRequest) returns (ListAlloffSizeResponse);
-  rpc EditAlloffSize(EditAlloffSizeRequest) returns (EditAlloffSizeResponse);
-  rpc CreateAlloffSize(CreateAlloffSizeRequest) returns (CreateAlloffSizeResponse);
+  rpc EditAlloffSize(EditAlloffSizeRequest) returns (AlloffSizeMessage);
+  rpc CreateAlloffSize(CreateAlloffSizeRequest) returns (AlloffSizeMessage);
 }
 
 /*
