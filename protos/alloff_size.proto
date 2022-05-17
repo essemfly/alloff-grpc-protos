@@ -19,10 +19,6 @@ message GetAlloffSizeRequest {
   string alloff_size_id = 1;
 }
 
-message GetAlloffSizeResponse {
-  AlloffSizeMessage alloff_size = 1;
-}
-
 message ListAlloffSizeRequest {
 }
 
@@ -35,18 +31,10 @@ message CreateAlloffSizeRequest {
   string guide_image = 2;
 }
 
-message CreateAlloffSizeResponse {
-  AlloffSizeMessage alloff_size = 1;
-}
-
 message EditAlloffSizeRequest {
   string alloff_size_id = 1;
   optional string size_name = 2;
   optional string guide_image = 3;
-}
-
-message EditAlloffSizeResponse {
-  AlloffSizeMessage alloff_size = 1;
 }
 
 message AlloffSizeMessage {
