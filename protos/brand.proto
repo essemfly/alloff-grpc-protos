@@ -35,7 +35,7 @@ message EditBrandRequest {
     repeated SizeGuideMessage size_guide = 9;
     optional string back_image_url = 10;
     optional bool is_hide = 11;
-    repeated InventoryMappingPolicyMessage inventory_mapping_policies = 12;
+    repeated InventoryMappingPolicyRequester inventory_mapping_policies = 12;
 }
 
 message EditBrandResponse {
@@ -53,7 +53,7 @@ message CreateBrandRequest {
     bool in_maintenance = 8;
     repeated SizeGuideMessage size_guide = 9;
     string back_image_url = 10;
-    repeated InventoryMappingPolicyMessage inventory_mapping_policies = 11;
+    repeated InventoryMappingPolicyRequester inventory_mapping_policies = 11;
 }
 
 message CreateBrandResponse {
@@ -84,4 +84,9 @@ message SizeGuideMessage {
 message InventoryMappingPolicyMessage {
     string brand_size = 1;
     AlloffSizeMessage alloff_size = 2;
+}
+
+message InventoryMappingPolicyRequester {
+    string brand_size = 1;
+    string alloff_size_id = 2;
 }
