@@ -41,7 +41,7 @@ message EditAlloffSizeResponse {
 }
 
 message AlloffSizeMessage {
-  string id = 1;
+  string alloff_size_id = 1;
   string size_name = 2;
   string guide_image = 3;
 }
