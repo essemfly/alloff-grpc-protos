@@ -28,10 +28,9 @@ message ListAlloffSizeResponse {
 }
 
 message CreateAlloffSizeRequest {
-  string size_name = 1;
-  string alloff_category_id = 2;
-  string alloff_size_name = 3;
-  string original_size_name = 4;
+  string alloff_category_id = 1;
+  string alloff_size_name = 2;
+  string original_size_name = 3;
 }
 
 message EditAlloffSizeRequest {
