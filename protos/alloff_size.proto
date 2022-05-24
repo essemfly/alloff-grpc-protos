@@ -2,6 +2,8 @@ syntax = "proto3";
 
 package goalloff;
 
+import "alloffcategory.proto";
+
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
 service AlloffSize {
@@ -19,12 +21,7 @@ message GetAlloffSizeRequest {
   string alloff_size_id = 1;
 }
 
-message GetAlloffSizeResponse {
-  AlloffSizeMessage alloff_size = 1;
-}
-
-message ListAlloffSizeRequest {
-}
+message ListAlloffSizeRequest {}
 
 message ListAlloffSizeResponse {
   repeated AlloffSizeMessage alloff_sizes = 1;
@@ -32,25 +29,21 @@ message ListAlloffSizeResponse {
 
 message CreateAlloffSizeRequest {
   string size_name = 1;
-  string guide_image = 2;
-}
-
-message CreateAlloffSizeResponse {
-  AlloffSizeMessage alloff_size = 1;
+  string alloff_category_id = 2;
+  string alloff_size_name = 3;
+  string original_size_name = 4;
 }
 
 message EditAlloffSizeRequest {
   string alloff_size_id = 1;
-  optional string size_name = 2;
-  optional string guide_image = 3;
-}
-
-message EditAlloffSizeResponse {
-  AlloffSizeMessage alloff_size = 1;
+  optional string alloff_category_id = 2;
+  optional string alloff_size_name = 3;
+  optional string original_size_name = 4;
 }
 
 message AlloffSizeMessage {
   string alloff_size_id = 1;
-  string size_name = 2;
-  string guide_image = 3;
+  AlloffCategoryMessage alloff_category = 2;
+  string alloff_size_name = 3;
+  string original_size_name = 4;
 }

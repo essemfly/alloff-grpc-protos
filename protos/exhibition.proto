@@ -37,15 +37,11 @@ message EditExhibitionRequest {
     optional string title = 4;
     optional string subtitle = 5;
     optional string description = 6;
-    optional string recruit_start_time = 7;
+    repeated string tags = 7;
     optional string start_time = 8;
     optional string finish_time = 9;
     repeated string pg_ids = 10;
     optional bool is_live = 11;
-    optional int32 target_sales = 12;
-    repeated ExhibitionBannerMessage banners = 13;
-    optional int32 num_users_required = 14;
-    optional bool allow_old_user = 15;
 }
 
 message CreateExhibitionRequest {
@@ -54,15 +50,11 @@ message CreateExhibitionRequest {
     string title = 3;
     string subtitle = 4;
     string description = 5;
-    string recruit_start_time = 6;
+    repeated string tags = 6;
     string start_time = 7;
     string finish_time = 8;
     repeated string pg_ids = 9;
     ExhibitionType exhibition_type = 10;
-    int32 target_sales = 11;
-    repeated ExhibitionBannerMessage banners = 12;
-    optional int32 num_users_required = 13;
-    bool allow_old_user = 14;
 }
 
 message GetExhibitionResponse {
@@ -94,24 +86,10 @@ message ExhibitionMessage {
     string title = 4;
     string subtitle = 5;
     string description = 6;
-    string recruit_start_time = 7;
+    repeated string tags = 7;
     string start_time = 8;
     string finish_time = 9;
     repeated ProductGroupMessage pgs = 10;
     bool is_live = 11;
     ExhibitionType exhibition_type = 12;
-    int32 target_sales = 13;
-    int32 current_sales = 14;
-    repeated ExhibitionBannerMessage banners = 15;
-    int32 total_participants = 16;
-    int32 num_users_required = 17;
-    int32 total_groups = 18;
-    bool allow_old_user = 19;
-}
-
-message ExhibitionBannerMessage {
-    string img_url = 1;
-    string title = 2;
-    string subtitle = 3;
-    string product_group_id = 4;
 }
