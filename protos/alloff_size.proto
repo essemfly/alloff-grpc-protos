@@ -30,19 +30,16 @@ message ListAlloffSizeResponse {
 message CreateAlloffSizeRequest {
   string alloff_category_id = 1;
   string alloff_size_name = 2;
-  string original_size_name = 3;
 }
 
 message EditAlloffSizeRequest {
   string alloff_size_id = 1;
   optional string alloff_category_id = 2;
   optional string alloff_size_name = 3;
-  optional string original_size_name = 4;
 }
 
 message AlloffSizeMessage {
   string alloff_size_id = 1;
   AlloffCategoryMessage alloff_category = 2;
   string alloff_size_name = 3;
-  string original_size_name = 4;
 }
