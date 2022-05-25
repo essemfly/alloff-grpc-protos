@@ -6,6 +6,14 @@ import "alloff_size.proto";
 
 option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 
+
+enum ProductType {
+    FEMALE = 0;
+    MALE = 1;
+    KIDS = 2;
+    SPORTS = 3;
+}
+
 service Product {
     rpc GetProduct(GetProductRequest) returns (GetProductResponse);
     rpc ListProducts(ListProductsRequest) returns (ListProductsResponse);
@@ -60,6 +68,7 @@ message CreateProductRequest {
     map<string, string> description_infos = 19;
     map<string, string> product_infos = 20;
     optional string thumbnail_image = 21;
+    repeated ProductType product_types = 22;
 }
 
 message CreateProductResponse {
@@ -91,6 +100,7 @@ message EditProductRequest {
     map<string, string> description_infos = 22;
     map<string, string> product_infos = 23;
     optional string thumbnail_image = 24;
+    repeated ProductType product_types = 25;
 }
 
 message EditProductResponse {
@@ -131,17 +141,13 @@ message ProductMessage {
     map<string, string> description_infos = 27;
     map<string, string> product_infos = 28;
     string thumbnail_image = 29;
+    repeated ProductType product_types = 30;
 }
 
 message ProductInventoryMessage {
     string size = 1;
     int32 quantity = 2;
-    AlloffSizeMessage alloff_size = 3;
-}
-
-message AlloffInventoryMessage {
-    AlloffSizeMessage alloff_size = 1;
-    int32 quantity = 2;
+    optional AlloffSizeMessage alloff_size = 3;
 }
 
 /*
