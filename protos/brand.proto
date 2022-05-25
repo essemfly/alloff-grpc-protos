@@ -75,8 +75,3 @@ message SizeGuideMessage {
     string label = 1;
     string image_url = 2;
 }
-
-message InventoryMappingPolicyRequester {
-    string brand_size = 1;
-    string alloff_size_id = 2;
-}

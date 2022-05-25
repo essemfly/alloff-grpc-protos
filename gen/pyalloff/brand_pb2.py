@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x62rand.proto\x12\x08goalloff\"\x12\n\x10ListBrandRequest\";\n\x11ListBrandResponse\x12&\n\x06\x62rands\x18\x01 \x03(\x0b\x32\x16.goalloff.BrandMessage\"\xbd\x03\n\x10\x45\x64itBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x14\n\x07korname\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x14\n\x07\x65ngname\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x1b\n\x0elogo_image_url\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x17\n\nis_popular\x18\x06 \x01(\x08H\x04\x88\x01\x01\x12\x14\n\x07is_open\x18\x07 \x01(\x08H\x05\x88\x01\x01\x12\x1b\n\x0ein_maintenance\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x1b\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\tH\x07\x88\x01\x01\x12\x14\n\x07is_hide\x18\x0b \x01(\x08H\x08\x88\x01\x01\x42\n\n\x08_kornameB\n\n\x08_engnameB\x11\n\x0f_logo_image_urlB\x0e\n\x0c_descriptionB\r\n\x0b_is_popularB\n\n\x08_is_openB\x11\n\x0f_in_maintenanceB\x11\n\x0f_back_image_urlB\n\n\x08_is_hide\":\n\x11\x45\x64itBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\xf9\x01\n\x12\x43reateBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x03 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x12\n\nis_popular\x18\x06 \x01(\x08\x12\x0f\n\x07is_open\x18\x07 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\x08 \x01(\x08\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\t\"<\n\x13\x43reateBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\x96\x02\n\x0c\x42randMessage\x12\x10\n\x08\x62rand_id\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07keyname\x18\x03 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x04 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\nis_popular\x18\x07 \x01(\x08\x12\x0f\n\x07is_open\x18\x08 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\t \x01(\x08\x12.\n\nsize_guide\x18\n \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\x0b \x01(\t\x12\x0f\n\x07is_hide\x18\x0c \x01(\x08\"4\n\x10SizeGuideMessage\x12\r\n\x05label\x18\x01 \x01(\t\x12\x11\n\timage_url\x18\x02 \x01(\t\"M\n\x1fInventoryMappingPolicyRequester\x12\x12\n\nbrand_size\x18\x01 \x01(\t\x12\x16\n\x0e\x61lloff_size_id\x18\x02 \x01(\t2\xdf\x01\n\x05\x42rand\x12\x44\n\tListBrand\x12\x1a.goalloff.ListBrandRequest\x1a\x1b.goalloff.ListBrandResponse\x12\x44\n\tEditBrand\x12\x1a.goalloff.EditBrandRequest\x1a\x1b.goalloff.EditBrandResponse\x12J\n\x0b\x43reateBrand\x12\x1c.goalloff.CreateBrandRequest\x1a\x1d.goalloff.CreateBrandResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x62rand.proto\x12\x08goalloff\"\x12\n\x10ListBrandRequest\";\n\x11ListBrandResponse\x12&\n\x06\x62rands\x18\x01 \x03(\x0b\x32\x16.goalloff.BrandMessage\"\xbd\x03\n\x10\x45\x64itBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x14\n\x07korname\x18\x02 \x01(\tH\x00\x88\x01\x01\x12\x14\n\x07\x65ngname\x18\x03 \x01(\tH\x01\x88\x01\x01\x12\x1b\n\x0elogo_image_url\x18\x04 \x01(\tH\x02\x88\x01\x01\x12\x18\n\x0b\x64\x65scription\x18\x05 \x01(\tH\x03\x88\x01\x01\x12\x17\n\nis_popular\x18\x06 \x01(\x08H\x04\x88\x01\x01\x12\x14\n\x07is_open\x18\x07 \x01(\x08H\x05\x88\x01\x01\x12\x1b\n\x0ein_maintenance\x18\x08 \x01(\x08H\x06\x88\x01\x01\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x1b\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\tH\x07\x88\x01\x01\x12\x14\n\x07is_hide\x18\x0b \x01(\x08H\x08\x88\x01\x01\x42\n\n\x08_kornameB\n\n\x08_engnameB\x11\n\x0f_logo_image_urlB\x0e\n\x0c_descriptionB\r\n\x0b_is_popularB\n\n\x08_is_openB\x11\n\x0f_in_maintenanceB\x11\n\x0f_back_image_urlB\n\n\x08_is_hide\":\n\x11\x45\x64itBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\xf9\x01\n\x12\x43reateBrandRequest\x12\x0f\n\x07keyname\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x03 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x04 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x05 \x01(\t\x12\x12\n\nis_popular\x18\x06 \x01(\x08\x12\x0f\n\x07is_open\x18\x07 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\x08 \x01(\x08\x12.\n\nsize_guide\x18\t \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\n \x01(\t\"<\n\x13\x43reateBrandResponse\x12%\n\x05\x62rand\x18\x01 \x01(\x0b\x32\x16.goalloff.BrandMessage\"\x96\x02\n\x0c\x42randMessage\x12\x10\n\x08\x62rand_id\x18\x01 \x01(\t\x12\x0f\n\x07korname\x18\x02 \x01(\t\x12\x0f\n\x07keyname\x18\x03 \x01(\t\x12\x0f\n\x07\x65ngname\x18\x04 \x01(\t\x12\x16\n\x0elogo_image_url\x18\x05 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x06 \x01(\t\x12\x12\n\nis_popular\x18\x07 \x01(\x08\x12\x0f\n\x07is_open\x18\x08 \x01(\x08\x12\x16\n\x0ein_maintenance\x18\t \x01(\x08\x12.\n\nsize_guide\x18\n \x03(\x0b\x32\x1a.goalloff.SizeGuideMessage\x12\x16\n\x0e\x62\x61\x63k_image_url\x18\x0b \x01(\t\x12\x0f\n\x07is_hide\x18\x0c \x01(\x08\"4\n\x10SizeGuideMessage\x12\r\n\x05label\x18\x01 \x01(\t\x12\x11\n\timage_url\x18\x02 \x01(\t2\xdf\x01\n\x05\x42rand\x12\x44\n\tListBrand\x12\x1a.goalloff.ListBrandRequest\x1a\x1b.goalloff.ListBrandResponse\x12\x44\n\tEditBrand\x12\x1a.goalloff.EditBrandRequest\x1a\x1b.goalloff.EditBrandResponse\x12J\n\x0b\x43reateBrand\x12\x1c.goalloff.CreateBrandRequest\x1a\x1d.goalloff.CreateBrandResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -26,7 +26,6 @@ _CREATEBRANDREQUEST = DESCRIPTOR.message_types_by_name['CreateBrandRequest']
 _CREATEBRANDRESPONSE = DESCRIPTOR.message_types_by_name['CreateBrandResponse']
 _BRANDMESSAGE = DESCRIPTOR.message_types_by_name['BrandMessage']
 _SIZEGUIDEMESSAGE = DESCRIPTOR.message_types_by_name['SizeGuideMessage']
-_INVENTORYMAPPINGPOLICYREQUESTER = DESCRIPTOR.message_types_by_name['InventoryMappingPolicyRequester']
 ListBrandRequest = _reflection.GeneratedProtocolMessageType('ListBrandRequest', (_message.Message,), {
   'DESCRIPTOR' : _LISTBRANDREQUEST,
   '__module__' : 'brand_pb2'
@@ -83,13 +82,6 @@ SizeGuideMessage = _reflection.GeneratedProtocolMessageType('SizeGuideMessage', 
   })
 _sym_db.RegisterMessage(SizeGuideMessage)
 
-InventoryMappingPolicyRequester = _reflection.GeneratedProtocolMessageType('InventoryMappingPolicyRequester', (_message.Message,), {
-  'DESCRIPTOR' : _INVENTORYMAPPINGPOLICYREQUESTER,
-  '__module__' : 'brand_pb2'
-  # @@protoc_insertion_point(class_scope:goalloff.InventoryMappingPolicyRequester)
-  })
-_sym_db.RegisterMessage(InventoryMappingPolicyRequester)
-
 _BRAND = DESCRIPTOR.services_by_name['Brand']
 if _descriptor._USE_C_DESCRIPTORS == False:
 
@@ -111,8 +103,6 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _BRANDMESSAGE._serialized_end=1207
   _SIZEGUIDEMESSAGE._serialized_start=1209
   _SIZEGUIDEMESSAGE._serialized_end=1261
-  _INVENTORYMAPPINGPOLICYREQUESTER._serialized_start=1263
-  _INVENTORYMAPPINGPOLICYREQUESTER._serialized_end=1340
-  _BRAND._serialized_start=1343
-  _BRAND._serialized_end=1566
+  _BRAND._serialized_start=1264
+  _BRAND._serialized_end=1487
 # @@protoc_insertion_point(module_scope)
