@@ -147,7 +147,7 @@ message ProductMessage {
 message ProductInventoryMessage {
     string size = 1;
     int32 quantity = 2;
-    optional AlloffSizeMessage alloff_size = 3;
+    AlloffSizeMessage alloff_size = 3;
 }
 
 /*
