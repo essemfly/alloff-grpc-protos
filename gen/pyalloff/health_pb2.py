@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0chealth.proto\x12\x08goalloff\"%\n\x12HealthCheckRequest\x12\x0f\n\x07service\x18\x01 \x01(\t\"\xa3\x01\n\x13HealthCheckResponse\x12;\n\x06status\x18\x01 \x01(\x0e\x32+.goalloff.HealthCheckResponse.ServingStatus\"O\n\rServingStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SERVING\x10\x01\x12\x0f\n\x0bNOT_SERVING\x10\x02\x12\x13\n\x0fSERVICE_UNKNOWN\x10\x03\x32\x96\x01\n\x06Health\x12\x44\n\x05\x43heck\x12\x1c.goalloff.HealthCheckRequest\x1a\x1d.goalloff.HealthCheckResponse\x12\x46\n\x05Watch\x12\x1c.goalloff.HealthCheckRequest\x1a\x1d.goalloff.HealthCheckResponse0\x01\x42\x37Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0chealth.proto\x12\x08goalloff\"%\n\x12HealthCheckRequest\x12\x0f\n\x07service\x18\x01 \x01(\t\"\xa3\x01\n\x13HealthCheckResponse\x12;\n\x06status\x18\x01 \x01(\x0e\x32+.goalloff.HealthCheckResponse.ServingStatus\"O\n\rServingStatus\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x0b\n\x07SERVING\x10\x01\x12\x0f\n\x0bNOT_SERVING\x10\x02\x12\x13\n\x0fSERVICE_UNKNOWN\x10\x03\x32N\n\x06Health\x12\x44\n\x05\x43heck\x12\x1c.goalloff.HealthCheckRequest\x1a\x1d.goalloff.HealthCheckResponseB7Z5github.com/lessbutter/alloff-grpc-protos/gen/goalloffb\x06proto3')
 
 
 
@@ -46,6 +46,6 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _HEALTHCHECKRESPONSE._serialized_end=229
   _HEALTHCHECKRESPONSE_SERVINGSTATUS._serialized_start=150
   _HEALTHCHECKRESPONSE_SERVINGSTATUS._serialized_end=229
-  _HEALTH._serialized_start=232
-  _HEALTH._serialized_end=382
+  _HEALTH._serialized_start=231
+  _HEALTH._serialized_end=309
 # @@protoc_insertion_point(module_scope)
