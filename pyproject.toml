@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "alloff_grpc_protos"
-version = "0.3.15"
+version = "0.3.17"
 description = ""
 authors = ["Seokmin Lee <essemfly@gmail.com>"]
 packages = [
