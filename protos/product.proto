@@ -10,8 +10,9 @@ option go_package = "github.com/lessbutter/alloff-grpc-protos/gen/goalloff";
 enum ProductType {
     FEMALE = 0;
     MALE = 1;
-    KIDS = 2;
-    SPORTS = 3;
+    BOY = 2;
+    GIRL = 3;
+    KIDS = 4;
 }
 
 service Product {
