@@ -9,4 +9,4 @@ pip3 install --no-binary :all: grpcio-tools --ignore-installed
 - Increase version in `pyproject.toml`
 ```
 poetry update alloff-grpc-protos
-```
+```# alloff-grpc-protos
